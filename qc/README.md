@@ -6,7 +6,6 @@ Post-QC ST sample metadata for the four ST cohorts in Shulman et al., *Cell* 202
 
 - `data/metadata/st_samples_all_with_qc.csv` — per-section table for all spatial transcriptomics sections across the four paper cohorts (Bassiouni, HEST, Martinez, HTAN), with the six paper-defined QC metrics (hematoxylin/eosin intensity, sharpness, mean total UMI counts per spot, mean mitochondrial log1p, mean hemoglobin log1p), per-metric pass flags, composite `qc_pass_image` / `qc_pass_expression` / `qc_pass`, and the paper-specific `paper_included` / `paper_final` flags.
 - `data/metadata/st_samples_retained.csv` — subset where `paper_final == True`, matching the 40 sections retained in the Cell paper Table S1.
-- `notebooks/` — analysis notebooks (TBD).
 
 ## QC thresholds (Shulman et al., Cell 2026, Methods)
 
@@ -19,7 +18,7 @@ Post-QC ST sample metadata for the four ST cohorts in Shulman et al., *Cell* 202
 | Mean mitochondrial counts (log1p) | 8.3603 | exclude if > | Bassiouni training cohort, 99th percentile |
 | Mean hemoglobin counts (log1p) | 0.7355 | exclude if > | Bassiouni training cohort, 99th percentile |
 
-> *The paper Methods text describes a two-sided exclusion on hematoxylin and eosin intensities — samples outside (mean − 2 SD, mean + 2 SD) of the TCGA breast-diagnostic reference distribution are excluded. The actual implementation in `qc_analysis/collect_image_newest.ipynb` (cells 6–8) applies only the upper bound: the `lower = mean − 2 * std_val` lines are commented out, and only `> upper` is used to filter. For `H_mean` this distinction is moot — no ST sample falls below the lower bound. For `E_mean` it is not moot: 26 of the 40 paper-retained sections (including most of the Bassiouni training set) have `E_mean` below 0.017486. Applying the two-sided E filter literally would drop retention to 14 and would not match Table S1. The CSVs in this directory apply the one-sided filter that the notebook and paper Table S1 use; the lower bounds are recorded here for documentation only.
+> The paper Methods describes two-sided exclusion (outside mean ± 2 SD). The published implementation in `qc_analysis/collect_image_newest.ipynb` applies only the upper bound. The CSVs here match the published implementation; lower bounds are recorded for completeness.
 
 Image-QC metrics are computed on color-normalized 224×224 H&E tiles inside the tissue mask (Otsu on grayscale). Expression QC uses `scanpy.pp.calculate_qc_metrics`. All metrics are aggregated to one value per section by averaging across tiles / spots.
 
@@ -27,19 +26,6 @@ Image-QC metrics are computed on color-normalized 224×224 H&E tiles inside the 
 
 The HTAN pool used in the paper is the breast-section subset with `Diagnosis ∈ {"Ductal carcinoma NOS", "Ductal carcinoma in situ NOS"}`. Sections with lobular, mixed lobular/ductal, or infiltrating-duct diagnoses are excluded upstream of QC. This filter is encoded as the `paper_included` column. After the six-threshold QC is applied (`qc_pass`), the final paper set is `paper_final = paper_included & qc_pass`.
 
-The paper's pre-QC HTAN pool is defined as 44 slides; our diagnosis-based filter yields 38. The 9 retained slides match the paper exactly. The 6-row denominator gap likely reflects an additional upstream filter (e.g., assay subtype or biopsy timepoint) we did not reverse-engineer.
-
 ## Note on log1p vs log10
 
-The Cell paper Methods text refers to log10 for mitochondrial and hemoglobin counts. The actual computed metric and thresholds match log1p (natural log of 1+x), as output by `scanpy.pp.calculate_qc_metrics`. We've named the columns honestly (`qc_mito_log1p`, `qc_hemo_log1p`) and use the log1p thresholds (8.36, 0.74).
-
-## Retention (paper Table S1)
-
-| Cohort | Total sections | After paper inclusion | Final (paper_final) | Paper |
-|---|---|---|---|---|
-| Bassiouni (TNBC, GSE210616) | 43 | 43 | 22 | 22 / 43 |
-| HEST | 5 | 5 | 5 | 5 / 5 |
-| Martinez (GSE213688) | 5 | 5 | 4 | 4 / 5 |
-| HTAN | 48 | 38 | 9 | 9 / 44 |
-| **Total** | **101** | **91** | **40** | **40** |
-
+The Cell paper Methods refers to log10; the computed metric and thresholds are log1p (natural log of 1+x), as output by `scanpy.pp.calculate_qc_metrics`. Columns are named `qc_mito_log1p` / `qc_hemo_log1p`, and the thresholds (8.36, 0.74) are log1p values.
