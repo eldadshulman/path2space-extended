@@ -12,12 +12,14 @@ Post-QC ST sample metadata for the four ST cohorts in Shulman et al., *Cell* 202
 
 | Metric | Threshold | Exclusion direction | Source |
 |---|---|---|---|
-| Hematoxylin intensity (`H_mean`) | 0.053546 | exclude if > | TCGA breast-diagnostic mean + 2 SD |
-| Eosin intensity (`E_mean`) | 0.022495 | exclude if > | TCGA breast-diagnostic mean + 2 SD |
+| Hematoxylin intensity (`H_mean`) | (mean − 2 SD, mean + 2 SD) = (0.029768, 0.053546)* | exclude if outside the interval | TCGA breast-diagnostic reference distribution |
+| Eosin intensity (`E_mean`) | (mean − 2 SD, mean + 2 SD) = (0.017486, 0.022495)* | exclude if outside the interval | TCGA breast-diagnostic reference distribution |
 | Sharpness (variance of Laplacian) | 0.000637 | exclude if < | TCGA breast-diagnostic threshold |
 | Mean total UMI counts per spot | 6193.7 | exclude if < | Bassiouni training cohort, 1st percentile |
 | Mean mitochondrial counts (log1p) | 8.3603 | exclude if > | Bassiouni training cohort, 99th percentile |
 | Mean hemoglobin counts (log1p) | 0.7355 | exclude if > | Bassiouni training cohort, 99th percentile |
+
+> *The paper Methods text describes a two-sided exclusion on hematoxylin and eosin intensities — samples outside (mean − 2 SD, mean + 2 SD) of the TCGA breast-diagnostic reference distribution are excluded. The actual implementation in `qc_analysis/collect_image_newest.ipynb` (cells 6–8) applies only the upper bound: the `lower = mean − 2 * std_val` lines are commented out, and only `> upper` is used to filter. For `H_mean` this distinction is moot — no ST sample falls below the lower bound. For `E_mean` it is not moot: 26 of the 40 paper-retained sections (including most of the Bassiouni training set) have `E_mean` below 0.017486. Applying the two-sided E filter literally would drop retention to 14 and would not match Table S1. The CSVs in this directory apply the one-sided filter that the notebook and paper Table S1 use; the lower bounds are recorded here for documentation only.
 
 Image-QC metrics are computed on color-normalized 224×224 H&E tiles inside the tissue mask (Otsu on grayscale). Expression QC uses `scanpy.pp.calculate_qc_metrics`. All metrics are aggregated to one value per section by averaging across tiles / spots.
 
