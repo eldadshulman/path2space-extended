@@ -25,6 +25,12 @@ Image-QC metrics are computed on color-normalized 224×224 H&E tiles inside the 
 
 The HTAN pool used in the paper is the breast-section subset with `Diagnosis ∈ {"Ductal carcinoma NOS", "Ductal carcinoma in situ NOS"}`. Sections with lobular, mixed lobular/ductal, or infiltrating-duct diagnoses are excluded upstream of QC. This filter is encoded as the `paper_included` column. After the six-threshold QC is applied (`qc_pass`), the final paper set is `paper_final = paper_included & qc_pass`.
 
+The paper's pre-QC HTAN pool is defined as 44 slides; our diagnosis-based filter yields 38. The 9 retained slides match the paper exactly. The 6-row denominator gap likely reflects an additional upstream filter (e.g., assay subtype or biopsy timepoint) we did not reverse-engineer.
+
+## Note on log1p vs log10
+
+The Cell paper Methods text refers to log10 for mitochondrial and hemoglobin counts. The actual computed metric and thresholds match log1p (natural log of 1+x), as output by `scanpy.pp.calculate_qc_metrics`. We've named the columns honestly (`qc_mito_log1p`, `qc_hemo_log1p`) and use the log1p thresholds (8.36, 0.74).
+
 ## Retention (paper Table S1)
 
 | Cohort | Total sections | After paper inclusion | Final (paper_final) | Paper |
