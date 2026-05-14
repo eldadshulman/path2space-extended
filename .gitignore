@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+data/cells/
+data/raw/
+data/processed/
+data/*.h5
+data/*.h5ad
+data/*.parquet
+*.tar.gz
+*.zip
