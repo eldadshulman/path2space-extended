@@ -54,8 +54,8 @@ SPATIOTYPE_LEVELS = [
     "Proliferation-Enriched",
     "Immune-Modulated",
     "Immune-Inactive",
-    "Lipid-Metabolic",
-    "Hedgehog-Active",
+    "Metacluster 1",
+    "Metacluster 2",
 ]
 
 
@@ -63,14 +63,15 @@ def assign_spatiotypes(X: np.ndarray) -> pd.DataFrame:
     """Hierarchically cluster `X` at k=5 and label the resulting groups.
 
     Returns a data frame with columns `Metacluster` and `SpatioType`.
-    Mapping is by cluster size, then alphabetical, in the same order as the
-    paper:
+    The three largest groups get the biologically interpreted names; the two
+    smallest are left generic (`Metacluster 1`, `Metacluster 2`) because their
+    sample sizes are too small to analyse.
 
       biggest → Immune-Modulated
       2nd     → Proliferation-Enriched
       3rd     → Immune-Inactive
-      4th     → Hedgehog-Active
-      5th     → Lipid-Metabolic
+      4th     → Metacluster 1
+      5th     → Metacluster 2
     """
     Z = linkage(X, method="ward")
     labs = fcluster(Z, t=5, criterion="maxclust")
@@ -80,8 +81,8 @@ def assign_spatiotypes(X: np.ndarray) -> pd.DataFrame:
         "Immune-Modulated",
         "Proliferation-Enriched",
         "Immune-Inactive",
-        "Hedgehog-Active",
-        "Lipid-Metabolic",
+        "Metacluster 1",
+        "Metacluster 2",
     ]
     mapping = dict(zip(size_order, name_order))
 
@@ -102,20 +103,25 @@ def assign_spatiotypes(X: np.ndarray) -> pd.DataFrame:
 # Paper colour palette and cluster row ordering
 
 # JAMA palette ("default") used by ggsci::pal_jama in the paper's R notebook.
+# Paper convention (main_clustering_R.ipynb): use JAMA colors 1, 3, 4 for the
+# three named SpatioTypes, and grey for the two too-small-to-analyse groups.
 JAMA_COLORS = [
-    "#374E55",  # dark navy   → Proliferation-Enriched
-    "#DF8F44",  # orange      → Immune-Modulated
-    "#00A1D5",  # light blue  → Immune-Inactive
-    "#B24745",  # dark red    → Lipid-Metabolic
-    "#79AF97",  # mint green  → Hedgehog-Active
+    "#374E55",  # 1 dark navy
+    "#DF8F44",  # 2 orange
+    "#00A1D5",  # 3 light blue
+    "#B24745",  # 4 dark red
+    "#79AF97",  # 5 mint green
+    "#6A6599",  # 6 muted purple
+    "#80796B",  # 7 olive
 ]
+_SMALL_GREY = "#908D8B"
 
 SPATIOTYPE_PALETTE = {
     "Proliferation-Enriched": JAMA_COLORS[0],
-    "Immune-Modulated":       JAMA_COLORS[1],
-    "Immune-Inactive":        JAMA_COLORS[2],
-    "Lipid-Metabolic":        JAMA_COLORS[3],
-    "Hedgehog-Active":        JAMA_COLORS[4],
+    "Immune-Modulated":       JAMA_COLORS[2],
+    "Immune-Inactive":        JAMA_COLORS[3],
+    "Metacluster 1":          _SMALL_GREY,
+    "Metacluster 2":          _SMALL_GREY,
 }
 
 # Cluster row order in the paper heatmap, frozen by hand.
