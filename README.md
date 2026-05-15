@@ -5,8 +5,9 @@ Private extended Path2Space codebase — analysis and downstream methods beyond 
 ## Components
 
 - [`qc/`](./qc/) — post-QC ST sample metadata reproducing Table S1 of Shulman et al., *Cell* 2026, with paper-defined per-sample QC metrics as columns. Covers 4 ST cohorts (TNBC/Bassiouni, HEST, Martinez, HTAN).
+- [`clustering/`](./clustering/) — spatial clustering pipeline (SpaGCN per slide → Seurat cross-patient → SpatioType). Currently TCGA; future cohorts: METABRIC, clinical cohorts.
 
-Future components will be added as additional sibling folders (e.g., `deconvolution/`, `spatiotype/`, `spand/`).
+Future components will be added as additional sibling folders (e.g., `deconvolution/`, `spand/`).
 
 ## Related
 
