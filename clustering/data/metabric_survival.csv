@@ -1,0 +1,142 @@
+rownames,SpatioType,RFS_MONTHS,RFS_STATUS,Age,Tumor_stage,NPI,clinical_subtype
+MB-0008,Immune-Modulated,18.8,1:Recurred,76.97,2,6.08,HR+
+MB-0050,Immune-Modulated,75.3333333333333,0:Not Recurred,44.64,2,4.066,HR+
+MB-0060,Proliferative,140.866666666667,0:Not Recurred,45.43,2,4.046,HR+
+MB-0102,Immune-Modulated,102.0,1:Recurred,51.38,2,5.08,HR+
+MB-0106,Immune-Modulated,85.3333333333333,0:Not Recurred,49.87,3,4.14,HR+
+MB-0108,Immune-Modulated,23.0,1:Recurred,43.15,1,4.036,
+MB-0129,Immune-Modulated,38.5666666666667,0:Not Recurred,63.53,2,6.048,HER2+
+MB-0131,Immune-Modulated,64.4333333333333,1:Recurred,69.16,2,4.078,HR+
+MB-0133,Immune-Modulated,151.0,0:Not Recurred,58.89,2,3.16,HR+
+MB-0164,Proliferative,10.8333333333333,0:Not Recurred,37.87,2,4.032,TNBC
+MB-0165,Immune-Modulated,32.5666666666667,1:Recurred,53.75,3,6.104,
+MB-0166,Immune-Modulated,104.4,0:Not Recurred,44.98,2,5.048,HR+
+MB-0176,Immune-Modulated,78.5666666666667,1:Recurred,38.78,2,6.072,HR+
+MB-0179,Immune-Modulated,17.9333333333333,1:Recurred,56.39,3,6.068,TNBC
+MB-0189,Immune-Inactive,1.33333333333333,1:Recurred,57.79,4,6.096,HR+
+MB-0194,Immune-Modulated,91.6,0:Not Recurred,56.45,2,5.042,HR+
+MB-0198,Immune-Modulated,144.766666666667,0:Not Recurred,43.37,2,6.036,HR+
+MB-0201,Proliferative,125.7,0:Not Recurred,49.5,1,4.04,HER2+
+MB-0203,Proliferative,58.7666666666667,0:Not Recurred,86.24,2,5.05,HR+
+MB-0218,Proliferative,131.066666666667,0:Not Recurred,43.39,2,5.04,HR+
+MB-0236,Immune-Modulated,205.033333333333,0:Not Recurred,43.63,2,4.054,
+MB-0248,Immune-Modulated,71.0,0:Not Recurred,45.76,2,4.042,HR+
+MB-0257,Immune-Modulated,32.5333333333333,1:Recurred,57.61,2,3.05,HR+
+MB-0259,Immune-Inactive,11.8666666666667,1:Recurred,38.99,3,6.0,TNBC
+MB-0269,Immune-Modulated,22.2333333333333,0:Not Recurred,45.39,2,5.052,TNBC
+MB-0307,Immune-Modulated,177.333333333333,0:Not Recurred,41.63,2,6.02,
+MB-0315,Immune-Modulated,186.2,0:Not Recurred,56.32,2,4.1,HR+
+MB-0321,Immune-Inactive,174.633333333333,0:Not Recurred,46.86,2,5.06,HR+
+MB-0324,Proliferative,74.5666666666667,1:Recurred,47.64,2,6.064,HR+
+MB-0352,Immune-Modulated,46.4,1:Recurred,61.32,1,4.026,TNBC
+MB-0358,Proliferative,32.8666666666667,0:Not Recurred,57.87,2,5.052,HR+
+MB-0362,Immune-Modulated,47.0333333333333,1:Recurred,52.79,2,4.036,HR+
+MB-0368,Immune-Modulated,31.8666666666667,1:Recurred,74.79,2,6.062,HR+
+MB-0370,Immune-Modulated,93.5,0:Not Recurred,64.01,2,6.094,HR+
+MB-0378,Proliferative,97.3,1:Recurred,57.15,2,5.056,HER2+
+MB-0393,Immune-Inactive,8.76666666666667,1:Recurred,68.74,3,6.106,HR+
+MB-0400,Immune-Inactive,19.0333333333333,1:Recurred,55.28,1,4.032,TNBC
+MB-0401,Immune-Inactive,20.6666666666667,1:Recurred,48.58,1,4.04,TNBC
+MB-0406,Immune-Modulated,32.4,1:Recurred,69.32,3,6.36,HR+
+MB-0408,Immune-Modulated,101.833333333333,0:Not Recurred,51.01,2,5.094,HR+
+MB-0413,Immune-Modulated,128.666666666667,1:Recurred,56.58,2,6.094,HR+
+MB-0420,Immune-Modulated,76.7333333333333,0:Not Recurred,34.92,1,4.032,TNBC
+MB-0424,Immune-Modulated,9.83333333333333,1:Recurred,44.02,3,6.12,TNBC
+MB-0426,Immune-Modulated,131.1,0:Not Recurred,50.48,2,4.084,HR+
+MB-0434,Immune-Modulated,24.0666666666667,1:Recurred,69.79,2,5.04,
+MB-0438,Immune-Modulated,135.166666666667,0:Not Recurred,57.41,2,5.05,HER2+
+MB-0440,Immune-Modulated,100.833333333333,0:Not Recurred,56.73,2,5.052,HR+
+MB-0445,Immune-Modulated,132.533333333333,0:Not Recurred,40.07,2,4.046,HR+
+MB-0446,Immune-Modulated,72.2666666666667,0:Not Recurred,56.96,2,4.048,TNBC
+MB-0448,Immune-Modulated,28.5333333333333,1:Recurred,59.45,2,4.026,HR+
+MB-0453,Immune-Modulated,16.3333333333333,1:Recurred,61.11,3,6.2,
+MB-0458,Immune-Modulated,65.0666666666667,1:Recurred,49.28,2,4.1,HR+
+MB-0464,Immune-Modulated,19.5333333333333,1:Recurred,58.98,3,6.026,TNBC
+MB-0466,Immune-Modulated,43.8666666666667,0:Not Recurred,33.97,2,5.14,HR+
+MB-0468,Immune-Modulated,129.6,0:Not Recurred,60.95,2,6.052,
+MB-0469,Immune-Modulated,131.266666666667,0:Not Recurred,67.94,2,5.078,HR+
+MB-0476,Immune-Modulated,130.433333333333,0:Not Recurred,54.62,2,4.05,
+MB-0481,Immune-Modulated,33.8666666666667,1:Recurred,54.22,1,4.038,TNBC
+MB-0482,Immune-Modulated,15.8666666666667,1:Recurred,39.53,2,5.032,HER2+
+MB-0483,Immune-Modulated,64.3,1:Recurred,49.61,2,5.042,HR+
+MB-0484,Immune-Modulated,82.6333333333333,0:Not Recurred,38.72,2,5.044,HR+
+MB-0485,Immune-Modulated,34.3,1:Recurred,60.78,3,6.1,HR+
+MB-0486,Immune-Modulated,89.9666666666667,0:Not Recurred,57.57,2,4.064,HR+
+MB-0494,Immune-Modulated,19.8333333333333,1:Recurred,77.22,3,6.08,TNBC
+MB-0500,Immune-Modulated,67.4666666666667,0:Not Recurred,36.56,2,4.044,TNBC
+MB-0501,Immune-Modulated,71.5,0:Not Recurred,48.93,2,4.042,HR+
+MB-0514,Immune-Modulated,13.4,0:Not Recurred,42.89,2,4.04,HR+
+MB-0516,Immune-Modulated,114.466666666667,0:Not Recurred,62.81,1,4.03,TNBC
+MB-0519,Immune-Modulated,110.966666666667,0:Not Recurred,61.99,3,6.13,HR+
+MB-0524,Immune-Modulated,80.8333333333333,0:Not Recurred,40.65,2,4.02,HR+
+MB-0528,Immune-Modulated,177.366666666667,1:Recurred,53.64,2,5.052,HR+
+MB-0529,Immune-Modulated,48.5333333333333,1:Recurred,67.46,4,5.05,HR+
+MB-0538,Immune-Modulated,23.9666666666667,1:Recurred,61.89,2,6.074,HR+
+MB-0541,Immune-Modulated,174.266666666667,0:Not Recurred,38.86,1,4.038,HR+
+MB-0542,Immune-Modulated,48.6,1:Recurred,39.3,2,6.046,HR+
+MB-0544,Immune-Modulated,79.3333333333333,0:Not Recurred,74.46,3,5.104,HR+
+MB-0546,Immune-Modulated,193.8,0:Not Recurred,51.45,2,4.024,HR+
+MB-0564,Immune-Modulated,37.9333333333333,1:Recurred,48.39,1,4.044,HER2+
+MB-0575,Immune-Modulated,78.8666666666667,1:Recurred,48.1,3,5.11,HR+
+MB-0580,Immune-Modulated,59.5,1:Recurred,33.8,2,5.08,HR+
+MB-0593,Immune-Modulated,25.6333333333333,1:Recurred,62.34,3,5.18,HER2+
+MB-0597,Immune-Modulated,113.2,0:Not Recurred,64.55,2,4.034,HR+
+MB-0599,Immune-Modulated,52.7666666666667,1:Recurred,46.85,2,4.048,HR+
+MB-0601,Immune-Modulated,14.3666666666667,1:Recurred,32.99,2,6.05,HR+
+MB-0607,Immune-Modulated,87.8333333333333,0:Not Recurred,53.1,2,5.06,HR+
+MB-0613,Immune-Modulated,48.8,0:Not Recurred,60.2,3,3.12,TNBC
+MB-0614,Immune-Modulated,119.333333333333,0:Not Recurred,48.99,2,5.038,HR+
+MB-0619,Immune-Modulated,94.2333333333333,0:Not Recurred,38.9,2,5.05,HR+
+MB-0630,Immune-Modulated,86.8,0:Not Recurred,38.35,1,4.04,HR+
+MB-0639,Immune-Modulated,75.4,0:Not Recurred,50.39,1,4.036,
+MB-0656,Immune-Modulated,5.23333333333333,1:Recurred,35.9,3,4.2,HER2+
+MB-0658,Immune-Modulated,97.2666666666667,0:Not Recurred,60.89,2,5.05,TNBC
+MB-0660,Immune-Modulated,13.4333333333333,1:Recurred,52.43,1,6.32,
+MB-0664,Immune-Modulated,11.0666666666667,1:Recurred,78.27,3,6.168,TNBC
+MB-0666,Immune-Modulated,21.4,1:Recurred,61.31,2,6.05,HR+
+MB-7009,Immune-Modulated,19.1,1:Recurred,68.28,,5.054,TNBC
+MB-7012,Immune-Modulated,12.6333333333333,1:Recurred,60.96,,4.04,TNBC
+MB-7017,Immune-Modulated,135.333333333333,0:Not Recurred,36.63,,5.054,TNBC
+MB-7018,Immune-Modulated,85.7,1:Recurred,72.12,,4.08,HR+
+MB-7020,Immune-Inactive,39.2,1:Recurred,44.47,,5.054,HER2+
+MB-7023,Immune-Inactive,6.46666666666667,1:Recurred,66.66,,5.08,TNBC
+MB-7027,Immune-Inactive,30.2333333333333,1:Recurred,60.56,,6.03,HER2+
+MB-7035,Immune-Modulated,15.1333333333333,1:Recurred,45.3,,6.1,HER2+
+MB-7036,Immune-Inactive,120.433333333333,0:Not Recurred,54.48,,5.036,TNBC
+MB-7038,Immune-Modulated,81.0333333333333,0:Not Recurred,57.62,,5.044,TNBC
+MB-7050,Immune-Modulated,54.3333333333333,1:Recurred,64.99,,4.045,HR+
+MB-7054,Immune-Modulated,22.9333333333333,1:Recurred,73.74,,5.0256,
+MB-7057,Immune-Modulated,43.8333333333333,1:Recurred,72.81,,4.044,
+MB-7059,Immune-Modulated,119.333333333333,0:Not Recurred,50.55,,6.048,HER2+
+MB-7066,Immune-Modulated,89.7666666666667,0:Not Recurred,64.24,,5.037,
+MB-7073,Immune-Modulated,137.933333333333,0:Not Recurred,54.69,,6.04,HER2+
+MB-7087,Immune-Modulated,5.06666666666667,0:Not Recurred,66.61,,5.028,
+MB-7089,Immune-Modulated,118.9,0:Not Recurred,47.7,,5.036,TNBC
+MB-7090,Immune-Modulated,109.766666666667,0:Not Recurred,48.52,,5.034,TNBC
+MB-7093,Immune-Modulated,78.0333333333333,1:Recurred,76.25,,3.0338,HR+
+MB-7097,Immune-Modulated,42.1333333333333,1:Recurred,60.09,,2.0806,HR+
+MB-7112,Proliferative,38.0666666666667,1:Recurred,40.74,,4.08,HR+
+MB-7119,Immune-Modulated,128.366666666667,0:Not Recurred,54.53,,5.046,TNBC
+MB-7121,Immune-Modulated,88.8333333333333,0:Not Recurred,49.02,,6.076,TNBC
+MB-7135,Immune-Modulated,14.4666666666667,1:Recurred,56.93,,6.052,HER2+
+MB-7148,Immune-Modulated,7.2,1:Recurred,62.97,,6.26,HR+
+MB-7155,Immune-Modulated,149.766666666667,0:Not Recurred,41.14,,5.0344,TNBC
+MB-7158,Immune-Modulated,32.2,1:Recurred,50.73,,6.058,TNBC
+MB-7159,Immune-Modulated,9.93333333333333,1:Recurred,60.45,,4.068,
+MB-7163,Immune-Modulated,51.6,1:Recurred,43.81,,5.06,HR+
+MB-7165,Immune-Modulated,147.166666666667,0:Not Recurred,28.78,,5.364,TNBC
+MB-7182,Immune-Modulated,33.9666666666667,1:Recurred,58.26,,4.054,HR+
+MB-7187,Immune-Modulated,81.0,1:Recurred,49.35,,3.0046,HER2+
+MB-7189,Immune-Modulated,89.3666666666667,1:Recurred,58.75,,4.042,
+MB-7194,Immune-Modulated,29.1,1:Recurred,63.71,,3.043,HR+
+MB-7205,Immune-Modulated,166.033333333333,0:Not Recurred,38.17,,5.05,TNBC
+MB-7207,Immune-Modulated,14.9333333333333,1:Recurred,43.28,,2.06,
+MB-7208,Immune-Modulated,11.8333333333333,1:Recurred,48.83,,6.0622,TNBC
+MB-7226,Immune-Modulated,42.2666666666667,1:Recurred,67.88,,5.0352,HR+
+MB-7256,Immune-Modulated,28.0,1:Recurred,50.92,,5.08,HER2+
+MB-7258,Immune-Modulated,10.0,1:Recurred,45.11,,6.06,
+MB-7267,Immune-Modulated,138.4,1:Recurred,28.37,,5.041,
+MB-7270,Immune-Modulated,175.166666666667,0:Not Recurred,50.84,,5.032,TNBC
+MB-7275,Immune-Modulated,22.9333333333333,1:Recurred,30.02,,5.04,
+MB-7281,Immune-Modulated,24.8666666666667,1:Recurred,51.22,,5.032,HER2+
+MB-7283,Immune-Modulated,12.9666666666667,1:Recurred,54.42,,5.06,HR+
