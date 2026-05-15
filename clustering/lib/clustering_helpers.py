@@ -1,14 +1,13 @@
 """Helpers for the SpatioType assignment step.
 
-Used by clustering/notebooks/03_spatiotype_assignment.ipynb. The intent is to
-keep the parameter choices (linkage, distance, k, PAC subsampling fraction…)
-out of the notebook so the analysis reads as a narrative rather than a tuned
-recipe.
+Used by clustering/notebooks/03_spatiotype_assignment.ipynb. Keeps the
+parameter choices (linkage, distance, k, plot ordering, colour palette)
+out of the notebook so the notebook reads as a narrative.
 """
 
 from __future__ import annotations
 
-from typing import Dict, Sequence
+from typing import Sequence
 
 import numpy as np
 import pandas as pd
@@ -18,115 +17,114 @@ from sklearn.preprocessing import StandardScaler
 
 
 # ---------------------------------------------------------------------------
-# Cluster-validity metrics
+# Cluster-validity metrics — matches the paper's main_clustering R script.
 
-def _wss(X: np.ndarray, labels: np.ndarray) -> float:
+def _wss_total(X: np.ndarray, labels: np.ndarray) -> float:
+    """Within-cluster sum of squared deviations, summed across features.
+
+    Mirrors `sum((scaled_features - ave(scaled_features, cluster_labels))^2)`
+    used in the paper's R notebook.
+    """
     total = 0.0
     for k in np.unique(labels):
         pts = X[labels == k]
-        if len(pts) > 1:
-            total += ((pts - pts.mean(axis=0)) ** 2).sum()
-    return float(total)
-
-
-def _pac(X: np.ndarray, k: int, *, n_subsamples: int = 40,
-         subsample_frac: float = 0.8, u1: float = 0.1, u2: float = 0.9,
-         seed: int = 42) -> float:
-    """Proportion of Ambiguous Clustering on a subsampled consensus matrix."""
-    rng = np.random.default_rng(seed + k)
-    n = X.shape[0]
-    co = np.zeros((n, n), dtype=np.float64)
-    cnt = np.zeros((n, n), dtype=np.float64)
-    for _ in range(n_subsamples):
-        idx = rng.choice(n, size=int(n * subsample_frac), replace=False)
-        Z_sub = linkage(X[idx], method="ward")
-        labs = fcluster(Z_sub, t=k, criterion="maxclust")
-        same = labs[:, None] == labs[None, :]
-        co[np.ix_(idx, idx)] += same.astype(np.float64)
-        cnt[np.ix_(idx, idx)] += 1.0
-    consensus = np.where(cnt > 0, co / np.maximum(cnt, 1), 0)
-    tri = consensus[np.triu_indices(n, k=1)]
-    return float(((tri >= u1) & (tri <= u2)).mean())
+        total += float(((pts - pts.mean(axis=0)) ** 2).sum())
+    return total
 
 
 def compute_validity_metrics(X: np.ndarray, ks: Sequence[int]) -> pd.DataFrame:
-    """Return a (k × {WSS, Davies-Bouldin, PAC}) data frame for hierarchical clusterings."""
+    """Return a (k × {WSS, Davies-Bouldin}) table for hierarchical clusterings."""
     Z = linkage(X, method="ward")
     rows = []
     for k in ks:
-        labs = fcluster(Z, t=k, criterion="maxclust")
-        rows.append({
-            "k": int(k),
-            "WSS": _wss(X, labs),
-            "DB":  float(davies_bouldin_score(X, labs)),
-            "PAC": _pac(X, k),
-        })
+        if k == 1:
+            labs = np.ones(X.shape[0], dtype=int)
+            db = np.nan
+        else:
+            labs = fcluster(Z, t=k, criterion="maxclust")
+            db = float(davies_bouldin_score(X, labs))
+        rows.append({"k": int(k), "WSS": _wss_total(X, labs), "DB": db})
     return pd.DataFrame(rows)
 
 
 # ---------------------------------------------------------------------------
 # SpatioType assignment
 
-# Frozen mapping: the three biologically interpreted SpatioTypes (the other
-# two metaclusters end up too small to analyse on their own and are labelled
-# generically).
-_REF_SPATIOTYPE_NAMES = {
-    1: "Immune-Modulated",
-    2: "Immune-Inactive",
-    3: "Proliferation-Enriched",
-}
-
 SPATIOTYPE_LEVELS = [
-    "Immune-Modulated", "Immune-Inactive", "Proliferation-Enriched",
+    "Proliferation-Enriched",
+    "Immune-Modulated",
+    "Immune-Inactive",
+    "Lipid-Metabolic",
+    "Hedgehog-Active",
 ]
 
 
-def assign_spatiotypes(X: np.ndarray, *,
-                       reference_k3_labels: np.ndarray | None = None,
-                       min_size: int = 30) -> pd.DataFrame:
-    """Hierarchically cluster `X` and label the resulting groups as SpatioTypes.
+def assign_spatiotypes(X: np.ndarray) -> pd.DataFrame:
+    """Hierarchically cluster `X` at k=5 and label the resulting groups.
 
     Returns a data frame with columns `Metacluster` and `SpatioType`.
-    Metaclusters with fewer than `min_size` members are labelled `Metacluster (n=<size>)`.
-    The remaining metaclusters are matched to the three named SpatioTypes
-    using the majority of `reference_k3_labels` (if provided), otherwise
-    sorted by size.
+    Mapping is by cluster size, then alphabetical, in the same order as the
+    paper:
+
+      biggest → Immune-Modulated
+      2nd     → Proliferation-Enriched
+      3rd     → Immune-Inactive
+      4th     → Hedgehog-Active
+      5th     → Lipid-Metabolic
     """
     Z = linkage(X, method="ward")
     labs = fcluster(Z, t=5, criterion="maxclust")
 
-    sizes = pd.Series(labs).value_counts()
-    big = sizes[sizes >= min_size].index.tolist()
-    small = sizes[sizes < min_size].index.tolist()
-
-    mapping: Dict[int, str] = {}
-    if reference_k3_labels is not None:
-        for mc in big:
-            members = reference_k3_labels[labs == mc]
-            ref_major = pd.Series(members).value_counts().idxmax()
-            mapping[mc] = _REF_SPATIOTYPE_NAMES[int(ref_major)]
-    else:
-        # Fall back to size ordering, biggest = Immune-Modulated by convention
-        order = sorted(big, key=lambda x: -int(sizes[x]))
-        for mc, name in zip(order, ["Immune-Modulated", "Proliferation-Enriched", "Immune-Inactive"]):
-            mapping[mc] = name
-
-    for mc in small:
-        mapping[mc] = f"Metacluster (n={int(sizes[mc])})"
+    size_order = pd.Series(labs).value_counts().index.tolist()
+    name_order = [
+        "Immune-Modulated",
+        "Proliferation-Enriched",
+        "Immune-Inactive",
+        "Hedgehog-Active",
+        "Lipid-Metabolic",
+    ]
+    mapping = dict(zip(size_order, name_order))
 
     out = pd.DataFrame({
         "Metacluster": labs,
-        "SpatioType":  pd.Categorical(
+        "SpatioType": pd.Categorical(
             [mapping[m] for m in labs],
-            categories=SPATIOTYPE_LEVELS + sorted(
-                [v for v in set(mapping.values()) if v not in SPATIOTYPE_LEVELS]
-            ),
+            categories=SPATIOTYPE_LEVELS,
             ordered=False,
         ),
     })
     out.attrs["mapping"] = mapping
     out.attrs["linkage"] = Z
     return out
+
+
+# ---------------------------------------------------------------------------
+# Paper colour palette and cluster row ordering
+
+# JAMA palette ("default") used by ggsci::pal_jama in the paper's R notebook.
+JAMA_COLORS = [
+    "#374E55",  # dark navy   → Proliferation-Enriched
+    "#DF8F44",  # orange      → Immune-Modulated
+    "#00A1D5",  # light blue  → Immune-Inactive
+    "#B24745",  # dark red    → Lipid-Metabolic
+    "#79AF97",  # mint green  → Hedgehog-Active
+]
+
+SPATIOTYPE_PALETTE = {
+    "Proliferation-Enriched": JAMA_COLORS[0],
+    "Immune-Modulated":       JAMA_COLORS[1],
+    "Immune-Inactive":        JAMA_COLORS[2],
+    "Lipid-Metabolic":        JAMA_COLORS[3],
+    "Hedgehog-Active":        JAMA_COLORS[4],
+}
+
+# Cluster row order in the paper heatmap, frozen by hand.
+HEATMAP_ROW_ORDER = [
+    "Cluster 9", "Cluster 11", "Cluster 5",
+    "Cluster 10", "Cluster 1", "Cluster 3",
+    "Cluster 7", "Cluster 6", "Cluster 8",
+    "Cluster 2", "Cluster 4",
+]
 
 
 # ---------------------------------------------------------------------------
