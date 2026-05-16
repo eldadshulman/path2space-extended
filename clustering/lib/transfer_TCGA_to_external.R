@@ -1,92 +1,102 @@
 #!/usr/bin/env Rscript
 # Project the 11 TCGA ST-cluster labels onto an external cohort's per-domain
-# Seurat object via anchor-based integration (`FindTransferAnchors` +
-# `TransferData`). Adapted from
-# spatial_clusters/3_transfer_check_param_METABRIC.r — the parameter grid in
-# that script was pruned to one tuned set here.
+# Seurat object via anchor-based integration. Functions are factored out so
+# the tuned parameters live in one place; the notebook only sees the
+# high-level pipeline.
+#
+# Pipeline:
+#   reference.qs ----+
+#                    +--> transfer_cluster_labels()  --> per-domain predictions
+#   query.qs --------+
+#                                                     |
+#                                                     v
+#                              aggregate_to_patient_proportions()
+#                                                     |
+#                                                     v
+#                                  per-patient × per-cluster CSV
 #
 # Usage:
 #   Rscript transfer_TCGA_to_external.R \
-#       <reference.qs> <query.qs> <out_per_domain.csv> [<refdata_field>]
-#
-#   reference.qs : Seurat object with per-domain mapped TCGA clusters (label
-#                  column named in `refdata_field`, default "mapped_clusters").
-#   query.qs     : Seurat object for the external cohort, one "cell" per
-#                  SpaGCN domain, with `slide_name` and `proportion_of_spots`
-#                  in @meta.data.
-#   out_per_domain.csv : output CSV — one row per query domain with the
-#                  predicted TCGA cluster label.
+#       <reference.qs> <query.qs> <out_per_patient_csv> [<refdata_field>]
 
 suppressPackageStartupMessages({
   library(Seurat)
   library(qs)
   library(data.table)
+  library(dplyr)
+  library(tidyr)
 })
 
-args <- commandArgs(trailingOnly = TRUE)
-if (length(args) < 3) {
-  stop("Usage: Rscript transfer_TCGA_to_external.R <reference.qs> <query.qs> <out.csv> [refdata_field]")
+
+# ----- Step 1: Seurat anchor-based label transfer ----------------------------
+# All tuning parameters are kept here. They were chosen by the grid search
+# in spatial_clusters/3_transfer_check_param_METABRIC.r; the column-name
+# encoding in clusters_reviewer_3/analysis_row_1_data.rds pins them down
+# (k_anchor_40 / k_score_30 / l2_norm_FALSE / k_filter_50 / nn_method_hnsw /
+# k_weight_15 / reduction_pcaproject). dims and npcs are fixed in the
+# original loop body, not in the column name.
+transfer_cluster_labels <- function(reference, query, refdata_col = "mapped_clusters") {
+  anchors <- FindTransferAnchors(
+    reference = reference,
+    query     = query,
+    dims      = 1:20,
+    npcs      = 20,
+    reduction = "pcaproject",
+    k.anchor  = 40,
+    k.score   = 30,
+    k.filter  = 50,
+    l2.norm   = FALSE,
+    nn.method = "hnsw"
+  )
+  preds <- TransferData(
+    anchorset        = anchors,
+    refdata          = reference@meta.data[[refdata_col]],
+    weight.reduction = "pcaproject",
+    k.weight         = 15
+  )
+  data.table(
+    domain_id           = rownames(preds),
+    slide_name          = query@meta.data$slide_name,
+    proportion_of_spots = query@meta.data$proportion_of_spots,
+    predicted_cluster   = preds$predicted.id,
+    prediction_score    = preds$prediction.score.max
+  )
 }
-reference_qs <- args[1]
-query_qs     <- args[2]
-out_csv      <- args[3]
-refdata_col  <- ifelse(length(args) >= 4, args[4], "mapped_clusters")
 
-cat(sprintf("Loading reference: %s\n", reference_qs))
-target <- qread(reference_qs)
-cat(sprintf("Loading query:     %s\n", query_qs))
-query  <- qread(query_qs)
 
-# Winning parameter combination from the METABRIC grid search in
-# spatial_clusters/3_transfer_check_param_METABRIC.r.
-# Recovered from clusters_reviewer_3/analysis_row_1_data.rds, which stored
-# the top-ranked column name as
-#   pred_id_k_anchor_40_k_score_30_l2_norm_FALSE_k_filter_50_
-#   nn_method_hnsw_k_weight_15_reduction_pcaproject
-params <- list(
-  dims              = 1:20,    # fixed in source loop, not in column name
-  npcs              = 20,      # fixed in source loop, not in column name
-  reduction         = "pcaproject",
-  k.anchor          = 40,
-  k.score           = 30,
-  k.filter          = 50,
-  l2.norm           = FALSE,
-  nn.method         = "hnsw",
-  weight.reduction  = "pcaproject",
-  k.weight          = 15
-)
+# ----- Step 2: aggregate per-domain predictions to per-patient proportions ---
+aggregate_to_patient_proportions <- function(per_domain, n_clusters = 11) {
+  wide <- per_domain[, .(prop = sum(proportion_of_spots, na.rm = TRUE)),
+                     by = .(slide_name, predicted_cluster)] |>
+          tidyr::pivot_wider(names_from = predicted_cluster,
+                             values_from = prop,
+                             values_fill = 0)
+  cluster_cols <- paste0("Cluster_", seq_len(n_clusters))
+  for (c in cluster_cols) if (!c %in% colnames(wide)) wide[[c]] <- 0
+  wide <- wide[, c("slide_name", cluster_cols)]
+  wide
+}
 
-cat("Finding transfer anchors...\n")
-anchors <- FindTransferAnchors(
-  reference = target,
-  query     = query,
-  dims      = params$dims,
-  npcs      = params$npcs,
-  reduction = params$reduction,
-  k.anchor  = params$k.anchor,
-  k.score   = params$k.score,
-  k.filter  = params$k.filter,
-  l2.norm   = params$l2.norm,
-  nn.method = params$nn.method
-)
 
-cat("Transferring labels...\n")
-preds <- TransferData(
-  anchorset       = anchors,
-  refdata         = target@meta.data[[refdata_col]],
-  weight.reduction = params$weight.reduction,
-  k.weight         = params$k.weight
-)
+# ----- Main script -----------------------------------------------------------
+args <- commandArgs(trailingOnly = TRUE)
+if (length(args) >= 3) {
+  reference_qs <- args[1]
+  query_qs     <- args[2]
+  out_csv      <- args[3]
+  refdata_col  <- ifelse(length(args) >= 4, args[4], "mapped_clusters")
 
-# Build per-domain output: one row per query domain.
-md <- query@meta.data
-out <- data.table(
-  domain_id           = rownames(md),
-  slide_name          = md$slide_name,
-  proportion_of_spots = if ("proportion_of_spots" %in% colnames(md)) md$proportion_of_spots else NA_real_,
-  predicted_cluster   = preds$predicted.id,
-  prediction_score    = preds$prediction.score.max
-)
+  cat(sprintf("Loading reference: %s\n", reference_qs))
+  reference <- qread(reference_qs)
+  cat(sprintf("Loading query:     %s\n", query_qs))
+  query     <- qread(query_qs)
 
-fwrite(out, file = out_csv)
-cat(sprintf("Wrote %d rows to %s\n", nrow(out), out_csv))
+  cat("Running label transfer...\n")
+  per_domain <- transfer_cluster_labels(reference, query, refdata_col = refdata_col)
+
+  cat("Aggregating to per-patient × per-cluster proportions...\n")
+  per_patient <- aggregate_to_patient_proportions(per_domain)
+
+  fwrite(per_patient, out_csv)
+  cat(sprintf("Wrote %d patients to %s\n", nrow(per_patient), out_csv))
+}
