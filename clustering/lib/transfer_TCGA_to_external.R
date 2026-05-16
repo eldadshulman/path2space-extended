@@ -44,7 +44,8 @@ query  <- qread(query_qs)
 #   pred_id_k_anchor_40_k_score_30_l2_norm_FALSE_k_filter_50_
 #   nn_method_hnsw_k_weight_15_reduction_pcaproject
 params <- list(
-  dims              = 1:30,
+  dims              = 1:20,    # fixed in source loop, not in column name
+  npcs              = 20,      # fixed in source loop, not in column name
   reduction         = "pcaproject",
   k.anchor          = 40,
   k.score           = 30,
@@ -60,6 +61,7 @@ anchors <- FindTransferAnchors(
   reference = target,
   query     = query,
   dims      = params$dims,
+  npcs      = params$npcs,
   reduction = params$reduction,
   k.anchor  = params$k.anchor,
   k.score   = params$k.score,
