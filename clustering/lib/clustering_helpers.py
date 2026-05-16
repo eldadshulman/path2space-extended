@@ -67,9 +67,12 @@ def assign_spatiotypes(X: np.ndarray) -> pd.DataFrame:
     smallest are left generic (`Metacluster 1`, `Metacluster 2`) because their
     sample sizes are too small to analyse.
 
+    Size→name mapping matches the published reference
+    (`spatial_clusters/original_meta_tcga.csv`, 562 / 218 / 62 / ... / ...):
+
       biggest → Immune-Modulated
-      2nd     → Proliferation-Enriched
-      3rd     → Immune-Inactive
+      2nd     → Immune-Inactive
+      3rd     → Proliferation-Enriched
       4th     → Metacluster 1
       5th     → Metacluster 2
     """
@@ -79,8 +82,8 @@ def assign_spatiotypes(X: np.ndarray) -> pd.DataFrame:
     size_order = pd.Series(labs).value_counts().index.tolist()
     name_order = [
         "Immune-Modulated",
-        "Proliferation-Enriched",
         "Immune-Inactive",
+        "Proliferation-Enriched",
         "Metacluster 1",
         "Metacluster 2",
     ]
@@ -138,3 +141,70 @@ HEATMAP_ROW_ORDER = [
 def scale_features(X) -> np.ndarray:
     """z-score scaling (column-wise)."""
     return StandardScaler().fit_transform(np.asarray(X, dtype=float))
+
+
+# ---------------------------------------------------------------------------
+# SpatioType projection onto an external cohort (Aitchison-distance method).
+# Matches METABRIC/scr/spatiotypes_aitchison.r — the script the paper uses
+# to assign METABRIC patients to TCGA-derived SpatioTypes.
+
+def _closure(X: np.ndarray) -> np.ndarray:
+    X = np.asarray(X, dtype=float)
+    return X / X.sum(axis=-1, keepdims=True)
+
+
+def _clr(X: np.ndarray) -> np.ndarray:
+    """Centered log-ratio transform — row-wise."""
+    X = np.asarray(X, dtype=float)
+    log_X = np.log(X)
+    return log_X - log_X.mean(axis=-1, keepdims=True)
+
+
+def build_spatiotype_centroids(tcga_props: pd.DataFrame,
+                                spatiotype_col: str = "SpatioType",
+                                cluster_cols: Sequence[str] | None = None,
+                                pseudocount: float = 1e-6,
+                                keep: Sequence[str] = ("Immune-Modulated",
+                                                       "Immune-Inactive",
+                                                       "Proliferative")) -> pd.DataFrame:
+    """Geometric-mean (CLR) centroids of the reference SpatioTypes.
+
+    Mirrors `prepare_projection_model_aitchison()` in the R script:
+    apply a pseudocount, closure-normalize, take the per-SpatioType
+    mean in CLR space."""
+    if cluster_cols is None:
+        cluster_cols = [c for c in tcga_props.columns if c.startswith("Cluster")]
+    sub = tcga_props[tcga_props[spatiotype_col].isin(list(keep))].copy()
+    X = _clr(_closure(sub[cluster_cols].values + pseudocount))
+    sub = sub.assign(**{c: X[:, i] for i, c in enumerate(cluster_cols)})
+    cent = sub.groupby(spatiotype_col)[list(cluster_cols)].mean()
+    return cent.loc[[s for s in keep if s in cent.index]]
+
+
+def project_spatiotypes(query_props: pd.DataFrame,
+                         centroids: pd.DataFrame,
+                         cluster_cols: Sequence[str] | None = None,
+                         pseudocount: float = 1e-6) -> pd.DataFrame:
+    """Assign each query patient to the nearest TCGA centroid in Aitchison
+    (CLR) space. Returns (SpatioType, confidence)."""
+    cent_cols = list(centroids.columns)
+    if cluster_cols is None:
+        # Tolerate "Cluster 1" vs "Cluster_1" by string matching.
+        cluster_cols = []
+        for cc in cent_cols:
+            matches = [c for c in query_props.columns if c.replace("_", " ") == cc.replace("_", " ")]
+            if matches:
+                cluster_cols.append(matches[0])
+        if len(cluster_cols) != len(cent_cols):
+            raise ValueError("Could not align query cluster columns to centroid columns.")
+    Q = _clr(_closure(query_props[cluster_cols].values + pseudocount))
+    C = centroids.values  # already in CLR space
+    # Pairwise Euclidean distance Q × C
+    dists = np.linalg.norm(Q[:, None, :] - C[None, :, :], axis=-1)
+    nearest = dists.argmin(axis=1)
+    sorted_d = np.sort(dists, axis=1)
+    confidence = (sorted_d[:, 1] - sorted_d[:, 0]) / sorted_d[:, 1]
+    return pd.DataFrame({
+        "SpatioType":  centroids.index.values[nearest],
+        "confidence":  confidence,
+    }, index=query_props.index)
