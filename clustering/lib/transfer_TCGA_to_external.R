@@ -37,17 +37,22 @@ target <- qread(reference_qs)
 cat(sprintf("Loading query:     %s\n", query_qs))
 query  <- qread(query_qs)
 
-# Tuned-default parameters (one of the better-performing param combinations from
-# the grid search in 3_transfer_check_param_METABRIC.r — change to match yours).
+# Winning parameter combination from the METABRIC grid search in
+# spatial_clusters/3_transfer_check_param_METABRIC.r.
+# Recovered from clusters_reviewer_3/analysis_row_1_data.rds, which stored
+# the top-ranked column name as
+#   pred_id_k_anchor_40_k_score_30_l2_norm_FALSE_k_filter_50_
+#   nn_method_hnsw_k_weight_15_reduction_pcaproject
 params <- list(
   dims              = 1:30,
   reduction         = "pcaproject",
-  k.anchor          = 5,
+  k.anchor          = 40,
   k.score           = 30,
-  k.filter          = 200,
-  l2.norm           = TRUE,
+  k.filter          = 50,
+  l2.norm           = FALSE,
+  nn.method         = "hnsw",
   weight.reduction  = "pcaproject",
-  k.weight          = 50
+  k.weight          = 15
 )
 
 cat("Finding transfer anchors...\n")
@@ -59,7 +64,8 @@ anchors <- FindTransferAnchors(
   k.anchor  = params$k.anchor,
   k.score   = params$k.score,
   k.filter  = params$k.filter,
-  l2.norm   = params$l2.norm
+  l2.norm   = params$l2.norm,
+  nn.method = params$nn.method
 )
 
 cat("Transferring labels...\n")
