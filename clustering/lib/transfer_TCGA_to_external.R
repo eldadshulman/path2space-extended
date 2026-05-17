@@ -1,8 +1,6 @@
 #!/usr/bin/env Rscript
 # Project the 11 TCGA ST-cluster labels onto an external cohort's per-domain
-# Seurat object via anchor-based integration. Functions are factored out so
-# the tuned parameters live in one place; the notebook only sees the
-# high-level pipeline.
+# Seurat object via anchor-based integration.
 #
 # Pipeline:
 #   reference.qs ----+
@@ -15,9 +13,14 @@
 #                                                     v
 #                                  per-patient × per-cluster CSV
 #
+# Per-cohort tuned parameter presets are kept in TRANSFER_PRESETS below.
+# They were chosen by the grid searches in
+# spatial_clusters/3_transfer_check_param_METABRIC.r (for METABRIC) and
+# spatial_clusters/2_Ronai_Seurat_winningc.r (for Cedars-Sinai / Ronai_BRCA).
+#
 # Usage:
-#   Rscript transfer_TCGA_to_external.R \
-#       <reference.qs> <query.qs> <out_per_patient_csv> [<refdata_field>]
+#   Rscript transfer_TCGA_to_external.R <reference.qs> <query.qs> <out_csv> [cohort]
+#     cohort: METABRIC (default) or Cedars_Sinai
 
 suppressPackageStartupMessages({
   library(Seurat)
@@ -28,31 +31,46 @@ suppressPackageStartupMessages({
 })
 
 
+# ----- Cohort-specific tuned parameter presets -------------------------------
+TRANSFER_PRESETS <- list(
+  # Recovered from clusters_reviewer_3/analysis_row_1_data.rds; the dims/npcs
+  # values are fixed in the source loop, not the column-name encoding.
+  METABRIC = list(
+    dims      = 1:20,  npcs     = 20,    reduction = "pcaproject",
+    k.anchor  = 40,    k.score  = 30,    k.filter  = 50,
+    l2.norm   = FALSE, nn.method = "hnsw",
+    weight.reduction = "pcaproject", k.weight = 15
+  ),
+  # Hardcoded params at the top of spatial_clusters/2_Ronai_Seurat_winningc.r.
+  Cedars_Sinai = list(
+    dims      = 1:20,  npcs     = 20,    reduction = "pcaproject",
+    k.anchor  = 195,   k.score  = 200,   k.filter  = 50,
+    l2.norm   = TRUE,  nn.method = "rann",
+    weight.reduction = "pcaproject", k.weight = 15
+  )
+)
+
+
 # ----- Step 1: Seurat anchor-based label transfer ----------------------------
-# All tuning parameters are kept here. They were chosen by the grid search
-# in spatial_clusters/3_transfer_check_param_METABRIC.r; the column-name
-# encoding in clusters_reviewer_3/analysis_row_1_data.rds pins them down
-# (k_anchor_40 / k_score_30 / l2_norm_FALSE / k_filter_50 / nn_method_hnsw /
-# k_weight_15 / reduction_pcaproject). dims and npcs are fixed in the
-# original loop body, not in the column name.
-transfer_cluster_labels <- function(reference, query, refdata_col = "mapped_clusters") {
+transfer_cluster_labels <- function(reference, query, params,
+                                    refdata_col = "mapped_clusters") {
   anchors <- FindTransferAnchors(
     reference = reference,
     query     = query,
-    dims      = 1:20,
-    npcs      = 20,
-    reduction = "pcaproject",
-    k.anchor  = 40,
-    k.score   = 30,
-    k.filter  = 50,
-    l2.norm   = FALSE,
-    nn.method = "hnsw"
+    dims      = params$dims,
+    npcs      = params$npcs,
+    reduction = params$reduction,
+    k.anchor  = params$k.anchor,
+    k.score   = params$k.score,
+    k.filter  = params$k.filter,
+    l2.norm   = params$l2.norm,
+    nn.method = params$nn.method
   )
   preds <- TransferData(
     anchorset        = anchors,
     refdata          = reference@meta.data[[refdata_col]],
-    weight.reduction = "pcaproject",
-    k.weight         = 15
+    weight.reduction = params$weight.reduction,
+    k.weight         = params$k.weight
   )
   data.table(
     domain_id           = rownames(preds),
@@ -84,7 +102,14 @@ if (length(args) >= 3) {
   reference_qs <- args[1]
   query_qs     <- args[2]
   out_csv      <- args[3]
-  refdata_col  <- ifelse(length(args) >= 4, args[4], "mapped_clusters")
+  cohort       <- ifelse(length(args) >= 4, args[4], "METABRIC")
+  refdata_col  <- ifelse(length(args) >= 5, args[5], "mapped_clusters")
+
+  if (!cohort %in% names(TRANSFER_PRESETS))
+    stop(sprintf("Unknown cohort '%s'. Known: %s", cohort,
+                 paste(names(TRANSFER_PRESETS), collapse = ", ")))
+  params <- TRANSFER_PRESETS[[cohort]]
+  cat(sprintf("Cohort: %s\n", cohort))
 
   cat(sprintf("Loading reference: %s\n", reference_qs))
   reference <- qread(reference_qs)
@@ -92,7 +117,8 @@ if (length(args) >= 3) {
   query     <- qread(query_qs)
 
   cat("Running label transfer...\n")
-  per_domain <- transfer_cluster_labels(reference, query, refdata_col = refdata_col)
+  per_domain <- transfer_cluster_labels(reference, query, params,
+                                        refdata_col = refdata_col)
 
   cat("Aggregating to per-patient × per-cluster proportions...\n")
   per_patient <- aggregate_to_patient_proportions(per_domain)
