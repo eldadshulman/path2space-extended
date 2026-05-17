@@ -47,6 +47,24 @@ TRANSFER_PRESETS <- list(
     k.anchor  = 195,   k.score  = 200,   k.filter  = 50,
     l2.norm   = TRUE,  nn.method = "rann",
     weight.reduction = "pcaproject", k.weight = 15
+  ),
+  # Column-name encoded in PBCP/scr/get_aucs.ipynb:
+  #   pred_id_k_anchor_75_k_score_30_l2_norm_TRUE_k_filter_200_
+  #   nn_method_rann_k_weight_115_reduction_pcaproject
+  PBCP_Trastuzumab = list(
+    dims      = 1:20,  npcs     = 20,    reduction = "pcaproject",
+    k.anchor  = 75,    k.score  = 30,    k.filter  = 200,
+    l2.norm   = TRUE,  nn.method = "rann",
+    weight.reduction = "pcaproject", k.weight = 115
+  ),
+  # Column-name encoded in PBCP/scr/get_aucs.ipynb:
+  #   pred_id_k_anchor_145_k_score_135_l2_norm_FALSE_k_filter_100_
+  #   nn_method_hnsw_k_weight_55_reduction_pcaproject
+  PBCP_Chemo = list(
+    dims      = 1:20,  npcs     = 20,    reduction = "pcaproject",
+    k.anchor  = 145,   k.score  = 135,   k.filter  = 100,
+    l2.norm   = FALSE, nn.method = "hnsw",
+    weight.reduction = "pcaproject", k.weight = 55
   )
 )
 
