@@ -31,7 +31,11 @@ and selected by name from the notebook (`METABRIC`, `Cedars_Sinai`,
 | METABRIC | External validation | 141 | 04, 05 |
 | Cedars-Sinai (Ronai_BRCA) | Trastuzumab response | 30 | 06 |
 | PBCP — trastuzumab arm | Trastuzumab response | 18 | 06 |
+| TransNEO — trastuzumab arm | Trastuzumab response | 61 | 06 |
+| IMPRESS — trastuzumab arm | Trastuzumab response | 62 | 06 |
 | PBCP — chemotherapy arm | Chemotherapy response | 19 | 07 |
+| TransNEO — chemotherapy arm | Chemotherapy response | 93 | 07 |
+| IMPRESS — chemotherapy arm | Chemotherapy response | 64 | 07 |
 
 ## Data
 

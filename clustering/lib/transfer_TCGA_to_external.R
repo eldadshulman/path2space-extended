@@ -65,6 +65,43 @@ TRANSFER_PRESETS <- list(
     k.anchor  = 145,   k.score  = 135,   k.filter  = 100,
     l2.norm   = FALSE, nn.method = "hnsw",
     weight.reduction = "pcaproject", k.weight = 55
+  ),
+  # Column-name encoded in scr/new_tras_clusters/auc_final_chemo_v3.py:
+  #   pred_id_k_anchor_20_k_score_10_l2_norm_TRUE_k_filter_50_
+  #   nn_method_rann_k_weight_25_reduction_pcaproject
+  TransNEO_Chemo = list(
+    dims      = 1:20,  npcs     = 20,    reduction = "pcaproject",
+    k.anchor  = 20,    k.score  = 10,    k.filter  = 50,
+    l2.norm   = TRUE,  nn.method = "rann",
+    weight.reduction = "pcaproject", k.weight = 25
+  ),
+  # Column-name encoded in scr/new_tras_clusters/auc_final_chemo_v3.py:
+  #   pred_id_k_anchor_3_k_score_2_l2_norm_TRUE_k_filter_200_
+  #   nn_method_hnsw_k_weight_5_reduction_pcaproject
+  IMPRESS_Chemo = list(
+    dims      = 1:20,  npcs     = 20,    reduction = "pcaproject",
+    k.anchor  = 3,     k.score  = 2,     k.filter  = 200,
+    l2.norm   = TRUE,  nn.method = "hnsw",
+    weight.reduction = "pcaproject", k.weight = 5
+  ),
+  # Column-name encoded in scr/new_tras_clusters/auc_final_trastuzumab_new.py:
+  #   pred_id_k_anchor_120_k_score_200_l2_norm_FALSE_k_filter_NA_
+  #   nn_method_annoy_k_weight_15_reduction_pcaproject
+  # NA in k_filter means anchor filtering disabled (k.filter = NA).
+  TransNEO_Trastuzumab = list(
+    dims      = 1:20,  npcs     = 20,    reduction = "pcaproject",
+    k.anchor  = 120,   k.score  = 200,   k.filter  = NA,
+    l2.norm   = FALSE, nn.method = "annoy",
+    weight.reduction = "pcaproject", k.weight = 15
+  ),
+  # Column-name encoded in scr/new_tras_clusters/auc_final_trastuzumab_new.py:
+  #   pred_id_k_anchor_50_k_score_10_l2_norm_TRUE_k_filter_100_
+  #   nn_method_annoy_k_weight_20_reduction_pcaproject
+  IMPRESS_Trastuzumab = list(
+    dims      = 1:20,  npcs     = 20,    reduction = "pcaproject",
+    k.anchor  = 50,    k.score  = 10,    k.filter  = 100,
+    l2.norm   = TRUE,  nn.method = "annoy",
+    weight.reduction = "pcaproject", k.weight = 20
   )
 )
 
