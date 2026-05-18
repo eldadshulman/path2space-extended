@@ -127,10 +127,19 @@ transfer_cluster_labels <- function(reference, query, params,
     weight.reduction = params$weight.reduction,
     k.weight         = params$k.weight
   )
+  # Some query Seurat objects (e.g. PBCP, TransNEO, IMPRESS) don't carry the
+  # per-domain `proportion_of_spots` in @meta.data. In that case give each
+  # domain equal weight within its slide.
+  md <- query@meta.data
+  if (!"proportion_of_spots" %in% colnames(md)) {
+    md$proportion_of_spots <- ave(rep(1, nrow(md)), md$slide_name,
+                                  FUN = function(x) 1 / length(x))
+  }
+
   data.table(
     domain_id           = rownames(preds),
-    slide_name          = query@meta.data$slide_name,
-    proportion_of_spots = query@meta.data$proportion_of_spots,
+    slide_name          = md$slide_name,
+    proportion_of_spots = md$proportion_of_spots,
     predicted_cluster   = preds$predicted.id,
     prediction_score    = preds$prediction.score.max
   )
