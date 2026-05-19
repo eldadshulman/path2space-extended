@@ -5,7 +5,8 @@ Extended Path2Space codebase — analysis and downstream methods beyond the comp
 ## Components
 
 - [`qc/`](./qc/) — post-QC ST sample metadata reproducing Table S1 of Shulman et al., *Cell* 2026, with paper-defined per-sample QC metrics as columns. Covers 4 ST cohorts (TNBC/Bassiouni, HEST, Martinez, HTAN).
-- [`clustering/`](./clustering/) — spatial clustering pipeline (SpaGCN per slide → Seurat cross-patient → SpatioType). Currently TCGA; future cohorts: METABRIC, clinical cohorts.
+- [`clustering/`](./clustering/) — spatial clustering pipeline (SpaGCN per slide → Seurat cross-patient → SpatioType). TCGA training + METABRIC validation; per-cohort cluster-projection outputs for Cedars-Sinai, PBCP, TransNEO and IMPRESS.
+- [`response_prediction/`](./response_prediction/) — pCR-prediction models trained on the ST cluster compositions. Two notebooks (chemotherapy and trastuzumab), the fitted joblib models, per-slide pCR labels, ERBB2-SPAND scores, and the cross-cohort AUC table.
 
 Future components will be added as additional sibling folders (e.g., `deconvolution/`, `spand/`).
 
