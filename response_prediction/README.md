@@ -39,11 +39,11 @@ The notebooks read the per-cohort per-patient cluster proportion CSVs from
 |---|---|---|---|---|---|
 | **Chemotherapy** | | | | | |
 | TransNEO (5-fold CV) | 93 | 0.226 | 0.753 | — | — |
-| IMPRESS | 64 | 0.422 | 0.741 | — | — |
+| IMPRESS | 64 | 0.422 | 0.749 | — | — |
 | PBCP | 19 | 0.263 | 0.886 | — | — |
 | **Trastuzumab** | | | | | |
 | TransNEO (5-fold CV) | 61 | 0.311 | 0.867 | 0.778 | 0.900 |
-| IMPRESS | 62 | 0.613 | 0.745 | 0.274* | 0.382 |
+| IMPRESS | 62 | 0.613 | 0.743 | 0.274* | 0.368 |
 | PBCP | 18 | 0.611 | 0.896 | — | — |
 | Cedars-Sinai | 30 | 0.867 | 0.683 | — | — |
 
