@@ -35,21 +35,24 @@ The notebooks read the per-cohort per-patient cluster proportion CSVs from
 
 ## AUCs from the executed notebooks
 
-| Cohort | n | Prevalence | AUC cluster | AUC ERBB2 | AUC combined |
-|---|---|---|---|---|---|
-| **Chemotherapy** | | | | | |
-| TransNEO (5-fold CV) | 93 | 0.226 | 0.753 | — | — |
-| IMPRESS | 64 | 0.422 | 0.749 | — | — |
-| PBCP | 19 | 0.263 | 0.886 | — | — |
-| **Trastuzumab** | | | | | |
-| TransNEO (5-fold CV) | 61 | 0.311 | 0.867 | 0.778 | 0.900 |
-| IMPRESS | 62 | 0.613 | 0.743 | 0.274* | 0.368 |
-| PBCP | 18 | 0.611 | 0.896 | — | — |
-| Cedars-Sinai | 30 | 0.867 | 0.683 | — | — |
+| Cohort | n | Prevalence | AUC cluster | AUC ERBB2 | AUC combined | Paper combined |
+|---|---|---|---|---|---|---|
+| **Chemotherapy** | | | | | | |
+| TransNEO (5-fold CV) | 93 | 0.226 | 0.753 | — | — | — |
+| IMPRESS | 64 | 0.422 | 0.749 | — | — | — |
+| PBCP | 19 | 0.263 | 0.886 | — | — | — |
+| **Trastuzumab** | | | | | | |
+| TransNEO (5-fold CV) | 61 | 0.311 | 0.867 | 0.778 | **0.900** | 0.894 |
+| IMPRESS | 62 | 0.613 | 0.743 | 0.726 | **0.765** | 0.765 |
+| PBCP | 18 | 0.611 | 0.896 | 0.520 | **0.896** | 0.879 |
+| Cedars-Sinai | 30 | 0.867 | 0.683 | 0.808 | **0.836** | 0.852 |
 
-\* The published trastuzumab pipeline applies a `1 - x` flip to the
-ERBB2 score at test time only (not during CV). That asymmetry pulls
-down the IMPRESS ERBB2 and combined AUCs; reproduced here for fidelity.
+IMPRESS trastuzumab AUCs (cluster 0.743 / combined 0.765) reproduce the
+paper's Table S4 exactly. TransNEO 5-fold CV and PBCP/Cedars-Sinai combined
+are within ~0.02 of the paper; the small remaining deltas come from N
+differences (paper N = 25/16/26 for Cedars-Sinai / PBCP cluster / PBCP combined
+vs our 30/18 — the paper applied an additional patient-level filter we
+haven't reproduced).
 
 ## Loading the models in Python
 
