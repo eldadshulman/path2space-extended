@@ -14,17 +14,22 @@ diagnostic slides (PanopTILs) and on two annotated Visium slides (HEST).
 
 ## Notebooks
 
-| Notebook | Figure | What it does |
-|---|---|---|
-| `01_panoptils_deconvolution.ipynb` | 4C, S5B | PanopTILs (TCGA): 5-fold CV of the supervised model + SpaCET on inferred ST; per-slide PCC and AUC. |
-| `02_hest_deconvolution.ipynb` | 4D | Annotated HEST: AUC of SpaCET (measured), Path2Space (inferred), SpaCET (inferred) and HoVer-Net. |
+| Notebook | Language | Figure | What it does |
+|---|---|---|---|
+| `01_panoptils_deconvolution.ipynb` | Python | 4C, S5B | PanopTILs (TCGA): 5-fold CV of the supervised model + SpaCET on inferred ST; per-slide PCC and AUC. |
+| `02_hest_deconvolution.ipynb` | Python | 4D | Annotated HEST: AUC of SpaCET (measured), Path2Space (inferred), SpaCET (inferred) and HoVer-Net. |
+| `03_spacet_deconvolution.ipynb` | R | — | Upstream step: runs SpaCET on Path2Space inferred / measured expression to produce the per-spot cell-type proportion matrices. |
 
-Both notebooks **load the five fold-models and predict live** — no retraining.
+The Python notebooks **load the five fold-models and predict live** — no retraining.
+The R notebook runs SpaCET (≈ 1 min per slide); it needs the `SpaCET` and `qs`
+R packages.
 
 ## Layout
 
 ```
 cell_type_deconvolution/
+├── lib/
+│   └── new_SpaCET.R              # SpaCET.deconvolution_new() — deconvolves a gene-by-spot matrix
 ├── models/
 │   ├── deconv_fold_{0-4}.joblib   # MinMaxScaler -> MLPRegressor pipelines (5-fold CV)
 │   └── best_feat_fold_{0-4}.txt   # the 1,000 genes selected in each fold
@@ -34,10 +39,14 @@ cell_type_deconvolution/
 │   ├── panoptils_spacet_inferred.csv      # SpaCET on inferred ST (35 fine cell types)
 │   ├── hest_expression.csv.gz             # Path2Space-inferred expression for HEST spots
 │   ├── hest_method_predictions.csv        # per-spot scores + labels: SpaCET (measured), HoVer-Net
-│   └── hest_spacet_inferred_TENX{13,39}.csv  # SpaCET on inferred ST, per HEST slide
+│   ├── hest_spacet_inferred_TENX{13,39}.csv  # SpaCET on inferred ST, per HEST slide
+│   └── spacet/                            # qs inputs/outputs for the R notebook
+│       ├── {panoptils,hest_TENX13,hest_TENX39}_*_expression.qs   # gene-by-spot inputs
+│       └── {panoptils_spacet_proportions,hest_*_spacet_*}.qs     # SpaCET proportion outputs
 └── notebooks/
     ├── 01_panoptils_deconvolution.ipynb
-    └── 02_hest_deconvolution.ipynb
+    ├── 02_hest_deconvolution.ipynb
+    └── 03_spacet_deconvolution.ipynb
 ```
 
 ## The model
@@ -49,6 +58,15 @@ genes by ANOVA F-statistic (`SelectKBest`, `f_regression`) within the fold, with
 three outputs (TILs / Stromal / Epithelial fractions). Folds keep all ROIs from
 a patient together to avoid leakage. For TCGA the fold model predicts on its
 held-out ROIs (5-fold CV); for HEST the five models are averaged.
+
+## SpaCET deconvolution (`03`)
+
+`03_spacet_deconvolution.ipynb` runs SpaCET on the Path2Space expression and
+writes the per-spot cell-type proportion matrices to `data/spacet/`. Inputs and
+outputs are stored as `.qs` (compact R serialization): inferred expression in
+log10 space (the notebook applies `10^x − 1`), measured expression as raw
+counts. SpaCET returns 35 fine cell types, which the Python notebooks collapse
+to cancer / lymphocyte / stromal.
 
 ## Outputs
 
