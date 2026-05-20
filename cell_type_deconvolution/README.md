@@ -50,7 +50,7 @@ three outputs (TILs / Stromal / Epithelial fractions). Folds keep all ROIs from
 a patient together to avoid leakage. For TCGA the fold model predicts on its
 held-out ROIs (5-fold CV); for HEST the five models are averaged.
 
-## Reproduced values
+## Outputs
 
 **PanopTILs — Figure S5B / 4C** (per-slide mean over the 20 slides with ≥20 ROIs):
 
@@ -60,7 +60,7 @@ held-out ROIs (5-fold CV); for HEST the five models are averaged.
 | Lympho. | 0.57 | 0.79 | 0.79 | 0.86 |
 | Stromal | 0.40 | 0.85 | 0.59 | 0.84 |
 
-**HEST — Figure 4D** (AUC, mean over the two slides; reproduces the paper exactly):
+**HEST — Figure 4D** (AUC, mean over the two slides):
 
 | Method | Cancer | Stromal | TILs |
 |---|---|---|---|
