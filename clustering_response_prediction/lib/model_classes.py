@@ -55,12 +55,12 @@ class FeatureAligner(BaseEstimator, TransformerMixin):
 
 
 class CombinedModel(BaseEstimator, ClassifierMixin):
-    """Mean of the cluster-based ensemble proba and the MinMax-scaled ERBB2 spand.
+    """Mean of the cluster-based ensemble proba and the MinMax-scaled HER2 SPAND.
 
     Used by the trastuzumab notebook to combine spatial-cluster signal with
-    ERBB2 heterogeneity. The ERBB2 input is scaled once per fold during training
-    (the list of fitted MinMaxScalers is passed in) and the test-time scaled
-    values are averaged across folds.
+    HER2 heterogeneity. The HER2 SPAND input is scaled once per fold during
+    training (the list of fitted MinMaxScalers is passed in) and the test-time
+    scaled values are averaged across folds.
     """
 
     def __init__(self, ensemble_pipeline, scalers_het, spand_feature="her2_spand"):

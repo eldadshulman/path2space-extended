@@ -1,10 +1,10 @@
-# response_prediction — pCR prediction from spatial-cluster composition
+# clustering_response_prediction — pCR prediction from spatial-cluster composition
 
 Two notebooks that train and evaluate the published pCR-prediction models from
 Shulman et al., *Cell* 2026:
 
 - **Chemotherapy** model — trained on TransNEO chemo, evaluated on IMPRESS chemo and PBCP chemo.
-- **Trastuzumab** model — trained on TransNEO trastuzumab, evaluated on IMPRESS, PBCP and Cedars-Sinai (Ronai_BRCA). The trastuzumab pipeline additionally combines the cluster-based predictor with the ERBB2 SPAND heterogeneity score.
+- **Trastuzumab** model — trained on TransNEO trastuzumab, evaluated on IMPRESS, PBCP and Cedars-Sinai (Ronai_BRCA). The trastuzumab pipeline additionally combines the cluster-based predictor with the HER2 SPAND heterogeneity score.
 
 Per-fold pipeline: `MinMaxScaler → SelectKBest(f_classif, k='all') → LogisticRegression(L1, C=100, class_weight='balanced')`, wrapped in a 5-fold `StratifiedKFold` and averaged into an `EnsembleModel`. Adapted from
 `scr/new_tras_clusters/auc_final_chemo_v3.py` and
@@ -13,16 +13,16 @@ Per-fold pipeline: `MinMaxScaler → SelectKBest(f_classif, k='all') → Logisti
 ## Layout
 
 ```
-response_prediction/
+clustering_response_prediction/
 ├── lib/
 │   └── model_classes.py   # EnsembleModel, FeatureAligner, CombinedModel
 ├── data/
 │   ├── response_labels.csv     # slide_name → Response (pCR=1, non-pCR=0) + Cohort
-│   └── erbb2_spand_scores.csv  # per-slide ERBB2 SPAND heterogeneity score (sign-flipped)
+│   └── her2_spand_scores.csv  # per-slide HER2 SPAND heterogeneity score (sign-flipped)
 ├── models/
 │   ├── chemo_ensemble.joblib              # 5-fold logistic ensemble (chemo)
 │   ├── trastuzumab_cluster_ensemble.joblib # 5-fold logistic ensemble (trastuzumab, clusters only)
-│   └── trastuzumab_combined.joblib         # CombinedModel: cluster + ERBB2-SPAND
+│   └── trastuzumab_combined.joblib         # CombinedModel: cluster + HER2-SPAND
 └── notebooks/
     ├── 01_chemo_response_prediction.ipynb
     └── 02_trastuzumab_response_prediction.ipynb
@@ -35,17 +35,17 @@ The notebooks read the per-cohort per-patient cluster proportion CSVs from
 
 ## AUCs from the executed notebooks
 
-| Cohort | n | Prevalence | AUC cluster | AUC ERBB2 | AUC combined | Paper combined |
-|---|---|---|---|---|---|---|
-| **Chemotherapy** | | | | | | |
-| TransNEO (5-fold CV) | 93 | 0.226 | 0.753 | — | — | — |
-| IMPRESS | 64 | 0.422 | 0.749 | — | — | — |
-| PBCP | 19 | 0.263 | 0.886 | — | — | — |
-| **Trastuzumab** | | | | | | |
-| TransNEO (5-fold CV) | 61 | 0.311 | 0.867 | 0.778 | **0.900** | 0.894 |
-| IMPRESS | 62 | 0.613 | 0.743 | 0.726 | **0.765** | 0.765 |
-| PBCP | 18 | 0.611 | 0.896 | 0.520 | **0.896** | 0.879 |
-| Cedars-Sinai | 30 | 0.867 | 0.683 | 0.808 | **0.836** | 0.852 |
+| Cohort | n | Prevalence | AUC cluster | AUC combined | Paper combined |
+|---|---|---|---|---|---|
+| **Chemotherapy** | | | | | |
+| TransNEO (5-fold CV) | 93 | 0.226 | 0.753 | — | — |
+| IMPRESS | 64 | 0.422 | 0.749 | — | — |
+| PBCP | 19 | 0.263 | 0.886 | — | — |
+| **Trastuzumab** | | | | | |
+| TransNEO (5-fold CV) | 61 | 0.311 | 0.867 | **0.900** | 0.894 |
+| IMPRESS | 62 | 0.613 | 0.743 | **0.765** | 0.765 |
+| PBCP | 18 | 0.611 | 0.896 | **0.896** | 0.879 |
+| Cedars-Sinai | 30 | 0.867 | 0.683 | **0.837** | 0.852 |
 
 IMPRESS trastuzumab AUCs (cluster 0.743 / combined 0.765) reproduce the
 paper's Table S4 exactly. TransNEO 5-fold CV and PBCP/Cedars-Sinai combined
