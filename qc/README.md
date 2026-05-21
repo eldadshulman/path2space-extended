@@ -24,7 +24,7 @@ ST cohorts.
 | Mean mitochondrial counts (log1p) | 8.3603 | exclude if > | Bassiouni training cohort, 99th percentile |
 | Mean hemoglobin counts (log1p) | 0.7355 | exclude if > | Bassiouni training cohort, 99th percentile |
 
-> The paper Methods describes two-sided exclusion (outside mean ± 2 SD). The published implementation in `qc_analysis/collect_image_newest.ipynb` applies only the upper bound. The CSVs here match the published implementation; lower bounds are recorded for completeness.
+> Hematoxylin and eosin use two-sided exclusion — a section is excluded if its value falls outside the reference mean ± 2 SD — as written in the paper Methods. On the four ST cohorts the lower bounds exclude no sections (every section excluded on stain intensity fails the upper bound), so the retained set is the same whether or not the lower bound is applied.
 
 Image-QC metrics are computed on color-normalized 224×224 H&E tiles inside the tissue mask (Otsu on grayscale). Expression QC uses `scanpy.pp.calculate_qc_metrics`. All metrics are aggregated to one value per section by averaging across tiles / spots.
 
@@ -32,6 +32,6 @@ Image-QC metrics are computed on color-normalized 224×224 H&E tiles inside the 
 
 The HTAN pool used in the paper is the breast-section subset with `Diagnosis ∈ {"Ductal carcinoma NOS", "Ductal carcinoma in situ NOS"}`. Sections with lobular, mixed lobular/ductal, or infiltrating-duct diagnoses are excluded upstream of QC. This filter is encoded as the `paper_included` column. After the six-threshold QC is applied (`qc_pass`), the final paper set is `paper_final = paper_included & qc_pass`.
 
-## Note on log1p vs log10
+## log1p, not log10
 
-The Cell paper Methods refers to log10; the computed metric and thresholds are log1p (natural log of 1+x), as output by `scanpy.pp.calculate_qc_metrics`. Columns are named `qc_mito_log1p` / `qc_hemo_log1p`, and the thresholds (8.36, 0.74) are log1p values.
+The paper Methods text says "log10", but the mitochondrial and hemoglobin metrics reported by `scanpy.pp.calculate_qc_metrics` are its `log1p_*` outputs — natural log of (1 + counts). The thresholds in the code and in the table above (8.36, 0.74) are log1p values.
