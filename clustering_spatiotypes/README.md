@@ -21,6 +21,7 @@ proportion CSVs) so they're easy to download without pulling the 150 MB of
 | 3. SpatioType assignment | `notebooks/03_spatiotype_assignment.ipynb` | Python | Hierarchical clustering of TCGA patients into 5 metaclusters → 3 named SpatioTypes + 2 small. |
 | 4. Project ST clusters → METABRIC | `notebooks/04_project_clusters_to_METABRIC.ipynb` | Python | Figure-S7A heatmap. |
 | 5. Project SpatioTypes → METABRIC | `notebooks/05_project_spatiotypes_to_METABRIC.ipynb` | Python | Figure-S7B–D KM + Cox + LRT. |
+| 6. SpatioType survival | `notebooks/06_spatiotype_survival.ipynb` | R | Kaplan-Meier survival by SpatioType — TCGA (all patients + by clinical subtype) and METABRIC (overall, by subtype, NPI-stratified, plus the SpatioType heatmap). |
 
 ## Cluster-projection outputs for the treatment-response cohorts
 
@@ -50,6 +51,8 @@ nb 06 (trastuzumab) and nb 07 (chemotherapy). Shipped here as plain CSVs:
 | `metabric_spatiotypes.csv` | nb 04 / 05 — METABRIC projected SpatioType labels |
 | `metabric_survival.csv` | nb 05 — METABRIC survival + clinical |
 | `best_clust.csv` | nb 04 — per-domain METABRIC cluster predictions |
+| `xy_df.RDS`, `feature_df.RDS` | nb 06 — TCGA cluster abundances, survival and feature profiles |
+| `km_plot_data.rds`, `km_subtype_data.rds`, `npi_km_data.rds`, `heatmap_data.rds` | nb 06 — METABRIC survival + heatmap inputs |
 
 The 533 MB TCGA reference Seurat `.qs` is held on Biowulf and not committed.
 
