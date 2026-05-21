@@ -1,236 +1,236 @@
 ,y_test,y_pred_proba,method,Cohort
 BC_00000_470650,0.0,0.2850875398944468,spatial,TransNEO (Cross-validation)
-BC_00006_470656,0.0,0.09994817016951263,spatial,TransNEO (Cross-validation)
-BC_00021_471096,1.0,0.9438116656380241,spatial,TransNEO (Cross-validation)
+BC_00006_470656,0.0,0.0999481701695126,spatial,TransNEO (Cross-validation)
+BC_00021_471096,1.0,0.943811665638024,spatial,TransNEO (Cross-validation)
 BC_00056_473356,1.0,0.9068581959634786,spatial,TransNEO (Cross-validation)
 BC_00087_631901,1.0,0.760250772517666,spatial,TransNEO (Cross-validation)
-BC_00090_631907,0.0,0.20702300361554507,spatial,TransNEO (Cross-validation)
-BC_00111_634849,0.0,0.002166155967759919,spatial,TransNEO (Cross-validation)
-BC_00115_634858,0.0,0.11014241806876104,spatial,TransNEO (Cross-validation)
-BC_00116_634865,1.0,0.49923319956367984,spatial,TransNEO (Cross-validation)
+BC_00090_631907,0.0,0.207023003615545,spatial,TransNEO (Cross-validation)
+BC_00111_634849,0.0,0.0021661559677599,spatial,TransNEO (Cross-validation)
+BC_00115_634858,0.0,0.110142418068761,spatial,TransNEO (Cross-validation)
+BC_00116_634865,1.0,0.4992331995636798,spatial,TransNEO (Cross-validation)
 BC_00120_634873,0.0,0.2758187597669875,spatial,TransNEO (Cross-validation)
 BC_00134_634901,0.0,1.111902830799012e-16,spatial,TransNEO (Cross-validation)
 BC_00151_636821,0.0,0.3848052475570767,spatial,TransNEO (Cross-validation)
-BC_00158_636845,0.0,4.9079276811651445e-17,spatial,TransNEO (Cross-validation)
-BC_00010_470660,0.0,0.015491669736421894,spatial,TransNEO (Cross-validation)
-BC_00068_473371,1.0,0.9744678823065271,spatial,TransNEO (Cross-validation)
-BC_00089_631906,1.0,0.43562060576497935,spatial,TransNEO (Cross-validation)
+BC_00158_636845,0.0,4.907927681165145e-17,spatial,TransNEO (Cross-validation)
+BC_00010_470660,0.0,0.0154916697364218,spatial,TransNEO (Cross-validation)
+BC_00068_473371,1.0,0.9744678823065273,spatial,TransNEO (Cross-validation)
+BC_00089_631906,1.0,0.4356206057649793,spatial,TransNEO (Cross-validation)
 BC_00091_631908,1.0,0.6998274871037825,spatial,TransNEO (Cross-validation)
-BC_00092_631910,0.0,0.16037388542002684,spatial,TransNEO (Cross-validation)
+BC_00092_631910,0.0,0.1603738854200268,spatial,TransNEO (Cross-validation)
 BC_00097_632337,0.0,0.2740525518527624,spatial,TransNEO (Cross-validation)
 BC_00122_634877,0.0,2.438474121487797e-08,spatial,TransNEO (Cross-validation)
-BC_00136_634904,0.0,0.13770570350505584,spatial,TransNEO (Cross-validation)
-BC_00155_636834,0.0,0.22647962198684862,spatial,TransNEO (Cross-validation)
-BC_00161_636853,0.0,0.0019661780230328745,spatial,TransNEO (Cross-validation)
-BC_00008_470658,0.0,0.29461533001806006,spatial,TransNEO (Cross-validation)
-BC_00028_471107,0.0,0.11385485584801626,spatial,TransNEO (Cross-validation)
-BC_00059_473360,0.0,0.0018042184455436985,spatial,TransNEO (Cross-validation)
+BC_00136_634904,0.0,0.1377057035050558,spatial,TransNEO (Cross-validation)
+BC_00155_636834,0.0,0.2264796219868486,spatial,TransNEO (Cross-validation)
+BC_00161_636853,0.0,0.0019661780230328,spatial,TransNEO (Cross-validation)
+BC_00008_470658,0.0,0.29461533001806,spatial,TransNEO (Cross-validation)
+BC_00028_471107,0.0,0.1138548558480162,spatial,TransNEO (Cross-validation)
+BC_00059_473360,0.0,0.0018042184455436,spatial,TransNEO (Cross-validation)
 BC_00103_633298,0.0,0.3041068476048066,spatial,TransNEO (Cross-validation)
 BC_00108_634840,0.0,0.0752271041400525,spatial,TransNEO (Cross-validation)
-BC_00109_634842,0.0,0.04470417527786918,spatial,TransNEO (Cross-validation)
-BC_00110_634845,0.0,0.036757743199485174,spatial,TransNEO (Cross-validation)
+BC_00109_634842,0.0,0.0447041752778691,spatial,TransNEO (Cross-validation)
+BC_00110_634845,0.0,0.0367577431994851,spatial,TransNEO (Cross-validation)
 BC_00130_634894,1.0,1.0,spatial,TransNEO (Cross-validation)
 BC_00139_634910,1.0,0.9308727575768032,spatial,TransNEO (Cross-validation)
 BC_00149_636813,1.0,0.734726574498829,spatial,TransNEO (Cross-validation)
-BC_00020_471095,0.0,0.006239901295796052,spatial,TransNEO (Cross-validation)
+BC_00020_471095,0.0,0.006239901295796,spatial,TransNEO (Cross-validation)
 BC_00027_471105,1.0,0.2524877779821883,spatial,TransNEO (Cross-validation)
 BC_00029_473328,1.0,0.9935361158405354,spatial,TransNEO (Cross-validation)
 BC_00047_473347,0.0,0.8556269484644916,spatial,TransNEO (Cross-validation)
-BC_00071_473374,0.0,0.35645418050528954,spatial,TransNEO (Cross-validation)
-BC_00073_473376,0.0,0.0026920165857790674,spatial,TransNEO (Cross-validation)
-BC_00077_631614,0.0,0.0014330215051397968,spatial,TransNEO (Cross-validation)
-BC_00079_631617,0.0,0.0012566381331940062,spatial,TransNEO (Cross-validation)
+BC_00071_473374,0.0,0.3564541805052895,spatial,TransNEO (Cross-validation)
+BC_00073_473376,0.0,0.002692016585779,spatial,TransNEO (Cross-validation)
+BC_00077_631614,0.0,0.0014330215051397,spatial,TransNEO (Cross-validation)
+BC_00079_631617,0.0,0.001256638133194,spatial,TransNEO (Cross-validation)
 BC_00105_633305,0.0,0.9999999999999738,spatial,TransNEO (Cross-validation)
 BC_00112_634853,0.0,0.7636511977939473,spatial,TransNEO (Cross-validation)
 BC_00165_637132,1.0,0.7044311065277622,spatial,TransNEO (Cross-validation)
 BC_00002_470652,1.0,0.8625350571376057,spatial,TransNEO (Cross-validation)
-BC_00009_470659,0.0,0.20008801983365535,spatial,TransNEO (Cross-validation)
+BC_00009_470659,0.0,0.2000880198336553,spatial,TransNEO (Cross-validation)
 BC_00013_470663,1.0,4.5393103428326366e-05,spatial,TransNEO (Cross-validation)
 BC_00045_473345,0.0,0.1052547009402022,spatial,TransNEO (Cross-validation)
-BC_00046_473346,1.0,0.9999998870656591,spatial,TransNEO (Cross-validation)
+BC_00046_473346,1.0,0.9999998870656592,spatial,TransNEO (Cross-validation)
 BC_00075_473378,0.0,0.9999957705805312,spatial,TransNEO (Cross-validation)
-BC_00084_631628,0.0,0.9346413629956809,spatial,TransNEO (Cross-validation)
-BC_00101_632343,0.0,2.363062016723724e-08,spatial,TransNEO (Cross-validation)
-BC_00106_633315,0.0,0.02789540012219532,spatial,TransNEO (Cross-validation)
-BC_00119_634870,0.0,0.007331901829599489,spatial,TransNEO (Cross-validation)
+BC_00084_631628,0.0,0.9346413629956808,spatial,TransNEO (Cross-validation)
+BC_00101_632343,0.0,2.3630620167237242e-08,spatial,TransNEO (Cross-validation)
+BC_00106_633315,0.0,0.0278954001221953,spatial,TransNEO (Cross-validation)
+BC_00119_634870,0.0,0.0073319018295994,spatial,TransNEO (Cross-validation)
 BC_00159_636848,1.0,0.9999999005430608,spatial,TransNEO (Cross-validation)
-BC_00163_636862,0.0,0.03711474149786331,spatial,TransNEO (Cross-validation)
+BC_00163_636862,0.0,0.0371147414978633,spatial,TransNEO (Cross-validation)
 000_061_HE.svs,0.0,0.3999807431199707,spatial,IMPRESS (External validation set)
-001_062_HE.svs,0.0,0.9999999999999739,spatial,IMPRESS (External validation set)
-002_063_HE.svs,0.0,0.30365091778447484,spatial,IMPRESS (External validation set)
+001_062_HE.svs,0.0,0.999999999999974,spatial,IMPRESS (External validation set)
+002_063_HE.svs,0.0,0.3036509177844748,spatial,IMPRESS (External validation set)
 003_064_HE.svs,0.0,0.9999990999155198,spatial,IMPRESS (External validation set)
-004_065_HE.svs,1.0,0.9999999928619729,spatial,IMPRESS (External validation set)
-005_066_HE.svs,0.0,0.9934441065462709,spatial,IMPRESS (External validation set)
-006_067_HE.svs,0.0,0.9999975249078539,spatial,IMPRESS (External validation set)
+004_065_HE.svs,1.0,0.9999999928619728,spatial,IMPRESS (External validation set)
+005_066_HE.svs,0.0,0.9934441065462708,spatial,IMPRESS (External validation set)
+006_067_HE.svs,0.0,0.999997524907854,spatial,IMPRESS (External validation set)
 007_068_HE.svs,0.0,0.9999992224075642,spatial,IMPRESS (External validation set)
 008_069_HE.svs,1.0,0.9999999566669198,spatial,IMPRESS (External validation set)
 009_070_HE.svs,0.0,0.9999995309267364,spatial,IMPRESS (External validation set)
-010_071_HE.svs,1.0,0.9999918767936661,spatial,IMPRESS (External validation set)
+010_071_HE.svs,1.0,0.999991876793666,spatial,IMPRESS (External validation set)
 011_072_HE.svs,1.0,0.999999445179515,spatial,IMPRESS (External validation set)
-012_073_HE.svs,1.0,0.9999993802049033,spatial,IMPRESS (External validation set)
-013_074_HE.svs,0.0,0.9998010172494467,spatial,IMPRESS (External validation set)
+012_073_HE.svs,1.0,0.9999993802049032,spatial,IMPRESS (External validation set)
+013_074_HE.svs,0.0,0.9998010172494468,spatial,IMPRESS (External validation set)
 014_075_HE.svs,1.0,0.9999999999999606,spatial,IMPRESS (External validation set)
-015_076_HE.svs,1.0,0.9999999999678447,spatial,IMPRESS (External validation set)
-016_077_HE.svs,0.0,0.9999982517566407,spatial,IMPRESS (External validation set)
-017_078_HE.svs,1.0,0.9999999999990361,spatial,IMPRESS (External validation set)
+015_076_HE.svs,1.0,0.9999999999678448,spatial,IMPRESS (External validation set)
+016_077_HE.svs,0.0,0.9999982517566408,spatial,IMPRESS (External validation set)
+017_078_HE.svs,1.0,0.999999999999036,spatial,IMPRESS (External validation set)
 018_079_HE.svs,0.0,0.8508163361850887,spatial,IMPRESS (External validation set)
 019_080_HE.svs,0.0,0.8106236283175111,spatial,IMPRESS (External validation set)
 020_082_HE.svs,1.0,0.9999999998270768,spatial,IMPRESS (External validation set)
-021_083_HE.svs,1.0,0.9999679794959757,spatial,IMPRESS (External validation set)
-022_084_HE.svs,1.0,0.9999993048536959,spatial,IMPRESS (External validation set)
+021_083_HE.svs,1.0,0.9999679794959756,spatial,IMPRESS (External validation set)
+022_084_HE.svs,1.0,0.999999304853696,spatial,IMPRESS (External validation set)
 023_085_HE.svs,1.0,0.9999999755806742,spatial,IMPRESS (External validation set)
-024_086_HE.svs,1.0,0.9999999991797509,spatial,IMPRESS (External validation set)
+024_086_HE.svs,1.0,0.9999999991797508,spatial,IMPRESS (External validation set)
 025_087_HE.svs,1.0,0.9999998938028002,spatial,IMPRESS (External validation set)
 026_088_HE.svs,1.0,0.999999735770413,spatial,IMPRESS (External validation set)
-027_089_HE.svs,1.0,0.9999999988851943,spatial,IMPRESS (External validation set)
-028_090_HE.svs,0.0,0.02606510702582341,spatial,IMPRESS (External validation set)
+027_089_HE.svs,1.0,0.9999999988851944,spatial,IMPRESS (External validation set)
+028_090_HE.svs,0.0,0.0260651070258234,spatial,IMPRESS (External validation set)
 029_091_HE.svs,1.0,0.9999910310021626,spatial,IMPRESS (External validation set)
 030_092_HE.svs,1.0,0.9999999999824783,spatial,IMPRESS (External validation set)
 031_093_HE.svs,0.0,0.999999949374337,spatial,IMPRESS (External validation set)
 032_094_HE.svs,1.0,0.999982392788065,spatial,IMPRESS (External validation set)
-033_095_HE.svs,1.0,0.9999869060118073,spatial,IMPRESS (External validation set)
+033_095_HE.svs,1.0,0.9999869060118072,spatial,IMPRESS (External validation set)
 034_096_HE.svs,1.0,0.9960673298369178,spatial,IMPRESS (External validation set)
 035_097_HE.svs,0.0,0.9999999994713182,spatial,IMPRESS (External validation set)
-036_098_HE.svs,1.0,0.9999999999868521,spatial,IMPRESS (External validation set)
+036_098_HE.svs,1.0,0.999999999986852,spatial,IMPRESS (External validation set)
 037_099_HE.svs,1.0,0.9999999998025956,spatial,IMPRESS (External validation set)
-038_101_HE.svs,0.0,0.9999999999999941,spatial,IMPRESS (External validation set)
+038_101_HE.svs,0.0,0.999999999999994,spatial,IMPRESS (External validation set)
 039_102_HE.svs,0.0,0.999997294451027,spatial,IMPRESS (External validation set)
 040_103_HE.svs,1.0,0.9999999996730242,spatial,IMPRESS (External validation set)
-041_104_HE.svs,1.0,0.9999997089731005,spatial,IMPRESS (External validation set)
+041_104_HE.svs,1.0,0.9999997089731004,spatial,IMPRESS (External validation set)
 042_105_HE.svs,0.0,0.9998983131342042,spatial,IMPRESS (External validation set)
 043_106_HE.svs,0.0,0.1982265990388224,spatial,IMPRESS (External validation set)
-044_107_HE.svs,1.0,0.9999999685248943,spatial,IMPRESS (External validation set)
+044_107_HE.svs,1.0,0.9999999685248944,spatial,IMPRESS (External validation set)
 045_108_HE.svs,1.0,0.9999999999751992,spatial,IMPRESS (External validation set)
-046_109_HE.svs,1.0,0.9999999998669621,spatial,IMPRESS (External validation set)
+046_109_HE.svs,1.0,0.999999999866962,spatial,IMPRESS (External validation set)
 047_110_HE.svs,0.0,0.8555965020697764,spatial,IMPRESS (External validation set)
-048_111_HE.svs,0.0,0.9999998453447627,spatial,IMPRESS (External validation set)
-049_112_HE.svs,1.0,0.9994848449898139,spatial,IMPRESS (External validation set)
-050_113_HE.svs,1.0,0.9999998244192557,spatial,IMPRESS (External validation set)
+048_111_HE.svs,0.0,0.9999998453447628,spatial,IMPRESS (External validation set)
+049_112_HE.svs,1.0,0.999484844989814,spatial,IMPRESS (External validation set)
+050_113_HE.svs,1.0,0.9999998244192556,spatial,IMPRESS (External validation set)
 051_114_HE.svs,1.0,0.9999991691736442,spatial,IMPRESS (External validation set)
-052_115_HE.svs,0.0,0.9999419470688435,spatial,IMPRESS (External validation set)
+052_115_HE.svs,0.0,0.9999419470688437,spatial,IMPRESS (External validation set)
 053_116_HE.svs,1.0,0.9996711787909172,spatial,IMPRESS (External validation set)
-054_117_HE.svs,1.0,0.9999997809784681,spatial,IMPRESS (External validation set)
-055_118_HE.svs,0.0,0.9999986468308719,spatial,IMPRESS (External validation set)
+054_117_HE.svs,1.0,0.999999780978468,spatial,IMPRESS (External validation set)
+055_118_HE.svs,0.0,0.999998646830872,spatial,IMPRESS (External validation set)
 056_119_HE.svs,0.0,0.9999997340541282,spatial,IMPRESS (External validation set)
-057_120_HE.svs,1.0,0.9993986524814525,spatial,IMPRESS (External validation set)
+057_120_HE.svs,1.0,0.9993986524814524,spatial,IMPRESS (External validation set)
 058_121_HE.svs,1.0,0.999999883381417,spatial,IMPRESS (External validation set)
-059_122_HE.svs,1.0,0.9999999802646741,spatial,IMPRESS (External validation set)
+059_122_HE.svs,1.0,0.999999980264674,spatial,IMPRESS (External validation set)
 060_123_HE.svs,1.0,0.9999999972673,spatial,IMPRESS (External validation set)
-061_124_HE.svs,1.0,0.9999999786248461,spatial,IMPRESS (External validation set)
-0,0.0,0.9999950664804279,Imputed Bulk,IMPRESS (External validation set)
-1,0.0,0.9999998011265279,Imputed Bulk,IMPRESS (External validation set)
-2,0.0,0.9999993710953803,Imputed Bulk,IMPRESS (External validation set)
+061_124_HE.svs,1.0,0.999999978624846,spatial,IMPRESS (External validation set)
+0,0.0,0.999995066480428,Imputed Bulk,IMPRESS (External validation set)
+1,0.0,0.999999801126528,Imputed Bulk,IMPRESS (External validation set)
+2,0.0,0.9999993710953804,Imputed Bulk,IMPRESS (External validation set)
 3,0.0,0.999665882181557,Imputed Bulk,IMPRESS (External validation set)
-4,1.0,0.9999994637191751,Imputed Bulk,IMPRESS (External validation set)
-5,0.0,0.9989397115033191,Imputed Bulk,IMPRESS (External validation set)
+4,1.0,0.9999994637191753,Imputed Bulk,IMPRESS (External validation set)
+5,0.0,0.9989397115033192,Imputed Bulk,IMPRESS (External validation set)
 6,0.0,0.999971347817658,Imputed Bulk,IMPRESS (External validation set)
 7,0.0,0.9933569394479086,Imputed Bulk,IMPRESS (External validation set)
 8,1.0,0.9998874242131098,Imputed Bulk,IMPRESS (External validation set)
-9,0.0,0.9999930189813565,Imputed Bulk,IMPRESS (External validation set)
+9,0.0,0.9999930189813564,Imputed Bulk,IMPRESS (External validation set)
 10,1.0,0.9987316604736932,Imputed Bulk,IMPRESS (External validation set)
-11,1.0,0.9993463491730361,Imputed Bulk,IMPRESS (External validation set)
+11,1.0,0.999346349173036,Imputed Bulk,IMPRESS (External validation set)
 12,1.0,0.9999799658909552,Imputed Bulk,IMPRESS (External validation set)
 13,0.0,0.9997480920643074,Imputed Bulk,IMPRESS (External validation set)
 14,1.0,0.9982987779951168,Imputed Bulk,IMPRESS (External validation set)
-15,1.0,0.9999953093052417,Imputed Bulk,IMPRESS (External validation set)
+15,1.0,0.9999953093052416,Imputed Bulk,IMPRESS (External validation set)
 16,0.0,0.9998823434378876,Imputed Bulk,IMPRESS (External validation set)
-17,1.0,0.9999821875672783,Imputed Bulk,IMPRESS (External validation set)
+17,1.0,0.9999821875672784,Imputed Bulk,IMPRESS (External validation set)
 18,0.0,0.8677550641488198,Imputed Bulk,IMPRESS (External validation set)
 19,0.0,0.9999944623227346,Imputed Bulk,IMPRESS (External validation set)
-20,1.0,0.9985828485348307,Imputed Bulk,IMPRESS (External validation set)
+20,1.0,0.9985828485348308,Imputed Bulk,IMPRESS (External validation set)
 21,1.0,0.9997313958868718,Imputed Bulk,IMPRESS (External validation set)
 22,1.0,0.999998194279933,Imputed Bulk,IMPRESS (External validation set)
-23,1.0,0.9999740855583437,Imputed Bulk,IMPRESS (External validation set)
+23,1.0,0.9999740855583436,Imputed Bulk,IMPRESS (External validation set)
 24,1.0,0.9999830862935614,Imputed Bulk,IMPRESS (External validation set)
-25,1.0,0.9999663030995855,Imputed Bulk,IMPRESS (External validation set)
+25,1.0,0.9999663030995856,Imputed Bulk,IMPRESS (External validation set)
 26,1.0,0.9999981839098752,Imputed Bulk,IMPRESS (External validation set)
-27,1.0,0.9999629839407891,Imputed Bulk,IMPRESS (External validation set)
+27,1.0,0.9999629839407892,Imputed Bulk,IMPRESS (External validation set)
 28,0.0,0.999997558726713,Imputed Bulk,IMPRESS (External validation set)
-29,1.0,0.9999981514283217,Imputed Bulk,IMPRESS (External validation set)
-30,1.0,0.9999977914675213,Imputed Bulk,IMPRESS (External validation set)
+29,1.0,0.9999981514283216,Imputed Bulk,IMPRESS (External validation set)
+30,1.0,0.9999977914675212,Imputed Bulk,IMPRESS (External validation set)
 31,0.0,0.9999921470977762,Imputed Bulk,IMPRESS (External validation set)
 32,1.0,0.9999968420824246,Imputed Bulk,IMPRESS (External validation set)
-33,1.0,0.9950486510007737,Imputed Bulk,IMPRESS (External validation set)
+33,1.0,0.9950486510007736,Imputed Bulk,IMPRESS (External validation set)
 34,1.0,0.842350717392093,Imputed Bulk,IMPRESS (External validation set)
 35,0.0,0.9999117756800718,Imputed Bulk,IMPRESS (External validation set)
 36,1.0,0.9999537372199662,Imputed Bulk,IMPRESS (External validation set)
-37,1.0,0.9991417520366227,Imputed Bulk,IMPRESS (External validation set)
-38,0.0,0.9999989972965071,Imputed Bulk,IMPRESS (External validation set)
-39,0.0,0.9999495297706131,Imputed Bulk,IMPRESS (External validation set)
-40,1.0,0.9999995678396605,Imputed Bulk,IMPRESS (External validation set)
+37,1.0,0.9991417520366228,Imputed Bulk,IMPRESS (External validation set)
+38,0.0,0.9999989972965072,Imputed Bulk,IMPRESS (External validation set)
+39,0.0,0.9999495297706132,Imputed Bulk,IMPRESS (External validation set)
+40,1.0,0.9999995678396604,Imputed Bulk,IMPRESS (External validation set)
 41,1.0,0.9999997905223328,Imputed Bulk,IMPRESS (External validation set)
 42,0.0,0.9999448482596438,Imputed Bulk,IMPRESS (External validation set)
-43,0.0,0.9997447534750787,Imputed Bulk,IMPRESS (External validation set)
-44,1.0,0.9999555034941539,Imputed Bulk,IMPRESS (External validation set)
+43,0.0,0.9997447534750789,Imputed Bulk,IMPRESS (External validation set)
+44,1.0,0.999955503494154,Imputed Bulk,IMPRESS (External validation set)
 45,1.0,0.9999946978048314,Imputed Bulk,IMPRESS (External validation set)
-46,1.0,0.9998365520709745,Imputed Bulk,IMPRESS (External validation set)
+46,1.0,0.9998365520709744,Imputed Bulk,IMPRESS (External validation set)
 47,0.0,0.999174335181667,Imputed Bulk,IMPRESS (External validation set)
-48,0.0,0.9992361746605539,Imputed Bulk,IMPRESS (External validation set)
+48,0.0,0.999236174660554,Imputed Bulk,IMPRESS (External validation set)
 49,1.0,0.9999999139656106,Imputed Bulk,IMPRESS (External validation set)
-50,1.0,0.9999680224640077,Imputed Bulk,IMPRESS (External validation set)
+50,1.0,0.9999680224640076,Imputed Bulk,IMPRESS (External validation set)
 51,1.0,0.9999489883165174,Imputed Bulk,IMPRESS (External validation set)
-52,0.0,0.9999992341499515,Imputed Bulk,IMPRESS (External validation set)
+52,0.0,0.9999992341499516,Imputed Bulk,IMPRESS (External validation set)
 53,1.0,0.9998800212961158,Imputed Bulk,IMPRESS (External validation set)
 54,1.0,0.9999992434432162,Imputed Bulk,IMPRESS (External validation set)
-55,0.0,0.9996480033930519,Imputed Bulk,IMPRESS (External validation set)
+55,0.0,0.999648003393052,Imputed Bulk,IMPRESS (External validation set)
 56,0.0,0.9997260078793568,Imputed Bulk,IMPRESS (External validation set)
-57,1.0,0.9995812553507981,Imputed Bulk,IMPRESS (External validation set)
-58,1.0,0.9999992697435065,Imputed Bulk,IMPRESS (External validation set)
+57,1.0,0.999581255350798,Imputed Bulk,IMPRESS (External validation set)
+58,1.0,0.9999992697435064,Imputed Bulk,IMPRESS (External validation set)
 59,1.0,0.9999998629214903,Imputed Bulk,IMPRESS (External validation set)
-60,1.0,0.9999583452722263,Imputed Bulk,IMPRESS (External validation set)
+60,1.0,0.9999583452722264,Imputed Bulk,IMPRESS (External validation set)
 61,1.0,0.9999966356973484,Imputed Bulk,IMPRESS (External validation set)
-BC_00008_470658,0.0,0.09220132698150227,Imputed Bulk,TransNEO (Cross-validation)
-BC_00010_470660,0.0,0.10276013465598523,Imputed Bulk,TransNEO (Cross-validation)
+BC_00008_470658,0.0,0.0922013269815022,Imputed Bulk,TransNEO (Cross-validation)
+BC_00010_470660,0.0,0.1027601346559852,Imputed Bulk,TransNEO (Cross-validation)
 BC_00021_471096,1.0,0.7957248565192347,Imputed Bulk,TransNEO (Cross-validation)
-BC_00027_471105,1.0,0.24953821708887616,Imputed Bulk,TransNEO (Cross-validation)
-BC_00059_473360,0.0,0.28657955157628884,Imputed Bulk,TransNEO (Cross-validation)
-BC_00097_632337,0.0,0.15389862748746203,Imputed Bulk,TransNEO (Cross-validation)
-BC_00103_633298,0.0,0.09049925801594566,Imputed Bulk,TransNEO (Cross-validation)
-BC_00108_634840,0.0,0.07204725689729827,Imputed Bulk,TransNEO (Cross-validation)
-BC_00111_634849,0.0,0.22121516830174817,Imputed Bulk,TransNEO (Cross-validation)
-BC_00115_634858,0.0,0.18486429269253643,Imputed Bulk,TransNEO (Cross-validation)
+BC_00027_471105,1.0,0.2495382170888761,Imputed Bulk,TransNEO (Cross-validation)
+BC_00059_473360,0.0,0.2865795515762888,Imputed Bulk,TransNEO (Cross-validation)
+BC_00097_632337,0.0,0.153898627487462,Imputed Bulk,TransNEO (Cross-validation)
+BC_00103_633298,0.0,0.0904992580159456,Imputed Bulk,TransNEO (Cross-validation)
+BC_00108_634840,0.0,0.0720472568972982,Imputed Bulk,TransNEO (Cross-validation)
+BC_00111_634849,0.0,0.2212151683017481,Imputed Bulk,TransNEO (Cross-validation)
+BC_00115_634858,0.0,0.1848642926925364,Imputed Bulk,TransNEO (Cross-validation)
 BC_00116_634865,1.0,0.265103522752656,Imputed Bulk,TransNEO (Cross-validation)
-BC_00155_636834,0.0,0.058319086084579586,Imputed Bulk,TransNEO (Cross-validation)
+BC_00155_636834,0.0,0.0583190860845795,Imputed Bulk,TransNEO (Cross-validation)
 BC_00006_470656,0.0,0.8999239187524747,Imputed Bulk,TransNEO (Cross-validation)
-BC_00029_473328,1.0,0.9972047343937519,Imputed Bulk,TransNEO (Cross-validation)
+BC_00029_473328,1.0,0.997204734393752,Imputed Bulk,TransNEO (Cross-validation)
 BC_00071_473374,0.0,0.8402754766779862,Imputed Bulk,TransNEO (Cross-validation)
 BC_00075_473378,0.0,0.1767757745483884,Imputed Bulk,TransNEO (Cross-validation)
-BC_00077_631614,0.0,0.007265600237221747,Imputed Bulk,TransNEO (Cross-validation)
-BC_00084_631628,0.0,0.11699939482356167,Imputed Bulk,TransNEO (Cross-validation)
+BC_00077_631614,0.0,0.0072656002372217,Imputed Bulk,TransNEO (Cross-validation)
+BC_00084_631628,0.0,0.1169993948235616,Imputed Bulk,TransNEO (Cross-validation)
 BC_00105_633305,0.0,0.4657912859018109,Imputed Bulk,TransNEO (Cross-validation)
-BC_00134_634901,0.0,0.0008661789984104361,Imputed Bulk,TransNEO (Cross-validation)
-BC_00149_636813,1.0,0.07958568904530541,Imputed Bulk,TransNEO (Cross-validation)
-BC_00158_636845,0.0,0.9656482619149197,Imputed Bulk,TransNEO (Cross-validation)
-BC_00159_636848,1.0,0.11648653978998046,Imputed Bulk,TransNEO (Cross-validation)
-BC_00000_470650,0.0,0.022485828546402166,Imputed Bulk,TransNEO (Cross-validation)
-BC_00002_470652,1.0,0.13197607996541014,Imputed Bulk,TransNEO (Cross-validation)
-BC_00013_470663,1.0,0.023843535471906752,Imputed Bulk,TransNEO (Cross-validation)
-BC_00028_471107,0.0,0.45056502577633545,Imputed Bulk,TransNEO (Cross-validation)
-BC_00073_473376,0.0,0.0024754433631465206,Imputed Bulk,TransNEO (Cross-validation)
+BC_00134_634901,0.0,0.0008661789984104,Imputed Bulk,TransNEO (Cross-validation)
+BC_00149_636813,1.0,0.0795856890453054,Imputed Bulk,TransNEO (Cross-validation)
+BC_00158_636845,0.0,0.9656482619149196,Imputed Bulk,TransNEO (Cross-validation)
+BC_00159_636848,1.0,0.1164865397899804,Imputed Bulk,TransNEO (Cross-validation)
+BC_00000_470650,0.0,0.0224858285464021,Imputed Bulk,TransNEO (Cross-validation)
+BC_00002_470652,1.0,0.1319760799654101,Imputed Bulk,TransNEO (Cross-validation)
+BC_00013_470663,1.0,0.0238435354719067,Imputed Bulk,TransNEO (Cross-validation)
+BC_00028_471107,0.0,0.4505650257763354,Imputed Bulk,TransNEO (Cross-validation)
+BC_00073_473376,0.0,0.0024754433631465,Imputed Bulk,TransNEO (Cross-validation)
 BC_00091_631908,1.0,0.7469693543506278,Imputed Bulk,TransNEO (Cross-validation)
 BC_00110_634845,0.0,0.1549628311817684,Imputed Bulk,TransNEO (Cross-validation)
-BC_00120_634873,0.0,0.008940318881899336,Imputed Bulk,TransNEO (Cross-validation)
-BC_00136_634904,0.0,0.017690315599811816,Imputed Bulk,TransNEO (Cross-validation)
-BC_00151_636821,0.0,0.06240150552601228,Imputed Bulk,TransNEO (Cross-validation)
+BC_00120_634873,0.0,0.0089403188818993,Imputed Bulk,TransNEO (Cross-validation)
+BC_00136_634904,0.0,0.0176903155998118,Imputed Bulk,TransNEO (Cross-validation)
+BC_00151_636821,0.0,0.0624015055260122,Imputed Bulk,TransNEO (Cross-validation)
 BC_00165_637132,1.0,0.5280902861407939,Imputed Bulk,TransNEO (Cross-validation)
-BC_00009_470659,0.0,0.004517757214175026,Imputed Bulk,TransNEO (Cross-validation)
+BC_00009_470659,0.0,0.004517757214175,Imputed Bulk,TransNEO (Cross-validation)
 BC_00047_473347,0.0,0.2307715022702489,Imputed Bulk,TransNEO (Cross-validation)
-BC_00068_473371,1.0,0.37676574682894814,Imputed Bulk,TransNEO (Cross-validation)
-BC_00079_631617,0.0,0.9917398470583645,Imputed Bulk,TransNEO (Cross-validation)
+BC_00068_473371,1.0,0.3767657468289481,Imputed Bulk,TransNEO (Cross-validation)
+BC_00079_631617,0.0,0.9917398470583644,Imputed Bulk,TransNEO (Cross-validation)
 BC_00087_631901,1.0,0.5887145767009365,Imputed Bulk,TransNEO (Cross-validation)
-BC_00101_632343,0.0,0.030381621731166257,Imputed Bulk,TransNEO (Cross-validation)
-BC_00109_634842,0.0,0.21101114039889604,Imputed Bulk,TransNEO (Cross-validation)
+BC_00101_632343,0.0,0.0303816217311662,Imputed Bulk,TransNEO (Cross-validation)
+BC_00109_634842,0.0,0.211011140398896,Imputed Bulk,TransNEO (Cross-validation)
 BC_00112_634853,0.0,0.8932948611366268,Imputed Bulk,TransNEO (Cross-validation)
 BC_00130_634894,1.0,0.8837645262671182,Imputed Bulk,TransNEO (Cross-validation)
-BC_00161_636853,0.0,0.002131565496499991,Imputed Bulk,TransNEO (Cross-validation)
-BC_00020_471095,0.0,0.009963223113271911,Imputed Bulk,TransNEO (Cross-validation)
-BC_00045_473345,0.0,0.022950213234629827,Imputed Bulk,TransNEO (Cross-validation)
+BC_00161_636853,0.0,0.0021315654964999,Imputed Bulk,TransNEO (Cross-validation)
+BC_00020_471095,0.0,0.0099632231132719,Imputed Bulk,TransNEO (Cross-validation)
+BC_00045_473345,0.0,0.0229502132346298,Imputed Bulk,TransNEO (Cross-validation)
 BC_00046_473346,1.0,0.8636193649788435,Imputed Bulk,TransNEO (Cross-validation)
-BC_00056_473356,1.0,0.03511820258052182,Imputed Bulk,TransNEO (Cross-validation)
-BC_00089_631906,1.0,0.11546800073904144,Imputed Bulk,TransNEO (Cross-validation)
-BC_00090_631907,0.0,0.03889315787559988,Imputed Bulk,TransNEO (Cross-validation)
-BC_00092_631910,0.0,0.046848038945222964,Imputed Bulk,TransNEO (Cross-validation)
-BC_00119_634870,0.0,0.05372213032673239,Imputed Bulk,TransNEO (Cross-validation)
+BC_00056_473356,1.0,0.0351182025805218,Imputed Bulk,TransNEO (Cross-validation)
+BC_00089_631906,1.0,0.1154680007390414,Imputed Bulk,TransNEO (Cross-validation)
+BC_00090_631907,0.0,0.0388931578755998,Imputed Bulk,TransNEO (Cross-validation)
+BC_00092_631910,0.0,0.0468480389452229,Imputed Bulk,TransNEO (Cross-validation)
+BC_00119_634870,0.0,0.0537221303267323,Imputed Bulk,TransNEO (Cross-validation)
 BC_00122_634877,0.0,0.9477895319593458,Imputed Bulk,TransNEO (Cross-validation)
 BC_00139_634910,1.0,0.4635443841905999,Imputed Bulk,TransNEO (Cross-validation)
 BC_00163_636862,0.0,0.7621198715992261,Imputed Bulk,TransNEO (Cross-validation)
@@ -289,72 +289,72 @@ BC_00159_636848,1.0,0.375483028,Sammut-ML,TransNEO (Cross-validation)
 BC_00161_636853,0.0,0.126479801,Sammut-ML,TransNEO (Cross-validation)
 BC_00163_636862,0.0,0.318067802,Sammut-ML,TransNEO (Cross-validation)
 BC_00165_637132,1.0,0.411090054,Sammut-ML,TransNEO (Cross-validation)
-0,0.0,0.026133847999999998,Direct Model,TransNEO (Cross-validation)
+0,0.0,0.0261338479999999,Direct Model,TransNEO (Cross-validation)
 1,1.0,0.802530862,Direct Model,TransNEO (Cross-validation)
 2,0.0,0.23043019,Direct Model,TransNEO (Cross-validation)
-3,0.0,0.47526029799999997,Direct Model,TransNEO (Cross-validation)
+3,0.0,0.4752602979999999,Direct Model,TransNEO (Cross-validation)
 4,0.0,0.05460752,Direct Model,TransNEO (Cross-validation)
 5,0.0,0.559999264,Direct Model,TransNEO (Cross-validation)
 6,0.0,0.01526688,Direct Model,TransNEO (Cross-validation)
 7,0.0,0.7745041239999999,Direct Model,TransNEO (Cross-validation)
-8,1.0,0.9982766959999999,Direct Model,TransNEO (Cross-validation)
+8,1.0,0.998276696,Direct Model,TransNEO (Cross-validation)
 9,1.0,0.028648066,Direct Model,TransNEO (Cross-validation)
 10,0.0,0.7278888880000001,Direct Model,TransNEO (Cross-validation)
-11,0.0,0.17431540399999998,Direct Model,TransNEO (Cross-validation)
-12,1.0,0.34483786800000005,Direct Model,TransNEO (Cross-validation)
-13,0.0,0.030146302000000003,Direct Model,TransNEO (Cross-validation)
+11,0.0,0.1743154039999999,Direct Model,TransNEO (Cross-validation)
+12,1.0,0.344837868,Direct Model,TransNEO (Cross-validation)
+13,0.0,0.030146302,Direct Model,TransNEO (Cross-validation)
 14,1.0,0.023916198,Direct Model,TransNEO (Cross-validation)
-15,0.0,0.12532733000000001,Direct Model,TransNEO (Cross-validation)
+15,0.0,0.12532733,Direct Model,TransNEO (Cross-validation)
 16,1.0,0.626531096,Direct Model,TransNEO (Cross-validation)
-17,1.0,0.9751541979999999,Direct Model,TransNEO (Cross-validation)
+17,1.0,0.975154198,Direct Model,TransNEO (Cross-validation)
 18,0.0,0.038343544,Direct Model,TransNEO (Cross-validation)
 19,0.0,0.110727832,Direct Model,TransNEO (Cross-validation)
-20,0.0,0.10689339199999999,Direct Model,TransNEO (Cross-validation)
+20,0.0,0.1068933919999999,Direct Model,TransNEO (Cross-validation)
 21,0.0,0.372192716,Direct Model,TransNEO (Cross-validation)
 22,0.0,0.028116594,Direct Model,TransNEO (Cross-validation)
 23,0.0,0.854931388,Direct Model,TransNEO (Cross-validation)
 24,0.0,0.173541904,Direct Model,TransNEO (Cross-validation)
-25,0.0,0.30698319399999996,Direct Model,TransNEO (Cross-validation)
+25,0.0,0.3069831939999999,Direct Model,TransNEO (Cross-validation)
 26,1.0,0.9661754380000002,Direct Model,TransNEO (Cross-validation)
 27,1.0,0.720413054,Direct Model,TransNEO (Cross-validation)
 28,0.0,0.7467594399999999,Direct Model,TransNEO (Cross-validation)
-29,0.0,0.38983406400000004,Direct Model,TransNEO (Cross-validation)
-30,0.0,0.09920161999999999,Direct Model,TransNEO (Cross-validation)
+29,0.0,0.389834064,Direct Model,TransNEO (Cross-validation)
+30,0.0,0.0992016199999999,Direct Model,TransNEO (Cross-validation)
 31,1.0,0.433392892,Direct Model,TransNEO (Cross-validation)
 32,0.0,0.031053694,Direct Model,TransNEO (Cross-validation)
 33,0.0,0.01349484,Direct Model,TransNEO (Cross-validation)
 34,0.0,0.096456356,Direct Model,TransNEO (Cross-validation)
-35,0.0,0.20335506200000003,Direct Model,TransNEO (Cross-validation)
+35,0.0,0.203355062,Direct Model,TransNEO (Cross-validation)
 36,1.0,0.466696382,Direct Model,TransNEO (Cross-validation)
 37,0.0,0.193345532,Direct Model,TransNEO (Cross-validation)
-38,0.0,0.45144850200000003,Direct Model,TransNEO (Cross-validation)
-39,0.0,0.16208662999999998,Direct Model,TransNEO (Cross-validation)
+38,0.0,0.451448502,Direct Model,TransNEO (Cross-validation)
+39,0.0,0.1620866299999999,Direct Model,TransNEO (Cross-validation)
 40,1.0,0.030556928,Direct Model,TransNEO (Cross-validation)
 41,0.0,0.150066356,Direct Model,TransNEO (Cross-validation)
 42,0.0,0.02631037,Direct Model,TransNEO (Cross-validation)
-43,1.0,0.14921758000000002,Direct Model,TransNEO (Cross-validation)
-44,0.0,0.48597555200000003,Direct Model,TransNEO (Cross-validation)
+43,1.0,0.14921758,Direct Model,TransNEO (Cross-validation)
+44,0.0,0.485975552,Direct Model,TransNEO (Cross-validation)
 45,0.0,0.226464606,Direct Model,TransNEO (Cross-validation)
-46,1.0,0.025756663999999995,Direct Model,TransNEO (Cross-validation)
+46,1.0,0.0257566639999999,Direct Model,TransNEO (Cross-validation)
 47,1.0,0.162687274,Direct Model,TransNEO (Cross-validation)
 48,0.0,0.319717742,Direct Model,TransNEO (Cross-validation)
 49,1.0,0.5534365460000001,Direct Model,TransNEO (Cross-validation)
-50,0.0,0.9135690820000001,Direct Model,TransNEO (Cross-validation)
+50,0.0,0.913569082,Direct Model,TransNEO (Cross-validation)
 51,1.0,0.117313158,Direct Model,TransNEO (Cross-validation)
-52,0.0,0.21706357199999998,Direct Model,TransNEO (Cross-validation)
-53,0.0,0.022359596000000002,Direct Model,TransNEO (Cross-validation)
+52,0.0,0.2170635719999999,Direct Model,TransNEO (Cross-validation)
+53,0.0,0.022359596,Direct Model,TransNEO (Cross-validation)
 54,0.0,0.000695886,Direct Model,TransNEO (Cross-validation)
 55,1.0,0.246339606,Direct Model,TransNEO (Cross-validation)
-56,1.0,0.28332607800000004,Direct Model,TransNEO (Cross-validation)
+56,1.0,0.283326078,Direct Model,TransNEO (Cross-validation)
 57,0.0,0.019546542,Direct Model,TransNEO (Cross-validation)
 58,0.0,0.26005139,Direct Model,TransNEO (Cross-validation)
 59,0.0,0.008016526,Direct Model,TransNEO (Cross-validation)
 60,0.0,0.277207212,Direct Model,TransNEO (Cross-validation)
 061,0.0,0.6704628580808639,Direct Model,IMPRESS (External validation set)
-062,0.0,0.9052622568607331,Direct Model,IMPRESS (External validation set)
+062,0.0,0.9052622568607332,Direct Model,IMPRESS (External validation set)
 063,0.0,0.8130277073383331,Direct Model,IMPRESS (External validation set)
 064,0.0,0.6864021836454048,Direct Model,IMPRESS (External validation set)
-065,1.0,0.34290560955181715,Direct Model,IMPRESS (External validation set)
+065,1.0,0.3429056095518171,Direct Model,IMPRESS (External validation set)
 066,0.0,0.7410422210395337,Direct Model,IMPRESS (External validation set)
 067,0.0,0.602423036210239,Direct Model,IMPRESS (External validation set)
 068,0.0,0.4828904274478555,Direct Model,IMPRESS (External validation set)
@@ -365,15 +365,15 @@ BC_00165_637132,1.0,0.411090054,Sammut-ML,TransNEO (Cross-validation)
 073,1.0,0.9303597462177275,Direct Model,IMPRESS (External validation set)
 074,0.0,0.6950455260276795,Direct Model,IMPRESS (External validation set)
 075,1.0,0.338673848900944,Direct Model,IMPRESS (External validation set)
-076,1.0,0.9011598461866377,Direct Model,IMPRESS (External validation set)
+076,1.0,0.9011598461866376,Direct Model,IMPRESS (External validation set)
 077,0.0,0.8324480339884758,Direct Model,IMPRESS (External validation set)
-078,1.0,0.9109802162647247,Direct Model,IMPRESS (External validation set)
+078,1.0,0.9109802162647248,Direct Model,IMPRESS (External validation set)
 079,0.0,0.4083965095796157,Direct Model,IMPRESS (External validation set)
 080,0.0,0.6160725317150355,Direct Model,IMPRESS (External validation set)
 082,1.0,0.326856555622071,Direct Model,IMPRESS (External validation set)
 083,1.0,0.4708581326901912,Direct Model,IMPRESS (External validation set)
 084,1.0,0.8932013255357741,Direct Model,IMPRESS (External validation set)
-085,1.0,0.23774890433065593,Direct Model,IMPRESS (External validation set)
+085,1.0,0.2377489043306559,Direct Model,IMPRESS (External validation set)
 086,1.0,0.5434259239211678,Direct Model,IMPRESS (External validation set)
 087,1.0,0.4233302766643464,Direct Model,IMPRESS (External validation set)
 088,1.0,0.8345780397951602,Direct Model,IMPRESS (External validation set)
@@ -386,7 +386,7 @@ BC_00165_637132,1.0,0.411090054,Sammut-ML,TransNEO (Cross-validation)
 095,1.0,0.7669118513166904,Direct Model,IMPRESS (External validation set)
 096,1.0,0.6993205231428146,Direct Model,IMPRESS (External validation set)
 097,0.0,0.7097824442386628,Direct Model,IMPRESS (External validation set)
-098,1.0,0.32208715270273386,Direct Model,IMPRESS (External validation set)
+098,1.0,0.3220871527027338,Direct Model,IMPRESS (External validation set)
 099,1.0,0.272982706965413,Direct Model,IMPRESS (External validation set)
 101,0.0,0.5458988811820745,Direct Model,IMPRESS (External validation set)
 102,0.0,0.8872285145521163,Direct Model,IMPRESS (External validation set)
@@ -405,49 +405,49 @@ BC_00165_637132,1.0,0.411090054,Sammut-ML,TransNEO (Cross-validation)
 115,0.0,0.8335424910485745,Direct Model,IMPRESS (External validation set)
 116,1.0,0.5996087228506805,Direct Model,IMPRESS (External validation set)
 117,1.0,0.6328290541470051,Direct Model,IMPRESS (External validation set)
-118,0.0,0.49057494733482604,Direct Model,IMPRESS (External validation set)
+118,0.0,0.490574947334826,Direct Model,IMPRESS (External validation set)
 119,0.0,0.7433383958041668,Direct Model,IMPRESS (External validation set)
 120,1.0,0.7664727883040905,Direct Model,IMPRESS (External validation set)
 121,1.0,0.8091423757374286,Direct Model,IMPRESS (External validation set)
-122,1.0,0.9579293799400329,Direct Model,IMPRESS (External validation set)
+122,1.0,0.9579293799400328,Direct Model,IMPRESS (External validation set)
 123,1.0,0.7920346023142338,Direct Model,IMPRESS (External validation set)
-124,1.0,0.9112493979930877,Direct Model,IMPRESS (External validation set)
+124,1.0,0.9112493979930876,Direct Model,IMPRESS (External validation set)
 BC_00000_470650,0.0,1.1827326435368883,Path2Space (combined),TransNEO (Cross-validation)
-BC_00006_470656,0.0,1.0247641714212459,Path2Space (combined),TransNEO (Cross-validation)
-BC_00021_471096,1.0,1.8609927997736255,Path2Space (combined),TransNEO (Cross-validation)
+BC_00006_470656,0.0,1.024764171421246,Path2Space (combined),TransNEO (Cross-validation)
+BC_00021_471096,1.0,1.8609927997736253,Path2Space (combined),TransNEO (Cross-validation)
 BC_00056_473356,1.0,1.833038922496995,Path2Space (combined),TransNEO (Cross-validation)
 BC_00087_631901,1.0,1.6801542140735402,Path2Space (combined),TransNEO (Cross-validation)
 BC_00090_631907,0.0,1.128102421352934,Path2Space (combined),TransNEO (Cross-validation)
-BC_00111_634849,0.0,0.08013306088953674,Path2Space (combined),TransNEO (Cross-validation)
-BC_00115_634858,0.0,1.0395603752651175,Path2Space (combined),TransNEO (Cross-validation)
+BC_00111_634849,0.0,0.0801330608895367,Path2Space (combined),TransNEO (Cross-validation)
+BC_00115_634858,0.0,1.0395603752651177,Path2Space (combined),TransNEO (Cross-validation)
 BC_00116_634865,1.0,1.4172412691133134,Path2Space (combined),TransNEO (Cross-validation)
-BC_00120_634873,0.0,1.1733350325820013,Path2Space (combined),TransNEO (Cross-validation)
+BC_00120_634873,0.0,1.1733350325820011,Path2Space (combined),TransNEO (Cross-validation)
 BC_00134_634901,0.0,0.885600543180371,Path2Space (combined),TransNEO (Cross-validation)
 BC_00151_636821,0.0,1.308589284451497,Path2Space (combined),TransNEO (Cross-validation)
 BC_00158_636845,0.0,0.8613961613643997,Path2Space (combined),TransNEO (Cross-validation)
-BC_00010_470660,0.0,0.9597251404513987,Path2Space (combined),TransNEO (Cross-validation)
-BC_00068_473371,1.0,1.8794075015963054,Path2Space (combined),TransNEO (Cross-validation)
+BC_00010_470660,0.0,0.9597251404513988,Path2Space (combined),TransNEO (Cross-validation)
+BC_00068_473371,1.0,1.8794075015963052,Path2Space (combined),TransNEO (Cross-validation)
 BC_00089_631906,1.0,1.3530890291528788,Path2Space (combined),TransNEO (Cross-validation)
 BC_00091_631908,1.0,1.6125220715495083,Path2Space (combined),TransNEO (Cross-validation)
 BC_00092_631910,0.0,1.0525046429234148,Path2Space (combined),TransNEO (Cross-validation)
 BC_00097_632337,0.0,1.1830776027864935,Path2Space (combined),TransNEO (Cross-validation)
-BC_00122_634877,0.0,0.9024469837166821,Path2Space (combined),TransNEO (Cross-validation)
-BC_00136_634904,0.0,0.9047760067771241,Path2Space (combined),TransNEO (Cross-validation)
+BC_00122_634877,0.0,0.902446983716682,Path2Space (combined),TransNEO (Cross-validation)
+BC_00136_634904,0.0,0.904776006777124,Path2Space (combined),TransNEO (Cross-validation)
 BC_00155_636834,0.0,1.018912035078477,Path2Space (combined),TransNEO (Cross-validation)
 BC_00161_636853,0.0,0.4707330142224926,Path2Space (combined),TransNEO (Cross-validation)
 BC_00008_470658,0.0,1.165638239605012,Path2Space (combined),TransNEO (Cross-validation)
 BC_00028_471107,0.0,1.0215006744623594,Path2Space (combined),TransNEO (Cross-validation)
-BC_00059_473360,0.0,0.12827147890847815,Path2Space (combined),TransNEO (Cross-validation)
+BC_00059_473360,0.0,0.1282714789084781,Path2Space (combined),TransNEO (Cross-validation)
 BC_00103_633298,0.0,1.216863603521152,Path2Space (combined),TransNEO (Cross-validation)
 BC_00108_634840,0.0,0.9347806870604244,Path2Space (combined),TransNEO (Cross-validation)
 BC_00109_634842,0.0,0.57211000677506,Path2Space (combined),TransNEO (Cross-validation)
 BC_00110_634845,0.0,0.844122056771597,Path2Space (combined),TransNEO (Cross-validation)
-BC_00130_634894,1.0,1.9108239276800019,Path2Space (combined),TransNEO (Cross-validation)
+BC_00130_634894,1.0,1.9108239276800016,Path2Space (combined),TransNEO (Cross-validation)
 BC_00139_634910,1.0,1.8422279902431096,Path2Space (combined),TransNEO (Cross-validation)
 BC_00149_636813,1.0,1.6458763172991553,Path2Space (combined),TransNEO (Cross-validation)
-BC_00020_471095,0.0,0.9353313696653787,Path2Space (combined),TransNEO (Cross-validation)
+BC_00020_471095,0.0,0.9353313696653788,Path2Space (combined),TransNEO (Cross-validation)
 BC_00027_471105,1.0,1.2316126406386556,Path2Space (combined),TransNEO (Cross-validation)
-BC_00029_473328,1.0,1.9006386763424132,Path2Space (combined),TransNEO (Cross-validation)
+BC_00029_473328,1.0,1.9006386763424128,Path2Space (combined),TransNEO (Cross-validation)
 BC_00047_473347,0.0,1.7684141613709052,Path2Space (combined),TransNEO (Cross-validation)
 BC_00071_473374,0.0,1.2679503586268277,Path2Space (combined),TransNEO (Cross-validation)
 BC_00073_473376,0.0,0.8828724630158753,Path2Space (combined),TransNEO (Cross-validation)
@@ -458,33 +458,33 @@ BC_00112_634853,0.0,1.6563332531254762,Path2Space (combined),TransNEO (Cross-val
 BC_00165_637132,1.0,1.690673835204497,Path2Space (combined),TransNEO (Cross-validation)
 BC_00002_470652,1.0,1.7551998258114567,Path2Space (combined),TransNEO (Cross-validation)
 BC_00009_470659,0.0,1.166015192547872,Path2Space (combined),TransNEO (Cross-validation)
-BC_00013_470663,1.0,0.9345156266256839,Path2Space (combined),TransNEO (Cross-validation)
-BC_00045_473345,0.0,1.0078816067608543,Path2Space (combined),TransNEO (Cross-validation)
+BC_00013_470663,1.0,0.934515626625684,Path2Space (combined),TransNEO (Cross-validation)
+BC_00045_473345,0.0,1.0078816067608545,Path2Space (combined),TransNEO (Cross-validation)
 BC_00046_473346,1.0,1.999999887065659,Path2Space (combined),TransNEO (Cross-validation)
 BC_00075_473378,0.0,1.7193438916529704,Path2Space (combined),TransNEO (Cross-validation)
 BC_00084_631628,0.0,1.8577014505256364,Path2Space (combined),TransNEO (Cross-validation)
 BC_00101_632343,0.0,0.807326917128649,Path2Space (combined),TransNEO (Cross-validation)
 BC_00106_633315,0.0,0.9510568254343426,Path2Space (combined),TransNEO (Cross-validation)
-BC_00119_634870,0.0,0.31137274505834794,Path2Space (combined),TransNEO (Cross-validation)
-BC_00159_636848,1.0,1.9579233779322118,Path2Space (combined),TransNEO (Cross-validation)
+BC_00119_634870,0.0,0.3113727450583479,Path2Space (combined),TransNEO (Cross-validation)
+BC_00159_636848,1.0,1.957923377932212,Path2Space (combined),TransNEO (Cross-validation)
 BC_00163_636862,0.0,0.962400537697778,Path2Space (combined),TransNEO (Cross-validation)
 000_061_HE.svs,0.0,0.3999807431199707,Path2Space (combined),IMPRESS (External validation set)
 001_062_HE.svs,0.0,1.0623165568655104,Path2Space (combined),IMPRESS (External validation set)
-002_063_HE.svs,0.0,0.30365091778447484,Path2Space (combined),IMPRESS (External validation set)
+002_063_HE.svs,0.0,0.3036509177844748,Path2Space (combined),IMPRESS (External validation set)
 003_064_HE.svs,0.0,0.9999990999155198,Path2Space (combined),IMPRESS (External validation set)
 004_065_HE.svs,1.0,1.999999992861973,Path2Space (combined),IMPRESS (External validation set)
-005_066_HE.svs,0.0,1.6297436264118315,Path2Space (combined),IMPRESS (External validation set)
-006_067_HE.svs,0.0,0.9999975249078539,Path2Space (combined),IMPRESS (External validation set)
+005_066_HE.svs,0.0,1.6297436264118317,Path2Space (combined),IMPRESS (External validation set)
+006_067_HE.svs,0.0,0.999997524907854,Path2Space (combined),IMPRESS (External validation set)
 007_068_HE.svs,0.0,0.9999992224075642,Path2Space (combined),IMPRESS (External validation set)
 008_069_HE.svs,1.0,1.8986354729713617,Path2Space (combined),IMPRESS (External validation set)
 009_070_HE.svs,0.0,1.9193036833666413,Path2Space (combined),IMPRESS (External validation set)
-010_071_HE.svs,1.0,1.9014304806486462,Path2Space (combined),IMPRESS (External validation set)
-011_072_HE.svs,1.0,1.9574383032729186,Path2Space (combined),IMPRESS (External validation set)
+010_071_HE.svs,1.0,1.9014304806486464,Path2Space (combined),IMPRESS (External validation set)
+011_072_HE.svs,1.0,1.9574383032729183,Path2Space (combined),IMPRESS (External validation set)
 012_073_HE.svs,1.0,1.915360438746605,Path2Space (combined),IMPRESS (External validation set)
-013_074_HE.svs,0.0,1.8834128019056067,Path2Space (combined),IMPRESS (External validation set)
+013_074_HE.svs,0.0,1.883412801905607,Path2Space (combined),IMPRESS (External validation set)
 014_075_HE.svs,1.0,1.672008690766983,Path2Space (combined),IMPRESS (External validation set)
 015_076_HE.svs,1.0,1.5162070875539304,Path2Space (combined),IMPRESS (External validation set)
-016_077_HE.svs,0.0,1.9173708921553274,Path2Space (combined),IMPRESS (External validation set)
+016_077_HE.svs,0.0,1.9173708921553276,Path2Space (combined),IMPRESS (External validation set)
 017_078_HE.svs,1.0,1.3165587055703314,Path2Space (combined),IMPRESS (External validation set)
 018_079_HE.svs,0.0,0.8508163361850887,Path2Space (combined),IMPRESS (External validation set)
 019_080_HE.svs,0.0,1.810623628317511,Path2Space (combined),IMPRESS (External validation set)
@@ -493,23 +493,23 @@ BC_00163_636862,0.0,0.962400537697778,Path2Space (combined),TransNEO (Cross-vali
 022_084_HE.svs,1.0,1.9025424711562704,Path2Space (combined),IMPRESS (External validation set)
 023_085_HE.svs,1.0,0.9999999755806742,Path2Space (combined),IMPRESS (External validation set)
 024_086_HE.svs,1.0,1.912659173040804,Path2Space (combined),IMPRESS (External validation set)
-025_087_HE.svs,1.0,1.5225423684284243,Path2Space (combined),IMPRESS (External validation set)
+025_087_HE.svs,1.0,1.5225423684284245,Path2Space (combined),IMPRESS (External validation set)
 026_088_HE.svs,1.0,1.8039571842879272,Path2Space (combined),IMPRESS (External validation set)
 027_089_HE.svs,1.0,1.9999999988851944,Path2Space (combined),IMPRESS (External validation set)
-028_090_HE.svs,0.0,0.02606510702582341,Path2Space (combined),IMPRESS (External validation set)
+028_090_HE.svs,0.0,0.0260651070258234,Path2Space (combined),IMPRESS (External validation set)
 029_091_HE.svs,1.0,1.8933325501146268,Path2Space (combined),IMPRESS (External validation set)
 030_092_HE.svs,1.0,1.912502165298414,Path2Space (combined),IMPRESS (External validation set)
 031_093_HE.svs,0.0,0.999999949374337,Path2Space (combined),IMPRESS (External validation set)
 032_094_HE.svs,1.0,0.999982392788065,Path2Space (combined),IMPRESS (External validation set)
-033_095_HE.svs,1.0,1.9073619773119972,Path2Space (combined),IMPRESS (External validation set)
-034_096_HE.svs,1.0,1.9960673298369178,Path2Space (combined),IMPRESS (External validation set)
+033_095_HE.svs,1.0,1.9073619773119967,Path2Space (combined),IMPRESS (External validation set)
+034_096_HE.svs,1.0,1.9960673298369176,Path2Space (combined),IMPRESS (External validation set)
 035_097_HE.svs,0.0,1.893875288131677,Path2Space (combined),IMPRESS (External validation set)
 036_098_HE.svs,1.0,1.9004495043997736,Path2Space (combined),IMPRESS (External validation set)
 037_099_HE.svs,1.0,0.9999999998025956,Path2Space (combined),IMPRESS (External validation set)
-038_101_HE.svs,0.0,0.9999999999999941,Path2Space (combined),IMPRESS (External validation set)
+038_101_HE.svs,0.0,0.999999999999994,Path2Space (combined),IMPRESS (External validation set)
 039_102_HE.svs,0.0,1.0961959528636434,Path2Space (combined),IMPRESS (External validation set)
 040_103_HE.svs,1.0,1.4009428877841932,Path2Space (combined),IMPRESS (External validation set)
-041_104_HE.svs,1.0,1.9999997089731005,Path2Space (combined),IMPRESS (External validation set)
+041_104_HE.svs,1.0,1.9999997089731003,Path2Space (combined),IMPRESS (External validation set)
 042_105_HE.svs,0.0,1.9998983131342043,Path2Space (combined),IMPRESS (External validation set)
 043_106_HE.svs,0.0,0.1982265990388224,Path2Space (combined),IMPRESS (External validation set)
 044_107_HE.svs,1.0,1.7773853570035092,Path2Space (combined),IMPRESS (External validation set)
@@ -519,14 +519,14 @@ BC_00163_636862,0.0,0.962400537697778,Path2Space (combined),TransNEO (Cross-vali
 048_111_HE.svs,0.0,1.4668640214920416,Path2Space (combined),IMPRESS (External validation set)
 049_112_HE.svs,1.0,1.655564503393867,Path2Space (combined),IMPRESS (External validation set)
 050_113_HE.svs,1.0,1.1630222624470017,Path2Space (combined),IMPRESS (External validation set)
-051_114_HE.svs,1.0,1.2010820347381435,Path2Space (combined),IMPRESS (External validation set)
+051_114_HE.svs,1.0,1.2010820347381437,Path2Space (combined),IMPRESS (External validation set)
 052_115_HE.svs,0.0,1.0231740858664395,Path2Space (combined),IMPRESS (External validation set)
 053_116_HE.svs,1.0,1.7501776925501509,Path2Space (combined),IMPRESS (External validation set)
-054_117_HE.svs,1.0,1.8887109641574935,Path2Space (combined),IMPRESS (External validation set)
-055_118_HE.svs,0.0,0.9999986468308719,Path2Space (combined),IMPRESS (External validation set)
+054_117_HE.svs,1.0,1.8887109641574933,Path2Space (combined),IMPRESS (External validation set)
+055_118_HE.svs,0.0,0.999998646830872,Path2Space (combined),IMPRESS (External validation set)
 056_119_HE.svs,0.0,0.9999997340541282,Path2Space (combined),IMPRESS (External validation set)
 057_120_HE.svs,1.0,1.912293352474216,Path2Space (combined),IMPRESS (External validation set)
-058_121_HE.svs,1.0,1.3221439710216303,Path2Space (combined),IMPRESS (External validation set)
+058_121_HE.svs,1.0,1.3221439710216305,Path2Space (combined),IMPRESS (External validation set)
 059_122_HE.svs,1.0,1.5780297244985992,Path2Space (combined),IMPRESS (External validation set)
 060_123_HE.svs,1.0,1.8733390994203067,Path2Space (combined),IMPRESS (External validation set)
 061_124_HE.svs,1.0,1.9289639219485444,Path2Space (combined),IMPRESS (External validation set)
@@ -588,11 +588,11 @@ BC_00108_634840,0.0,0.413542382666218,ENLIGHT,TransNEO (Cross-validation)
 BC_00115_634858,0.0,0.554716487671714,ENLIGHT,TransNEO (Cross-validation)
 732243,1.0,0.9999999972223602,Path2Space (combined),"PBCP
 (External validation set)"
-732244,1.0,0.9898668262387021,Path2Space (combined),"PBCP
+732244,1.0,0.989866826238702,Path2Space (combined),"PBCP
 (External validation set)"
-732250,0.0,0.9986137373606139,Path2Space (combined),"PBCP
+732250,0.0,0.998613737360614,Path2Space (combined),"PBCP
 (External validation set)"
-732251,0.0,0.9770864808685571,Path2Space (combined),"PBCP
+732251,0.0,0.9770864808685572,Path2Space (combined),"PBCP
 (External validation set)"
 732256,1.0,0.9999999546079588,Path2Space (combined),"PBCP
 (External validation set)"
@@ -600,7 +600,7 @@ BC_00115_634858,0.0,0.554716487671714,ENLIGHT,TransNEO (Cross-validation)
 (External validation set)"
 732261,0.0,0.8022257887986385,Path2Space (combined),"PBCP
 (External validation set)"
-732262,0.0,0.26626334423746983,Path2Space (combined),"PBCP
+732262,0.0,0.2662633442374698,Path2Space (combined),"PBCP
 (External validation set)"
 732266,1.0,1.3942648180813233,Path2Space (combined),"PBCP
 (External validation set)"
@@ -612,53 +612,53 @@ BC_00115_634858,0.0,0.554716487671714,ENLIGHT,TransNEO (Cross-validation)
 (External validation set)"
 732277,1.0,0.999849508915829,Path2Space (combined),"PBCP
 (External validation set)"
-732280,0.0,0.0072325867455445975,Path2Space (combined),"PBCP
+732280,0.0,0.0072325867455445,Path2Space (combined),"PBCP
 (External validation set)"
-732282,0.0,0.0072325867455445975,Path2Space (combined),"PBCP
+732282,0.0,0.0072325867455445,Path2Space (combined),"PBCP
 (External validation set)"
-732796,1.0,0.021946601044546855,Path2Space (combined),"PBCP
+732796,1.0,0.0219466010445468,Path2Space (combined),"PBCP
 (External validation set)"
-732799,1.0,0.9999999955255889,Path2Space (combined),"PBCP
+732799,1.0,0.9999999955255888,Path2Space (combined),"PBCP
 (External validation set)"
 733012,1.0,1.8125781820999616,Path2Space (combined),"PBCP
 (External validation set)"
-732243,1.0,0.9999999972216079,spatial,"PBCP
+732243,1.0,0.999999997221608,spatial,"PBCP
 (External validation set)"
 732244,1.0,0.989873870646961,spatial,"PBCP
 (External validation set)"
-732250,0.0,0.9986151063388583,spatial,"PBCP
+732250,0.0,0.9986151063388584,spatial,"PBCP
 (External validation set)"
-732251,0.0,0.9770838432354271,spatial,"PBCP
+732251,0.0,0.9770838432354272,spatial,"PBCP
 (External validation set)"
-732256,1.0,0.9999999547431073,spatial,"PBCP
+732256,1.0,0.9999999547431072,spatial,"PBCP
 (External validation set)"
-732259,0.0,0.007230273123935704,spatial,"PBCP
+732259,0.0,0.0072302731239357,spatial,"PBCP
 (External validation set)"
 732261,0.0,0.8022260154314221,spatial,"PBCP
 (External validation set)"
 732262,0.0,0.2662471155616682,spatial,"PBCP
 (External validation set)"
-732266,1.0,0.9999999997750327,spatial,"PBCP
+732266,1.0,0.9999999997750328,spatial,"PBCP
 (External validation set)"
-732267,1.0,0.9731140745695839,spatial,"PBCP
+732267,1.0,0.973114074569584,spatial,"PBCP
 (External validation set)"
 732269,1.0,0.9999334724115678,spatial,"PBCP
 (External validation set)"
-732270,1.0,0.9993152630465827,spatial,"PBCP
+732270,1.0,0.9993152630465828,spatial,"PBCP
 (External validation set)"
 732277,1.0,0.9998494961967068,spatial,"PBCP
 (External validation set)"
-732280,0.0,0.007230273123935704,spatial,"PBCP
+732280,0.0,0.0072302731239357,spatial,"PBCP
 (External validation set)"
-732282,0.0,0.007230273123935704,spatial,"PBCP
+732282,0.0,0.0072302731239357,spatial,"PBCP
 (External validation set)"
-732796,1.0,0.02194190266438549,spatial,"PBCP
+732796,1.0,0.0219419026643854,spatial,"PBCP
 (External validation set)"
 732799,1.0,0.9999999955245196,spatial,"PBCP
 (External validation set)"
-733012,1.0,0.9985536146822003,spatial,"PBCP
+733012,1.0,0.9985536146822004,spatial,"PBCP
 (External validation set)"
-732243,1.0,0.47422990567050877,Direct Model,"PBCP
+732243,1.0,0.4742299056705087,Direct Model,"PBCP
 (External validation set)"
 732244,1.0,0.6873503812402486,Direct Model,"PBCP
 (External validation set)"
@@ -678,7 +678,7 @@ BC_00115_634858,0.0,0.554716487671714,ENLIGHT,TransNEO (Cross-validation)
 (External validation set)"
 732259,0.0,0.3198070870433002,Direct Model,"PBCP
 (External validation set)"
-732280,0.0,0.22644743071869017,Direct Model,"PBCP
+732280,0.0,0.2264474307186901,Direct Model,"PBCP
 (External validation set)"
 732270,1.0,0.8126358759403228,Direct Model,"PBCP
 (External validation set)"
@@ -686,7 +686,7 @@ BC_00115_634858,0.0,0.554716487671714,ENLIGHT,TransNEO (Cross-validation)
 (External validation set)"
 732269,1.0,0.4650219023227691,Direct Model,"PBCP
 (External validation set)"
-732266,1.0,0.9682375931739807,Direct Model,"PBCP
+732266,1.0,0.9682375931739808,Direct Model,"PBCP
 (External validation set)"
 732256,1.0,0.5670722912251949,Direct Model,"PBCP
 (External validation set)"
@@ -698,23 +698,23 @@ BC_00115_634858,0.0,0.554716487671714,ENLIGHT,TransNEO (Cross-validation)
 (External validation set)"
 1,1.0,0.7621033714427062,Imputed Bulk,"PBCP
 (External validation set)"
-2,0.0,0.46557803488601557,Imputed Bulk,"PBCP
+2,0.0,0.4655780348860155,Imputed Bulk,"PBCP
 (External validation set)"
 3,1.0,0.2924314842966117,Imputed Bulk,"PBCP
 (External validation set)"
-4,1.0,0.9948961179624195,Imputed Bulk,"PBCP
+4,1.0,0.9948961179624196,Imputed Bulk,"PBCP
 (External validation set)"
 5,0.0,0.3586691476677702,Imputed Bulk,"PBCP
 (External validation set)"
 6,1.0,0.6161321832976197,Imputed Bulk,"PBCP
 (External validation set)"
-7,0.0,0.32391179125455827,Imputed Bulk,"PBCP
+7,0.0,0.3239117912545582,Imputed Bulk,"PBCP
 (External validation set)"
 8,1.0,0.3665849493864798,Imputed Bulk,"PBCP
 (External validation set)"
 9,0.0,0.419306377141178,Imputed Bulk,"PBCP
 (External validation set)"
-10,0.0,0.22548359378713395,Imputed Bulk,"PBCP
+10,0.0,0.2254835937871339,Imputed Bulk,"PBCP
 (External validation set)"
 11,1.0,0.7942941623847672,Imputed Bulk,"PBCP
 (External validation set)"
@@ -722,11 +722,219 @@ BC_00115_634858,0.0,0.554716487671714,ENLIGHT,TransNEO (Cross-validation)
 (External validation set)"
 13,1.0,0.2669976683456302,Imputed Bulk,"PBCP
 (External validation set)"
-14,1.0,0.9071093406327145,Imputed Bulk,"PBCP
+14,1.0,0.9071093406327144,Imputed Bulk,"PBCP
 (External validation set)"
 15,1.0,0.4458740758532266,Imputed Bulk,"PBCP
 (External validation set)"
 16,0.0,0.2507219302414074,Imputed Bulk,"PBCP
 (External validation set)"
-17,0.0,0.41084817544370955,Imputed Bulk,"PBCP
+17,0.0,0.4108481754437095,Imputed Bulk,"PBCP
+(External validation set)"
+Ronai_BRCA_034_DM-9606-3-002.svs,0.0,0.8942516239471863,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_028_DM-9606-2-014.svs,0.0,0.1997683088924157,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_006_DM-9606-4-007.svs,0.0,0.1536845647182778,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_004_DM-9606-4-005.svs,0.0,0.8000004333920527,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_018_DM-9606-2-001.svs,1.0,0.9580471744297804,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_010_DM-9606-012.svs,1.0,0.9974427107898848,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_025_DM-9606-2-011.svs,1.0,0.9998556906126048,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_030_DM-9606-2-017.svs,1.0,0.9999713514529373,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_001_DM-9606-4-002.svs,1.0,0.9999999858482428,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_003_DM-9606-004.svs,1.0,0.6463374527394785,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_023_DM-9606-2-009.svs,1.0,0.8085752851929511,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_036_DM-9606-3-004.svs,1.0,0.923035682697836,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_021_DM-9606-2-007.svs,1.0,0.0001461842918073,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_000_DM-9606-001.svs,1.0,0.0506423993914926,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_024_DM-9606-2-010.svs,1.0,3.0116099990841045e-06,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_003_DM-9606-4-004.svs,1.0,0.9994391793017504,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_027_DM-9606-2-013.svs,1.0,3.011609999084066e-06,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_014_DM-9606-016.svs,1.0,0.9999992091963495,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_000_DM-9606-4-001.svs,1.0,0.9834994552725104,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_037_DM-9606-3-005.svs,1.0,3.011609999084076e-06,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_011_DM-9606-013.svs,1.0,0.9999986967414444,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_022_DM-9606-2-008.svs,1.0,1.0,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_039_DM-9606-3-007.svs,1.0,0.6267010309952927,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_040_DM-9606.svs,1.0,0.9999999999925452,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_002_DM-9606-003.svs,1.0,0.9998980835983842,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_002_DM-9606-4-003.svs,1.0,1.0,spatial,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_034_DM-9606-3-002.svs,0.0,0.5812618672427043,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_028_DM-9606-2-014.svs,0.0,0.3549667765494581,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_006_DM-9606-4-007.svs,0.0,0.2879921337056192,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_004_DM-9606-4-005.svs,0.0,0.8157126166595898,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_018_DM-9606-2-001.svs,1.0,0.8405682760772335,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_010_DM-9606-012.svs,1.0,0.8437624454817452,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_025_DM-9606-2-011.svs,1.0,0.8776193779996793,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_030_DM-9606-2-017.svs,1.0,0.9551416183060514,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_001_DM-9606-4-002.svs,1.0,0.8879931993192205,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_003_DM-9606-004.svs,1.0,0.712873906062383,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_023_DM-9606-2-009.svs,1.0,0.8545979527523928,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_036_DM-9606-3-004.svs,1.0,0.867677968217183,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_021_DM-9606-2-007.svs,1.0,0.4266566555583576,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_000_DM-9606-001.svs,1.0,0.3792343889255749,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_024_DM-9606-2-010.svs,1.0,0.3542469972034918,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_003_DM-9606-4-004.svs,1.0,0.8243492512994619,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_027_DM-9606-2-013.svs,1.0,0.4522200058844189,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_014_DM-9606-016.svs,1.0,0.9412747968067288,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_000_DM-9606-4-001.svs,1.0,0.8887824668427986,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_037_DM-9606-3-005.svs,1.0,0.4354656917725058,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_011_DM-9606-013.svs,1.0,0.942023470407807,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_022_DM-9606-2-008.svs,1.0,0.8249421897192424,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_039_DM-9606-3-007.svs,1.0,0.6798069667324667,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_040_DM-9606.svs,1.0,0.953697555022377,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_002_DM-9606-003.svs,1.0,0.8360483299459343,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_002_DM-9606-4-003.svs,1.0,0.8934234887799539,Path2Space (combined),"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_034_DM-9606-3-002.svs,0.0,0.5123377418052405,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_028_DM-9606-2-014.svs,0.0,0.28517844827176303,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_006_DM-9606-4-007.svs,0.0,0.11702251613838599,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_004_DM-9606-4-005.svs,0.0,0.3538367718085647,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_018_DM-9606-2-001.svs,1.0,0.4728076133457943,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_010_DM-9606-012.svs,1.0,0.7486695033311843,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_025_DM-9606-2-011.svs,1.0,0.6005553176952525,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_030_DM-9606-2-017.svs,1.0,0.29426245074486357,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_001_DM-9606-4-002.svs,1.0,0.766450637280941,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_003_DM-9606-004.svs,1.0,0.4577873294427991,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_023_DM-9606-2-009.svs,1.0,0.40546893612481655,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_036_DM-9606-3-004.svs,1.0,0.6159765637665987,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_021_DM-9606-2-007.svs,1.0,0.7062959701567889,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_000_DM-9606-001.svs,1.0,0.3883762964978814,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_024_DM-9606-2-010.svs,1.0,0.5931316418666392,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_003_DM-9606-4-004.svs,1.0,0.13936899100895972,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_027_DM-9606-2-013.svs,1.0,0.5238977044261992,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_014_DM-9606-016.svs,1.0,0.181022589141503,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_000_DM-9606-4-001.svs,1.0,0.12432647781446575,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_037_DM-9606-3-005.svs,1.0,0.08638187003893108,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_011_DM-9606-013.svs,1.0,0.7124264304339886,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_022_DM-9606-2-008.svs,1.0,0.5329820916801691,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_039_DM-9606-3-007.svs,1.0,0.36172441590344534,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_040_DM-9606.svs,1.0,0.05269387414773519,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA_002_DM-9606-003.svs,1.0,0.11102459497749806,Direct Model,"Cedar-Sinai
+(External validation set)"
+Ronai_BRCA2_002_DM-9606-4-003.svs,1.0,0.21839704113721387,Direct Model,"Cedar-Sinai
+(External validation set)"
+0,0.0,0.27823417446913157,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+1,0.0,0.11903267021905499,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+2,0.0,0.1538574175166883,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+3,0.0,0.5947359469213646,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+4,1.0,0.34425958555393343,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+5,1.0,0.7107693755838839,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+6,1.0,0.27624108431306227,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+7,1.0,0.31145508556790086,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+8,1.0,0.5399281583935902,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+9,1.0,0.4200391548171664,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+10,1.0,0.034785734352877004,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+11,1.0,0.08145707521662747,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+12,1.0,0.395225141604482,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+13,1.0,0.13317272961315713,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+14,1.0,0.2558209141227035,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+15,1.0,0.12593076345527313,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+16,1.0,0.1000711247982857,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+17,1.0,0.08927485379067937,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+18,1.0,0.5237283639877328,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+19,1.0,0.13370711446476963,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+20,1.0,0.4391110168576843,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+21,1.0,0.13056657767978108,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+22,1.0,0.2701234019861406,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+23,1.0,0.3920316893789548,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+24,1.0,0.16039596392799543,Imputed Bulk,"Cedar-Sinai
+(External validation set)"
+25,1.0,0.13824488395919063,Imputed Bulk,"Cedar-Sinai
 (External validation set)"
