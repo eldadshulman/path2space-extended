@@ -1,9 +1,15 @@
-# qc — post-QC ST sample metadata
+# qc — ST sample quality control
 
-Post-QC ST sample metadata for the four ST cohorts in Shulman et al., *Cell* 2026, with the six paper-defined per-sample QC metrics as columns.
+The six per-sample QC metrics of Shulman et al., *Cell* 2026: the QC functions,
+a worked example on one ST section, and the post-QC metadata for the four paper
+ST cohorts.
 
 ## Contents
 
+- `lib/qc_metrics.py` — the six QC functions: `compute_image_qc` (hematoxylin, eosin, sharpness per H&E tile), `compute_expression_qc` (total UMI, mitochondrial, hemoglobin counts per spot), the paper `THRESHOLDS`, and `passes_qc`.
+- `lib/stain_norm.py` — `macenko_normalize`, the H&E color normalization applied before image QC (numpy-only Macenko).
+- `notebooks/qc_example.ipynb` — worked example computing all six metrics on one ST section (a public 10x Visium breast-cancer sample).
+- `data/example/` — that section's inputs: `block1_he_tiles.npz` (200 H&E tiles) and `block1_counts.h5ad` (raw counts).
 - `data/metadata/st_samples_all_with_qc.csv` — per-section table for all spatial transcriptomics sections across the four paper cohorts (Bassiouni, HEST, Martinez, HTAN), with the six paper-defined QC metrics (hematoxylin/eosin intensity, sharpness, mean total UMI counts per spot, mean mitochondrial log1p, mean hemoglobin log1p), per-metric pass flags, composite `qc_pass_image` / `qc_pass_expression` / `qc_pass`, and the paper-specific `paper_included` / `paper_final` flags.
 - `data/metadata/st_samples_retained.csv` — subset where `paper_final == True`, matching the 40 sections retained in the Cell paper Table S1.
 
