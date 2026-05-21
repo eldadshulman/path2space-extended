@@ -19,7 +19,8 @@ clustering_response_prediction/
 ├── data/
 │   ├── response_labels.csv     # slide_name → Response (pCR=1, non-pCR=0) + Cohort
 │   ├── her2_spand_scores.csv  # per-slide HER2 SPAND heterogeneity score (sign-flipped)
-│   └── benchmark_predictions_{chemo,trastuzumab}.csv  # per-sample predictions, all methods (nb 03)
+│   ├── benchmark_predictions_{chemo,trastuzumab}.csv  # per-sample predictions, all methods (nb 03)
+│   └── clinical_biomarker_scores.csv  # per-sample P2S + clinical-biomarker scores (nb 04)
 ├── models/
 │   ├── chemo_ensemble.joblib              # 5-fold logistic ensemble (chemo)
 │   ├── trastuzumab_cluster_ensemble.joblib # 5-fold logistic ensemble (trastuzumab, clusters only)
@@ -27,7 +28,8 @@ clustering_response_prediction/
 └── notebooks/
     ├── 01_chemo_response_prediction.ipynb
     ├── 02_trastuzumab_response_prediction.ipynb
-    └── 03_response_benchmark.ipynb          # Path2Space vs other methods, AUC comparison
+    ├── 03_response_benchmark.ipynb              # Path2Space vs other prediction methods
+    └── 04_clinical_biomarker_comparison.ipynb   # Path2Space vs clinical/molecular biomarkers
 ```
 
 The notebooks read the per-cohort per-patient cluster proportion CSVs from
