@@ -29,9 +29,9 @@ clustering_response_prediction/
 ```
 
 The notebooks read the per-cohort per-patient cluster proportion CSVs from
-[`../clustering/data/`](../clustering/data/) (`transneo_chemo_cluster_props.csv`,
+[`../clustering_spatiotypes/data/`](../clustering_spatiotypes/data/) (`transneo_chemo_cluster_props.csv`,
 `impress_trastuzumab_cluster_props.csv`, …), so this folder is a sibling of the
-`clustering/` outputs.
+`clustering_spatiotypes/` outputs.
 
 ## AUCs from the executed notebooks
 
@@ -63,5 +63,5 @@ proba = cmb.predict_proba(X_full)   # X_full = clusters + 'her2_spand' column
 ## Related
 
 - Paper: Shulman et al., *Cell* 2026. doi:10.1016/j.cell.2026.04.023.
-- Per-cohort cluster compositions: `../clustering/data/`.
+- Per-cohort cluster compositions: `../clustering_spatiotypes/data/`.
 - Projection code that produces those compositions: https://github.com/eldadshulman/path2space-extra

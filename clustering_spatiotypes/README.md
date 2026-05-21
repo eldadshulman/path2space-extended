@@ -1,4 +1,4 @@
-# clustering — spatial cluster derivation and SpatioType assignment
+# clustering_spatiotypes — spatial cluster derivation and SpatioType assignment
 
 Reproduces the spatial clustering analysis from Shulman et al., *Cell* 2026:
 per-slide SpaGCN → cross-patient Seurat clustering → SpatioType assignment on

@@ -90,4 +90,4 @@ to cancer / lymphocyte / stromal.
 ## Related
 
 - Paper: Shulman et al., *Cell* 2026. doi:10.1016/j.cell.2026.04.023.
-- Sibling components: `../clustering/`, `../clustering_response_prediction/`.
+- Sibling components: `../clustering_spatiotypes/`, `../clustering_response_prediction/`.
