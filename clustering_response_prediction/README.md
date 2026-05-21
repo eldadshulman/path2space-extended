@@ -18,14 +18,16 @@ clustering_response_prediction/
 │   └── model_classes.py   # EnsembleModel, FeatureAligner, CombinedModel
 ├── data/
 │   ├── response_labels.csv     # slide_name → Response (pCR=1, non-pCR=0) + Cohort
-│   └── her2_spand_scores.csv  # per-slide HER2 SPAND heterogeneity score (sign-flipped)
+│   ├── her2_spand_scores.csv  # per-slide HER2 SPAND heterogeneity score (sign-flipped)
+│   └── benchmark_predictions_{chemo,trastuzumab}.csv  # per-sample predictions, all methods (nb 03)
 ├── models/
 │   ├── chemo_ensemble.joblib              # 5-fold logistic ensemble (chemo)
 │   ├── trastuzumab_cluster_ensemble.joblib # 5-fold logistic ensemble (trastuzumab, clusters only)
 │   └── trastuzumab_combined.joblib         # CombinedModel: cluster + HER2-SPAND
 └── notebooks/
     ├── 01_chemo_response_prediction.ipynb
-    └── 02_trastuzumab_response_prediction.ipynb
+    ├── 02_trastuzumab_response_prediction.ipynb
+    └── 03_response_benchmark.ipynb          # Path2Space vs other methods, AUC comparison
 ```
 
 The notebooks read the per-cohort per-patient cluster proportion CSVs from
