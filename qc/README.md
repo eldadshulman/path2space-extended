@@ -13,6 +13,10 @@ ST cohorts.
 - `data/metadata/st_samples_all_with_qc.csv` — per-section table for all spatial transcriptomics sections across the four paper cohorts (Bassiouni, HEST, Martinez, HTAN), with the six paper-defined QC metrics (hematoxylin/eosin intensity, sharpness, mean total UMI counts per spot, mean mitochondrial log1p, mean hemoglobin log1p), per-metric pass flags, composite `qc_pass_image` / `qc_pass_expression` / `qc_pass`, and the paper-specific `paper_included` / `paper_final` flags.
 - `data/metadata/st_samples_retained.csv` — subset where `paper_final == True`, matching the 40 sections retained in the Cell paper Table S1.
 
+## Validation
+
+`compute_image_qc` reproduces the per-sample hematoxylin, eosin, and sharpness values in `data/metadata/st_samples_all_with_qc.csv` to floating-point exactness on the canonical input tiles. This assumes tiles are 224×224 Macenko-normalized RGB; see the docstrings in `lib/qc_metrics.py` for the resolution-sensitivity caveat on the sharpness metric.
+
 ## QC thresholds (Shulman et al., Cell 2026, Methods)
 
 | Metric | Threshold | Exclusion direction | Source |
@@ -24,7 +28,7 @@ ST cohorts.
 | Mean mitochondrial counts (log1p) | 8.3603 | exclude if > | Bassiouni training cohort, 99th percentile |
 | Mean hemoglobin counts (log1p) | 0.7355 | exclude if > | Bassiouni training cohort, 99th percentile |
 
-> Hematoxylin and eosin use two-sided exclusion — a section is excluded if its value falls outside the reference mean ± 2 SD — as written in the paper Methods. On the four ST cohorts the lower bounds exclude no sections (every section excluded on stain intensity fails the upper bound), so the retained set is the same whether or not the lower bound is applied.
+> Hematoxylin and eosin use two-sided exclusion — a section fails if its value falls outside the reference mean ± 2 SD.
 
 Image-QC metrics are computed on color-normalized 224×224 H&E tiles inside the tissue mask (Otsu on grayscale). Expression QC uses `scanpy.pp.calculate_qc_metrics`. All metrics are aggregated to one value per section by averaging across tiles / spots.
 
