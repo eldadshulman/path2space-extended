@@ -13,8 +13,9 @@ Gene-expression quality (per spot, averaged over a section's spots)
   6. log1p_total_counts_hb — mean log1p haemoglobin counts per spot
 
 Image metrics use scikit-image; expression metrics use
-`scanpy.pp.calculate_qc_metrics`. Image QC should be run on color-normalized
-tiles (see `stain_norm.macenko_normalize`).
+`scanpy.pp.calculate_qc_metrics`. Image QC expects Macenko-normalized tiles —
+if you have raw tiles, run `macenko_normalizer().transform()` from
+`stain_norm` on each tile first.
 """
 
 import numpy as np
@@ -27,7 +28,10 @@ from skimage import color, filters
 def compute_image_qc(tile_rgb):
     """Three histological-image QC metrics for one H&E tile.
 
-    tile_rgb : (H, W, 3) uint8 array — a (color-normalized) H&E tile.
+    Expects a Macenko-normalized tile; if you have raw tiles, run
+    `macenko_normalizer().transform()` (from `stain_norm`) on each first.
+
+    tile_rgb : (H, W, 3) uint8 array — a Macenko-normalized H&E tile.
     Returns {'hematoxylin', 'eosin', 'sharpness'}.
     """
     imgf = np.asarray(tile_rgb, dtype=np.float32) / 255.0
@@ -48,7 +52,10 @@ def compute_image_qc(tile_rgb):
 def image_qc_per_section(tiles):
     """Mean image QC over a section's tiles.
 
-    tiles : iterable of (H, W, 3) uint8 tiles.
+    Expects Macenko-normalized tiles; if you have raw tiles, run
+    `macenko_normalizer().transform()` (from `stain_norm`) on each first.
+
+    tiles : iterable of (H, W, 3) uint8 Macenko-normalized tiles.
     Returns a per-section {'hematoxylin', 'eosin', 'sharpness'} dict.
     """
     per_tile = pd.DataFrame(compute_image_qc(t) for t in tiles)
