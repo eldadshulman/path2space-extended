@@ -1,0 +1,23 @@
+# qc component — Python dependencies.
+# Paper versions are pinned where a QC metric depends on the version.
+
+numpy
+pandas
+scipy
+scikit-image==0.25.2     # rgb2hed / Otsu / Laplacian — histological image QC
+scanpy==1.11.4           # sc.pp.calculate_qc_metrics — gene-expression QC
+anndata
+opencv-python            # cv2 — used by stain_norm.py and preprocessing.py
+torch                    # preprocessing.py (init_random_seed, tile_transform)
+torchvision
+matplotlib
+
+# --- Macenko stain normalization (lib/stain_norm.py) needs the SPAMS solver ---
+# Prefer the prebuilt wheel (no source compilation):
+spams-bin
+# Alternative: conda install -c conda-forge python-spams
+#
+# Install note: in environments with user site-packages disabled (some conda
+# envs), `pip install --user spams-bin` may not be importable by default — make
+# it visible by adding the user site to PYTHONPATH, e.g.:
+#   PYTHONPATH=~/.local/lib/python3.12/site-packages
