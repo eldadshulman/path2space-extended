@@ -1,0 +1,7 @@
+# confounder_analysis component — Python dependencies.
+
+numpy
+pandas
+pyarrow        # read the bundled data/per_slide_correlations.parquet
+scipy          # scipy.stats — Pearson r, Stouffer p-value combination, t-distribution
+statsmodels    # Benjamini-Hochberg FDR (statsmodels.stats.multitest.multipletests)
