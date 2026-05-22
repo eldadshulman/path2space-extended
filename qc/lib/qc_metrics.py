@@ -23,6 +23,9 @@ import pandas as pd
 import scanpy as sc
 from skimage import color, filters
 
+__all__ = ["compute_image_qc", "image_qc_per_section",
+           "compute_expression_qc", "THRESHOLDS", "passes_qc"]
+
 # ---------------------------------------------------------------- image QC ---
 
 def compute_image_qc(tile_rgb):
@@ -30,6 +33,14 @@ def compute_image_qc(tile_rgb):
 
     Expects a Macenko-normalized tile; if you have raw tiles, run
     `macenko_normalizer().transform()` (from `stain_norm`) on each first.
+
+    Sharpness (variance of the Laplacian) is computed on the input tile
+    as-given and is resolution-sensitive — the variance of a fixed-kernel
+    Laplacian scales with image size. The paper sharpness threshold (6e-4)
+    was calibrated on 224x224 tiles (the CTransPath input size, and the
+    resolution at which paper QC was run). On differently-sized tiles the
+    threshold is not directly comparable: resize to 224x224 first, or
+    recalibrate the threshold on your own data.
 
     tile_rgb : (H, W, 3) uint8 array — a Macenko-normalized H&E tile.
     Returns {'hematoxylin', 'eosin', 'sharpness'}.
@@ -54,6 +65,11 @@ def image_qc_per_section(tiles):
 
     Expects Macenko-normalized tiles; if you have raw tiles, run
     `macenko_normalizer().transform()` (from `stain_norm`) on each first.
+
+    Sharpness is resolution-sensitive: the paper threshold (6e-4) was
+    calibrated on 224x224 tiles. On differently-sized tiles it is not
+    directly comparable — resize to 224x224 first, or recalibrate the
+    threshold on your own data. See `compute_image_qc` for the full note.
 
     tiles : iterable of (H, W, 3) uint8 Macenko-normalized tiles.
     Returns a per-section {'hematoxylin', 'eosin', 'sharpness'} dict.
