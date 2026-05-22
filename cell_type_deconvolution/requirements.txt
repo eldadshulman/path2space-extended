@@ -1,0 +1,14 @@
+# cell_type_deconvolution component — Python dependencies.
+
+numpy
+pandas
+scipy            # scipy.stats.pearsonr — gene-wise correlation
+scikit-learn     # sklearn.metrics.roc_auc_score — AUC for cell-type predictions
+joblib           # load the fitted MLP fold models (models/deconv_fold_*.joblib)
+seaborn          # plotting
+matplotlib
+
+# --- R component (notebooks/03_spacet_deconvolution.ipynb uses an R kernel) ---
+# Required R packages:
+#   - SpaCET, Matrix, qs                         (loaded at notebook setup)
+#   - MUDAN, factoextra, NbClust, cluster        (loaded inside lib/new_SpaCET.R)
