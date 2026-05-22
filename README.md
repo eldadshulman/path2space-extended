@@ -9,6 +9,7 @@ Extended Path2Space codebase — analysis and downstream methods beyond the comp
 - [`clustering_response_prediction/`](./clustering_response_prediction/) — pCR-prediction models trained on the ST cluster compositions. Two notebooks (chemotherapy and trastuzumab), the fitted joblib models, per-slide pCR labels, HER2-SPAND scores, and the cross-cohort AUC table.
 - [`cell_type_deconvolution/`](./cell_type_deconvolution/) — cell-type abundance from H&E-inferred expression (Figures 4C, 4D, S5B). A supervised MLP regressor and SpaCET, benchmarked on PanopTILs (TCGA) and annotated HEST against pathologist annotations.
 - [`confounder_analysis/`](./confounder_analysis/) — confounder analysis reproducing Table S2: per-gene partial correlations of predicted vs. measured expression controlling for hematoxylin stain intensity, cancer cell fraction, and total RNA content, across all 4 ST cohorts.
+- [`within_cell_type_variation/`](./within_cell_type_variation/) — within-cell-type expression variation (Figures 4E, 4F, S5G, S5H): per-gene predicted-vs-measured correlation inside pathologist-annotated regions and transcriptomic neighborhoods, gene-wise accuracy concordance across cell types, and a marker vs. non-marker gene comparison.
 
 Future components will be added as additional sibling folders (e.g., `spand/`).
 

@@ -1,0 +1,8 @@
+# within_cell_type_variation component — Python dependencies.
+
+numpy
+pandas
+pyarrow        # read the bundled data/*.parquet tables
+scipy          # scipy.stats.mannwhitneyu — marker vs non-marker test (S5H)
+seaborn        # box plots and concordance heatmaps
+matplotlib
