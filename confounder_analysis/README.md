@@ -25,7 +25,7 @@ significant (FDR < 0.05).
 - `lib/confounder_stats.py` — the analysis functions: `partial_correlation`,
   `per_slide_gene_correlations` (Stage A), `combine_pvalues_stouffer`,
   `aggregate_per_gene`, `confounder_summary` (Stage B).
-- `notebooks/confounder_analysis.ipynb` — worked example: loads the bundled
+- `notebooks/01_confounder_analysis.ipynb` — worked example: loads the bundled
   per-slide table, aggregates per gene, and writes the two output tables.
 - `data/per_slide_correlations.parquet` — **bundled input** (see below).
 - `data/confounder_summary.pkl` — output table 1 (one row per confounder).
@@ -67,7 +67,7 @@ Table S2 confounder summary is built entirely from partial correlations.
 
 ```bash
 pip install -r requirements.txt
-jupyter nbconvert --to notebook --execute --inplace notebooks/confounder_analysis.ipynb
+jupyter nbconvert --to notebook --execute --inplace notebooks/01_confounder_analysis.ipynb
 ```
 
 Both output tables are written as pickles; the notebook does not produce Excel.
