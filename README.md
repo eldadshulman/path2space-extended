@@ -13,7 +13,7 @@ Code accompanies Shulman et al., *Cell* 2026; licensed under Apache 2.0.
 - [`confounder_analysis/`](./confounder_analysis/) — per-gene partial correlations of predicted vs. measured expression controlling for hematoxylin stain intensity, cancer cell fraction, and total RNA content, across all four ST cohorts. Stage-A per-slide computation documented; Stage-B aggregation (Stouffer's combination, BH FDR, weighted means) reproducible end-to-end from the bundled parquet.
 - [`within_cell_type_variation/`](./within_cell_type_variation/) — within-cell-type expression variation (Figures 4E, 4F, S5G, S5H): per-gene predicted-vs-measured correlation inside pathologist-annotated regions and transcriptomic neighborhoods, gene-wise accuracy concordance across cell types, and a marker vs. non-marker gene comparison.
 
-Future components will be added as additional sibling folders.
+Active development; SPAND and benchmarking components in progress.
 
 ## Related
 
