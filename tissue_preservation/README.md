@@ -51,6 +51,7 @@ Upstream inputs that are not bundled (too large or not redistributable):
 
 - **Scope of the morphology MixedLM.** This component fits the morphology test at the per-sample level (n = 40) on bundled aggregated features, which makes the eccentricity coefficient (β ≈ −1.4) and its sign reproducible from the bundled data, but the per-feature p-values are noisier than at a per-spot scale. The eccentricity association is the strongest negative effect across the eight features in this per-sample fit; the paper's reported `q = 6.5 × 10⁻⁷` corresponds to an analysis with substantially more degrees of freedom than the per-sample table supports.
 - **External cohort definition.** "External validation" here means the three non-training cohorts: HEST, HTAN, pierre_martinez. Only HEST and HTAN contribute both FF and FFPE sections; pierre_martinez is FF only and is included in the MixedLM fit but contributes no FF/FFPE contrast.
+- **statsmodels version required.** `requirements.txt` pins `statsmodels>=0.14.6`. Earlier versions (including 0.14.4) return `NaN` p-values for the eccentricity MixedLM fit — the powell optimizer settles on a non-positive-definite Hessian; `lbfgs` converges to the same MLE with usable p-values, and 0.14.6+ uses it consistently. If you see the eccentricity row with `NaN` p-value, check your statsmodels version first.
 
 ## Running
 
