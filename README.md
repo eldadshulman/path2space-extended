@@ -12,6 +12,7 @@ Code accompanies Shulman et al., *Cell* 2026; licensed under Apache 2.0.
 - [`cell_type_deconvolution/`](./cell_type_deconvolution/) — cell-type abundance from H&E-inferred expression (Figures 4C, 4D, S5B). A supervised MLP regressor and SpaCET, benchmarked on PanopTILs (TCGA) and annotated HEST against pathologist annotations.
 - [`confounder_analysis/`](./confounder_analysis/) — per-gene partial correlations of predicted vs. measured expression controlling for hematoxylin stain intensity, cancer cell fraction, and total RNA content, across all four ST cohorts. Stage-A per-slide computation documented; Stage-B aggregation (Stouffer's combination, BH FDR, weighted means) reproducible end-to-end from the bundled parquet.
 - [`within_cell_type_variation/`](./within_cell_type_variation/) — within-cell-type expression variation (Figures 4E, 4F, S5G, S5H): per-gene predicted-vs-measured correlation inside pathologist-annotated regions and transcriptomic neighborhoods, gene-wise accuracy concordance across cell types, and a marker vs. non-marker gene comparison.
+- [`tissue_preservation/`](./tissue_preservation/) — fresh-frozen vs FFPE generalization (Figure 2G): per-section gene-wise PCC stratified by preservation method in the external cohorts, a cohort-adjusted MixedLM test of mean accuracy, and the eight-feature nuclear-morphology MixedLM identifying eccentricity as the strongest accuracy-associated feature.
 
 Active development; SPAND and benchmarking components in progress.
 

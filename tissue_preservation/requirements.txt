@@ -1,0 +1,9 @@
+# tissue_preservation component — Python dependencies.
+
+numpy
+pandas
+pyarrow         # read the bundled data/*.parquet tables
+scipy           # MixedLM optimizer internals
+statsmodels>=0.14.6  # MixedLM + Benjamini-Hochberg FDR — pinned because lbfgs convergence on narrow-range predictors (eccentricity) was tightened in 0.14.6
+seaborn         # violin and scatter plots
+matplotlib
