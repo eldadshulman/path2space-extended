@@ -1,0 +1,18 @@
+# spand component — Python dependencies.
+
+numpy
+pandas
+pyarrow              # read the bundled data/*.parquet tables
+libpysal             # spatial weights matrix (lat2W)
+esda                 # Global Moran's I
+joblib               # load the cell_type_deconvolution MLP fold models
+scikit-learn         # the MLPRegressor pipelines are sklearn pipelines
+seaborn              # plot styling
+matplotlib
+
+# Notebook 01 reuses the deconvolution MLP fold models bundled in the sibling
+# cell_type_deconvolution/ component (cell_type_deconvolution/models/*.joblib).
+
+# Upstream-only (not needed to run the notebooks; documented in the README for
+# anyone wanting to recompute the bundled per-spot GSEA NES from scratch):
+#   gseapy             # per-spot prerank GSEA against Wikipathways WP673

@@ -1,0 +1,33 @@
+{
+  "pathway_name": "ErbB Signaling Pathway",
+  "wikipathways_id": "WP673",
+  "source_url": "https://www.wikipathways.org/instance/WP673",
+  "license": "CC-BY 3.0",
+  "description": "ErbB family signaling (EGFR/ERBB2/ERBB3/ERBB4) and the canonical RAS/MAPK and PI3K/AKT effector cascades downstream, plus accessory PLC-gamma and JAK/STAT branches.",
+  "notes": "Bundled for documentation of the gene-set used in the upstream per-spot GSEA. The GSEA NES values in example_slide_gsea_her2_nes.parquet were computed against this gene set; the SPAND pipeline downstream uses only those NES values, so the gene list itself is not consumed by the notebooks.",
+  "genes": [
+    "EGFR", "ERBB2", "ERBB3", "ERBB4",
+    "EGF", "TGFA", "HBEGF", "BTC", "EREG", "AREG", "EPGN",
+    "NRG1", "NRG2", "NRG3", "NRG4",
+    "SHC1", "SHC2", "SHC3", "SHC4", "GRB2", "GAB1", "GAB2",
+    "SOS1", "SOS2", "NRAS", "HRAS", "KRAS",
+    "RAF1", "BRAF", "ARAF",
+    "MAP2K1", "MAP2K2", "MAPK1", "MAPK3",
+    "MAP2K4", "MAP2K7", "MAPK8", "MAPK9", "MAPK10",
+    "PIK3CA", "PIK3CB", "PIK3CD", "PIK3CG",
+    "PIK3R1", "PIK3R2", "PIK3R3", "PIK3R5",
+    "AKT1", "AKT2", "AKT3",
+    "MTOR", "GSK3B", "BAD",
+    "EIF4EBP1", "RPS6KB1", "RPS6KB2",
+    "SRC", "PTK2",
+    "CBL", "CBLB", "CBLC", "CRK", "CRKL",
+    "JUN", "MYC", "ELK1",
+    "STAT5A", "STAT5B",
+    "PRKCA", "PRKCB", "PRKCG",
+    "CAMK2A", "CAMK2B", "CAMK2D", "CAMK2G",
+    "PLCG1", "PLCG2",
+    "NCK1", "NCK2",
+    "PAK1", "PAK2", "PAK3", "PAK4", "PAK6", "PAK7",
+    "CDKN1A", "CDKN1B"
+  ]
+}
