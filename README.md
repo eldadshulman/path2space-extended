@@ -14,8 +14,9 @@ Code accompanies Shulman et al., *Cell* 2026; licensed under Apache 2.0.
 - [`within_cell_type_variation/`](./within_cell_type_variation/) — within-cell-type expression variation (Figures 4E, 4F, S5G, S5H): per-gene predicted-vs-measured correlation inside pathologist-annotated regions and transcriptomic neighborhoods, gene-wise accuracy concordance across cell types, and a marker vs. non-marker gene comparison.
 - [`tissue_preservation/`](./tissue_preservation/) — fresh-frozen vs FFPE generalization (Figure 2G): per-section gene-wise PCC stratified by preservation method in the external cohorts, a cohort-adjusted MixedLM test of mean accuracy, and the eight-feature nuclear-morphology MixedLM identifying eccentricity as the strongest accuracy-associated feature.
 - [`spand/`](./spand/) — Spatial Neighborhood Diverseness score: per-slide, per-signal Global Moran's I divided by the signal mean. End-to-end HER2-SPAND pipeline demo on one PBCP slide (predicted expression → ensemble deconvolution + per-spot GSEA → cancer-fraction-normalized pathway NES → SPAND), and a HER2-low / HER2-high response analysis across three trastuzumab cohorts (PBCP, IMPRESS, TransNEO; n=18/62/61) from precomputed per-patient scores.
+- [`benchmarking/`](./benchmarking/) — Path2Space vs 16 competing ST prediction methods on the Bassiouni Visium cohort (Figure 3, Table S3): 988-HVG and genome-wide top-4 panels with per-(cohort, validation-type) Mann-Whitney U comparisons, plus the legacy 785-HVG benchmark. Evaluation only — competing methods were trained upstream by the TRIPLEX authors and hosted at Nature Communications.
 
-Active development; the benchmarking component is in progress.
+Active development.
 
 ## Related
 

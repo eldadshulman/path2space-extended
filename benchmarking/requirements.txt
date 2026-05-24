@@ -1,0 +1,12 @@
+# benchmarking component — Python dependencies.
+
+numpy
+pandas
+pyarrow         # read the bundled data/*.parquet tables
+scipy           # scipy.stats.mannwhitneyu — model vs reference test
+seaborn         # box plots
+matplotlib
+
+# Upstream-only (not needed to run the notebooks; documented in the README for
+# anyone wanting to recompute the 988-HVG list from raw Seurat objects):
+#   R 4.3+ with scran + Seurat + reticulate  (see joo_benchmarking/scr/HVG_SVG_R.ipynb)
