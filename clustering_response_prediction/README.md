@@ -49,7 +49,7 @@ The notebooks read the per-cohort per-patient cluster proportion CSVs from
 | TransNEO (5-fold CV) | 61 | 0.311 | 0.867 | **0.900** |
 | IMPRESS | 62 | 0.613 | 0.743 | **0.765** |
 | PBCP | 18 | 0.611 | 0.896 | **0.896** |
-| Cedars-Sinai | 30 | 0.867 | 0.683 | **0.837** |
+| Cedars-Sinai | 26 | 0.867 | 0.683 | **0.837** |
 
 ## Loading the models in Python
 
