@@ -77,11 +77,16 @@ scran + Seurat):
 2. Union across QC-passing slides of the Bassiouni cohort.
 3. Drop genes expressed in < 70 % of spots of those slides.
 
-This yields the 988 genes bundled here (one extra gene over the paper text's
-988 — 989 in the parquet — from the union step; the difference does not
-affect the per-cohort medians materially). The 785 genes of the legacy
-benchmark were defined upstream by the original Nature Communications study
-and are reused as-is.
+This yields the canonical 988-gene list used by the 17 competing methods'
+prediction tables (the intersection of genes present across all methods).
+The 785 genes of the legacy benchmark were defined upstream by the original
+Nature Communications study and are reused as-is.
+
+The Path2Space prediction tables contain **one additional gene**,
+`AL627309.1`, that is not present in any of the 17 competitors' outputs.
+Because cross-method comparison requires the same gene set, this gene is
+filtered out of `bench_988_bassiouni.parquet`; the parquet and the bundled
+`hvg_988_bassiouni.csv` both contain exactly the 988 canonical HVGs.
 
 ## HVG-selection (R) — required packages
 
