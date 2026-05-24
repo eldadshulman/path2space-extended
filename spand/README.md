@@ -1,30 +1,39 @@
 # spand — SPAND score and the HER2-low / HER2-high trastuzumab analysis
 
-Reproduces the SPAND (Spatial Pattern of Aggregated Neighborhood Diversity)
-analysis of Shulman et al., *Cell* 2026.
+Reproduces the SPAND (Spatial Neighborhood Diverseness) analysis of Shulman et
+al., *Cell* 2026.
 
 ## What SPAND is
 
-SPAND is a per-slide score quantifying how spatially structured a gene-
-expression-derived signal is over a spatial-transcriptomics tissue grid. The
-score is **Global Moran's I divided by the mean of the signal**:
+SPAND is a per-slide, per-signal score quantifying how spatially structured a
+gene-expression-derived signal is over a spatial-transcriptomics tissue grid.
+The score is **Global Moran's I divided by the mean of the signal**:
 
 > SPAND(signal) = Moran's I(signal, lat2W(grid)) / mean(signal)
 
 where the weights matrix is the queen/rook adjacency on the spot grid (from
-`libpysal.weights.lat2W`). The signal can be any per-spot scalar — predicted
-expression of a single gene, a GSEA pathway NES per spot, or a cancer-cell-
-restricted pathway score. The paper convention negates the value so positive
-scores mean **more** spatially heterogeneous.
+`libpysal.weights.lat2W`). The signal is any per-spot scalar — predicted
+expression of a single gene, a GSEA pathway NES per spot, or a cancer-fraction-
+normalized pathway score. SPAND produces one number per (slide, signal): a
+single ERBB2-SPAND value per slide, a single WP673-pathway-SPAND value per
+slide, etc. The paper convention negates the value so positive scores mean
+**more** spatially heterogeneous.
 
-The published HER2-SPAND used downstream is **not** raw single-gene Moran's I —
-it is Moran's I on a cancer-cell-restricted, GSEA-pathway-derived signature:
+**HER2-SPAND** is the specific application the paper carries downstream:
+SPAND of a cancer-fraction-normalized WP673 ErbB-pathway NES per slide.
+Predicted expression feeds **two parallel branches** — cancer-cell
+deconvolution (per spot) and per-spot GSEA against WP673 — whose outputs are
+combined at the normalization step:
 
 ```
-predicted expression → cancer-cell deconvolution → per-spot pathway NES (GSEA)
-                                       │
-                                       └─→ NES / cancer_fraction   ─→ SPAND
+predicted expression ─┬─→ cancer-cell deconvolution ─→ cancer_fraction ─┐
+                      │                                                  │
+                      └─→ per-spot GSEA (WP673)      ─→ NES ─────────────┤
+                                                                         ├─→ NES / cancer_fraction → SPAND
 ```
+
+(GSEA is per-spot across all ~14,000 predicted genes; deconvolution and GSEA
+do not feed each other — they combine downstream at `NES / cancer_fraction`.)
 
 ## Contents
 
@@ -36,8 +45,8 @@ predicted expression → cancer-cell deconvolution → per-spot pathway NES (GSE
   deconvolution (using `cell_type_deconvolution/models/`) → load per-spot
   GSEA NES (precomputed upstream) → cancer-normalize → SPAND. Reproduces the
   bundled per-patient HER2-SPAND for that slide to ~0.4%, and contrasts the
-  three Moran's I values (raw ERBB2, raw WP673 NES, cancer-restricted WP673)
-  to show why cancer restriction matters.
+  three Moran's I values (raw ERBB2, raw WP673 NES, cancer-fraction-normalized
+  WP673) to show why the normalization step matters.
 - `notebooks/02_her2low_vs_her2high.ipynb` — three-cohort clinical analysis
   using precomputed per-patient HER2-SPAND vs measured HER2 predictors:
   **PBCP** (18 HER2+ patients, vs bulk ERBB2 log₂ TPM), **IMPRESS** (62
@@ -79,10 +88,12 @@ Two stages, mirroring the canonical pipeline:
    gene set; collect the Normalized Enrichment Score per spot per pathway.
    The bundled `example_slide_gsea_her2_nes.parquet` is the result of this
    step for the example slide; the recipe is below.
-4. **Cancer-restrict.** For each spot, divide the WP673 NES by the
-   Epithelial (cancer) fraction from step 2.
-5. **SPAND.** Pass the cancer-restricted signal and the spot (x, y) grid
-   coordinates to `spand_for_slide`. Negate by convention.
+4. **Cancer-fraction normalization.** For each spot, divide the WP673 NES
+   by the Epithelial (cancer) fraction from step 2. This rescales the pathway
+   signal by cancer content per spot — it is normalization, not thresholding;
+   no spots are dropped.
+5. **SPAND.** Pass the cancer-fraction-normalized signal and the spot (x, y)
+   grid coordinates to `spand_for_slide`. Negate by convention.
 
 **Stage B — clinical analysis on precomputed per-patient scores**
 (notebook 02): per-patient HER2-SPAND for three trastuzumab-treated cohorts

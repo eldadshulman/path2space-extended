@@ -1,15 +1,15 @@
-"""SPAND — Spatial Pattern of Aggregated Neighborhood Diversity.
+"""SPAND — Spatial Neighborhood Diverseness.
 
-A per-slide score quantifying how spatially structured a gene-expression-derived
-signal is over a spatial-transcriptomics tissue grid. The score is **Global
-Moran's I divided by the mean of the signal**:
+A per-slide, per-signal score quantifying how spatially structured a
+gene-expression-derived signal is over a spatial-transcriptomics tissue grid.
+The score is **Global Moran's I divided by the mean of the signal**:
 
     SPAND = Moran(signal, lat2W(grid_shape)).I / mean(signal)
 
-The signal can be any per-spot scalar — predicted expression of a single gene
-(e.g. ERBB2), a GSEA pathway NES per spot, or a cancer-restricted pathway score
-(per-spot NES divided by per-spot cancer-cell fraction, as used in the paper's
-HER2 SPAND).
+The signal is any per-spot scalar — predicted expression of a single gene
+(e.g. ERBB2), a GSEA pathway NES per spot, or a cancer-fraction-normalized
+pathway score (per-spot NES divided by per-spot cancer-cell fraction, as used
+in the paper's HER2-SPAND).
 
 Inputs to `spand_for_slide` are kept minimal — a per-spot signal and the spot
 (x, y) coordinates. The spot positions are rasterized into a 2-D grid; the
@@ -87,7 +87,7 @@ def spand_for_slide(signal, xy):
     """SPAND for one slide: Moran's I divided by the mean of the signal.
 
     signal : per-spot Series (e.g., predicted ERBB2 expression, or a
-             cancer-restricted pathway NES).
+             cancer-fraction-normalized pathway NES).
     xy     : DataFrame with ``x`` and ``y`` columns, aligned to `signal`'s index.
 
     Returns SPAND as a float. Negative SPAND values are interpreted as more
