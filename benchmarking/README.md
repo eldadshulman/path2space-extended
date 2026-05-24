@@ -92,13 +92,14 @@ bridge.
 
 ## Reproduction notes
 
-- **SGN under `no_cpm`.** SGN ranks first by external-validation median in
-  the 988-HVG `no_cpm` panel (0.42 vs Path2Space 0.39). Under `cpm`
-  normalization, SGN's median collapses to ≈ 0 — a pattern not seen for any
-  other method and consistent with a normalization or prediction artifact in
-  SGN's `no_cpm` outputs. The published Figure 3 panel excludes SGN for this
-  reason; this notebook keeps SGN visible to surface the inconsistency
-  rather than hide it. Treat the SGN bar as suspect.
+- **SGN is excluded** from all comparisons in notebook 01, matching the
+  published Figure 3 exclusion. SGN's `no_cpm` median is anomalously high
+  (0.42 vs Path2Space 0.39 in external validation) while its `cpm` median
+  collapses to ≈ 0 — a pattern not seen for any other method and consistent
+  with a normalization or prediction artifact in SGN's `no_cpm` outputs.
+  The raw SGN rows remain in `data/bench_988_bassiouni.parquet` for any
+  reader who wants to inspect them; the notebook filters SGN out at load
+  time.
 - **Path2Space variants.** The Path2Space smoothed prediction
   (`Path2Space_log_converted` upstream → `Path2Space` after renaming) and
   the unsmoothed variant (`Path2Space_unsmoothed_log_converted` →
