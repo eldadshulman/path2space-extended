@@ -24,7 +24,7 @@ medians. Path2Space training and prediction live in the companion repo,
 |---|---|---|---|---|
 | `01_benchmark_visium_bassiouni.ipynb` | 988-HVG Bassiouni benchmark | 17 (16 competitors + Path2Space) × 2 norms | 988 HVGs | Bassiouni (cross-val), HEST + HTAN + Martinez (external) |
 | `01_benchmark_visium_bassiouni.ipynb` | Genome-wide top-4 | 4 top competitors + Path2Space (smoothed/unsmoothed) | ~13,000 | same four cohorts |
-| `02_benchmark_legacy_dataset.ipynb`   | Legacy 785-HVG benchmark   | 7 + Path2Space (`no_library_size` panel) + 4 + Path2Space log(CPM) (`library_size` panel) | 785 HVGs | the legacy benchmark's cross-validation splits |
+| `02_benchmark_legacy_dataset.ipynb`   | Legacy 785-HVG benchmark   | Two **disjoint-by-design** panels: 7 raw-count methods + Path2Space (`no_library_size`), 4 CPM methods + Path2Space log(CPM) (`library_size`). Path2Space is the only method evaluated under both normalizations. | 785 HVGs | the legacy benchmark's cross-validation splits |
 
 Statistical comparison: per-(cohort, validation type) Mann-Whitney U test of
 the matched per-gene PCC vectors of Path2Space vs. each competitor.
@@ -97,6 +97,15 @@ bridge.
 
 ## Reproduction notes
 
+- **Legacy 785-HVG normalization split is by design, not by reporting gap.**
+  The original Nature Communications benchmark applied each method using the
+  normalization its own authors specified — methods designed to consume
+  library-size-normalized counts were evaluated on the `library_size` panel;
+  methods designed to consume raw counts on the `no_library_size` panel. The
+  two method sets are therefore **disjoint by design**, not overlapping with
+  one subset reporting less. There is no method present in both panels except
+  Path2Space, which we trained under both normalizations to demonstrate
+  robustness.
 - **SGN is excluded** from all comparisons in notebook 01, matching the
   published Figure 3 exclusion. SGN's `no_cpm` median is anomalously high
   (0.42 vs Path2Space 0.39 in external validation) while its `cpm` median
