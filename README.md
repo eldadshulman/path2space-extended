@@ -2,7 +2,14 @@
 
 Extended Path2Space codebase — analysis and downstream methods beyond the companion repo ([eldadshulman/path2space-companion](https://github.com/eldadshulman/path2space-companion)).
 
-Code accompanies Shulman et al., *Cell* 2026; licensed under Apache 2.0.
+Companion code for:
+
+> **AI-predicted spatial transcriptomics unlocks breast cancer biomarkers from
+> pathology.**
+> Shulman et al., *Cell* (2026).
+> [doi:10.1016/j.cell.2026.04.023](https://doi.org/10.1016/j.cell.2026.04.023)
+
+Licensed under Apache 2.0.
 
 ## Components
 
