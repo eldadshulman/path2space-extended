@@ -22,3 +22,4 @@ Active development.
 
 - Companion: https://github.com/eldadshulman/path2space-companion
 - Paper: Shulman et al., *Cell* 2026. doi:10.1016/j.cell.2026.04.023
+
