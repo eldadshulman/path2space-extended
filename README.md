@@ -1,6 +1,6 @@
 # path2space-extended
 
-Extended Path2Space codebase — analysis and downstream methods beyond the companion repo ([eldadshulman/path2space-companion](https://github.com/eldadshulman/path2space-companion)).
+Extended Path2Space codebase — analysis and downstream methods beyond the [Zenodo deposit](https://doi.org/10.5281/zenodo.20171390).
 
 Companion code for:
 
