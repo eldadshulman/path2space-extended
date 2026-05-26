@@ -1,0 +1,4 @@
+# Treat notebooks as vendored so GitHub Linguist classifies the repo by the
+# code it ships (Python, R) rather than by notebook line count. Notebooks
+# still render in the GitHub UI.
+*.ipynb linguist-vendored
