@@ -67,5 +67,4 @@ proba = cmb.predict_proba(X_full)   # X_full = clusters + 'her2_spand' column
 ## Related
 
 - Paper: Shulman et al., *Cell* 2026. doi:10.1016/j.cell.2026.04.023.
-- Per-cohort cluster compositions: `../clustering_spatiotypes/data/`.
-- Projection code that produces those compositions: https://github.com/eldadshulman/path2space-extra
+
